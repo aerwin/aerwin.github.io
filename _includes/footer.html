@@ -1,0 +1,36 @@
+<span class="footer-span">&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using a modified <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
+
+<nav class="footer-menuwrapper" role="navigation">
+	<ul class="footer-submenu">
+		{% if site.owner.email %}<li>
+			<a href="mailto:{{ site.owner.email }}" alt="Email" title="Email" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+		</li>{% endif %}
+		{% if site.owner.twitter %}<li>
+			<a href="https://twitter.com/{{ site.owner.twitter }}" alt="Twitter" title="Twitter" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+		</li>{% endif %}
+		{% if site.owner.facebook %}<li>
+			<a href="https://facebook.com/{{ site.owner.facebook }}" alt="Facebook" title="Facebook" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+		</li>{% endif %}
+		{% if site.owner.google_plus %}<li>
+			<a href="https://google.com/{{ site.owner.google_plus }}" alt="Google+" title="Google+" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+		</li>{% endif %}
+		{% if site.owner.linkedin %}<li>
+			<a href="https://linkedin.com/in/{{ site.owner.linkedin }}" alt="LinkedIn" title="LinkedIn"target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
+		</li>{% endif %}
+		{% if site.owner.github %}<li>
+			<a href="https://github.com/{{ site.owner.github }}" alt="GitHub" title="GitHub" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+		</li>{% endif %}
+		{% if site.owner.stackexchange %}<li>
+			<a href="{{ site.owner.stackexchange }}" alt="StackExchange" title="StackExchange" target="_blank"><i class="fa fa-fw fa-stack-exchange"></i></a>
+		</li>{% endif %}
+		{% if site.owner.instagram %}<li>
+			<a href="https://instagram.com/{{ site.owner.instagram }}" alt="Instagram" title="Instagram" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+		</li>{% endif %}
+		{% if site.owner.flickr %}<li>
+			<a href="https://www.flickr.com/photos/{{ site.owner.flickr }}" alt="Flickr" title="Flickr" target="_blank"><i class="fa fa-fw fa-flickr"></i></a>
+		</li>{% endif %}
+		{% if site.owner.tumblr %}<li>
+			<a href="http://{{ site.owner.tumblr }}.tumblr.com" alt="Tumblr" title="Tumblr" target="_blank"><i class="fa fa-fw fa-tumblr"></i></a>
+		</li>{% endif %}
+	</ul><!-- /.dl-submenu -->
+</nav>

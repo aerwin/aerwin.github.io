@@ -1,0 +1,155 @@
+---
+sitemap: false
+---
+
+/*
+ *
+ *  HPSTR
+ *
+ *  Designer: Michael Rose
+ *  Twitter: http://twitter.com/mmistakes
+ *
+*/
+
+@charset "utf-8";
+
+// Partials
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/magnific-popup/magnific-popup";
+@import "site";
+@import "typography";
+@import "syntax";
+// @import "coderay";
+@import "grid";
+@import "elements";
+@import "animations";
+@import "dl-menu";
+@import "page";
+
+/* Site header (from https://github.com/jglovier/jekyll-new/blob/gh-pages/css/main.css) */
+
+.site-header {
+  background: #7d110c;
+  border-bottom: 1px solid #333;
+  min-height: 56px;
+}
+
+.site-title,
+.site-title:hover,
+.site-title:visited {
+  display: block;
+  color: #e1d8b7;
+  font-size: 26px;
+  letter-spacing: -1px;
+  float: left;
+  line-height: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.site-nav {
+  float: right;
+  line-height: 56px;
+}
+
+.site-nav .menu-icon { display: none; }
+
+.site-nav .page-link {
+  margin-left: 20px;
+  color: #e1d8b7;
+  letter-spacing: -.5px;
+}
+
+/* Utility (https://github.com/jglovier/jekyll-new/blob/gh-pages/css/main.css)*/
+
+.wrap:before,
+.wrap:after { content:""; display:table; }
+.wrap:after { clear: both; }
+.wrap {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+/* ***************************
+   Custom Styles
+***************************** */
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+/* ***************************
+   Button Links
+***************************** */
+.button-link-container {
+	text-align:center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+// TODO: Verify I need all of these:
+/* ***************************
+   YouTube Video Wrapper
+***************************** */
+.videowrapper { 
+        float: none;
+        clear: both;
+        width: 70%;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+        margin: 20px auto 20px auto;
+}
+.videowrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 700px;
+        max-height: 400px;
+}
+
+
+.about-wrapper {
+  margin-left: 148px;
+}
+
+.about-content {
+  float: right;
+  width: 100%;
+
+  p {
+  	margin-top: 0px;
+  }
+}
+
+.about-sidebar {
+  float: left;
+  width: 148px;
+  margin-left: -148px;
+}
+
+.about-cleared {
+  clear: both;
+}
+
+
+.paragraph-thumbnail {
+	display: block; 
+	float: right; 
+	height: auto; 
+	margin: 7px 0px 10px 10px; 
+	max-height: 220px; 
+	max-width: 150px; 
+	min-width: 90px; 
+	padding: 0px 0px 0px 0px; 
+	position: relative;width:15%;
+}
