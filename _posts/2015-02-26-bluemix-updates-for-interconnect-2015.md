@@ -7,8 +7,8 @@ description: "I’m writing this edition of the blog from Las Vegas as IBM Inter
 tags: [ibm interconnect, bluemix, bluemix ui, announcements]
 modified_time: '2015-02-26T04:44:03.013-06:00'
 image:
-    feature: "/2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHills2to1_1000.JPG"
-    thumb: "/2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHillsSquare300.png"
+    feature: "2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHills2to1_1000.JPG"
+    thumb: "2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHillsSquare300.png"
 ---
 
 ![Bluemix Updates: IBM InterConnect 2015 (Small)!](/images/2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHillsSquare300.png){: .paragraph-thumbnail }

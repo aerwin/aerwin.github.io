@@ -33,18 +33,46 @@ body {
    Colors
    ========================================================================== */
 
-$base-color                      : rgba(#222,0.8);
-$body-color                      : #e8e8e8;
+$crimson: rgba(169, 5, 51, 1);
+$light-crimson: rgba(237, 23, 76, 1);
+$dark-crimson: rgba(119, 13, 41, 1);
+$cream: rgba(237, 235, 235, 1);
+
+$black: rgba(0, 0, 0, 1);
+$mahogany: rgba(73, 56, 40, 1);
+
+$limestone: rgba(173, 167, 164, 1);
+$dark-limestone: rgba(134, 125, 120, 1);
+
+$gold: rgba(254, 197, 83, 1);
+$dark-gold: rgba(234, 148, 26, 1);
+
+$mint: rgba(0, 148, 128, 1);
+$dark-mint: rgba(0, 89, 76, 1);
+
+$midnight: rgba(0, 91, 148, 1);
+$dark-midnight: rgba(0, 57, 99, 1);
+
+$majestic: rgba(92, 51, 84, 1);
+$dark-majestic: rgba(61, 2, 55, 1);
+
+$base-color                      : $black;
+$body-color                      : $dark-limestone;
+$site-header-color               : $crimson;
 $text-color                      : rgba(#222,0.8);
 $comp-color                      : complement(#222);
 $border-color                    : lighten($base-color,60);
-$link-color                      : rgba(#222,0.8);
+$link-color                      : $crimson;
+$visited-link-color              : $dark-crimson;
+$hover-link-color                : $dark-limestone;
 
-$primary                         : #222;
-$success                         : #5cb85c;
-$warning                         : #dd8338;
-$danger                          : #C64537;
-$info                            : #308cbc;
+$primary                         : $link-color;
+$primary-visited                 : $visited-link-color;
+$primary-hover                   : $hover-link-color;
+$success                         : #DDF4EA;
+$warning                         : #FDF7E7;
+$danger                          : #FDEEE8;
+$info                            : #E9F6FC;
 
 
 /* 

@@ -12,8 +12,8 @@ tags:
 - service keys
 modified_time: '2015-07-07T06:00:01.507-05:00'
 image:
-    feature: "/2015-07-07-bluemix-updates-first-anniversary/containersInCatalog2_featured.png"
-    thumb: "/2015-07-07-bluemix-updates-first-anniversary/bluemixToast300dark.png"
+    feature: "2015-07-07-bluemix-updates-first-anniversary/containersInCatalog2_featured.png"
+    thumb: "2015-07-07-bluemix-updates-first-anniversary/bluemixToast300dark.png"
 ---
 
 ![Bluemix Updates: First Anniversary Celebration!](/images/2015-07-07-bluemix-updates-first-anniversary/bluemixToast300dark.png){: .paragraph-thumbnail }

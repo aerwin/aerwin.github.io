@@ -7,8 +7,8 @@ description: "On the eve of Cinco de Mayo, we're pleased to some awesome Bluemix
 tags: [bluemix, bluemix ui, announcements, ibm, cloud]
 modified_time: '2015-05-05T12:10:17.244-05:00'
 image:
-    feature: "/2015-05-04-bluemix-updates-cinco-de-mayo/new_pricing2_2to1ratio.png"
-    thumb: "/2015-05-04-bluemix-updates-cinco-de-mayo/logo_dark300x300_dark.png"
+    feature: "2015-05-04-bluemix-updates-cinco-de-mayo/new_pricing2_2to1ratio.png"
+    thumb: "2015-05-04-bluemix-updates-cinco-de-mayo/logo_dark300x300_dark.png"
 ---
 
 ![Bluemix Updates: Cinco de Mayo!](/images/2015-05-04-bluemix-updates-cinco-de-mayo/logo_dark300x300_dark.png){: .paragraph-thumbnail }

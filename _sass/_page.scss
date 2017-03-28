@@ -15,6 +15,10 @@ body {
 
 .entry,
 .hentry {
+	max-width: 1000px; /* AWE TODO: Added */
+	margin: 50px auto 0px auto; /* AWE TODO: Added */
+    background-color: #fff; /* AWE TODO: Added */
+
 	@include clearfix;
 
 	h1, h2, h3, h4, h5, h6, p, li {
@@ -28,10 +32,10 @@ body {
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten($link-color, 50);
+		/* border-bottom: 1px dotted $link-color; */
 
 		&:hover {
-			border-bottom-style: solid;
+			/* border-bottom-style: solid; */
 		}
 	}
 
@@ -51,7 +55,6 @@ body {
    ========================================================================== */
 
 .entry-header {
-	width: 100%;
 	overflow: hidden;
 	position: relative;
 }
@@ -60,22 +63,24 @@ body {
 .entry-title {
 	text-align: center;
 	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .header-title {
 	text-align: center;
-	margin: 30px 0 0;
+	margin: 25px 0 0;
 
 	h1 {
 		/* AWE TODO margin: 10px 20px; */
-		max-width: 950px; /* AWE TODO: Added */
+		max-width: 1000px; /* AWE TODO: Added */
+		margin-top: 10px; /* AWE TODO: Added */
     	margin-left: auto; /* AWE TODO: Added */
     	margin-right: auto; /* AWE TODO: Added */
-    	margin-bottom: 20px; /* AWE TODO: Added */
+    	margin-bottom: 10px; /* AWE TODO: Added */
 
 		font-weight: 700;
 		@include font-rem(32);
-		color: lighten($base-color,20);
+		color: $crimson;
 
 		/* AWE TODO: added */
 		@media #{$small} {
@@ -93,10 +98,10 @@ body {
 	}
 
 	h2 {
-		margin: 0;
+		margin: 0 0 20px 0;
 		@include font-rem(18);
-		text-transform: uppercase;
-		color: lighten($base-color,40);
+		/* text-transform: uppercase; */
+		color: lighten($limestone, 10);
 
 		@media #{$medium} {
 			@include font-rem(24);
@@ -235,11 +240,11 @@ body {
 
 .entry-meta {
 	@include font-rem(12);
-	text-transform: uppercase;
-	color: lighten($base-color,60);
+	/* text-transform: uppercase; */
+	color: $limestone;
 
 	a {
-		color: lighten($base-color,60);
+		color: $limestone;
 	}
 
 	.vcard {
@@ -252,7 +257,7 @@ body {
 	.tag {
 		display: inline-block;
 		margin: 4px;
-		color: #fff;
+		color: $cream;
 		border-radius: 3px;
 		background-color: lighten($base-color,50);
 
@@ -284,26 +289,30 @@ header .entry-meta {
 	}
 }
 
+footer .entry-meta {
+	color: $crimson;
+}
+
 #post,
 #page {
 
 	.entry-content {
-		margin: 40px 2px 20px 2px;
+		margin: 0px 2px 20px 2px;
 		padding: 10px 15px;
 		background-color: #fff;
-		box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1);
+		/* box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1); */
 		border-radius: 3px;
 
 		@media #{$medium} {
 			margin-left: 10px;
 			margin-right: 10px;
-			padding: 20px 30px;
+			padding: 5px 30px;
 		}
 
 		@media #{$large} {
-			max-width: 800px;
-			margin: 35px auto 30px auto; /* AWE TODO: Changed first entry from 50px */
-			padding: 50px 80px;
+			max-width: 1000px;
+			margin: 0px auto 30px auto; /* AWE TODO: Changed first entry from 50px */
+			padding: 5px 80px;
 
 			> p:first-child {
 				/* AWE TODO @include font-size(20); */
@@ -315,7 +324,7 @@ header .entry-meta {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
 		background-color: #fff;
-		box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
+		/* box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1); */
 		border-radius: 3px;
 
 		@media #{$medium} {
@@ -325,14 +334,14 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 1000px;
 			padding: 50px 80px;
 			margin: 0 auto 30px auto;
 		}
 	}
 
 	.entry-meta {
-		margin: 50px 30px 10px; /* AWE TODO: changed from 50px 30px 30px; */
+		margin: 25px 30px 10px; /* AWE TODO: changed from 50px 30px 30px; */
 		text-align: center;
 	}
 }
@@ -368,8 +377,32 @@ header .entry-meta {
 		padding-right: 4px;
 	}
 
+	li > a {
+		color: $link-color;
+	}
+
+	li > a:hover {
+		color: $cream;
+	}
+
+	li > a:focus {
+		color: $cream;
+	}
+
 	.current-page {
 		font-weight: 700;
+	}
+
+	.btn {
+		color: $cream;
+	}
+
+	.btn:hover {
+		background-color: $limestone;
+	}
+
+	.btn:focus {
+		background-color: $limestone;
 	}
 }
 
@@ -379,7 +412,7 @@ header .entry-meta {
 	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
 	background-color: #fff;
-	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
+	/* box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1); */
 	border-radius: 3px;
 
 	@media #{$medium} {
@@ -388,7 +421,7 @@ header .entry-meta {
 	}
 
 	@media #{$large} {
-		max-width: 800px;
+		max-width: 1000px;
 		padding: 50px 80px;
 		margin: 60px auto;
 	}
@@ -412,13 +445,17 @@ header .entry-meta {
 .read-more-content {
 	@include font-size(16);
 
+	p {
+		text-align: left;
+	}
+
 	// Dotted line underlines for links
 	p > a,
 	li > a {
 		border-bottom: 1px dotted lighten($link-color, 50);
 
 		&:hover {
-			border-bottom-style: solid;
+			/* border-bottom-style: solid; */
 		}
 	}
 
@@ -427,7 +464,7 @@ header .entry-meta {
 		@include font-rem(28);
 
 		a { 
-			color: $text-color;
+			color: $link-color;
 		}
 
 		@media #{$medium} {
@@ -479,7 +516,7 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 1000px;
 			margin-top: 25px; /* AWE TODO Changed from 50px */
 			margin-left: auto;
 			margin-right: auto;
@@ -502,6 +539,24 @@ header .entry-meta {
 			padding: 50px 80px;
 		}
 	}
+}
+
+article {
+	margin: 25px 30px 10px;
+}
+
+ul {
+    .entry-title {
+    	text-align: left;
+    }
+
+    .entry-title > a:hover {
+    	color: $cream;
+    }
+
+    .entry-title > a:focus {
+    	color: $cream;
+    }
 }
 
 .entry-image-index {
@@ -537,10 +592,18 @@ header .entry-meta {
 	@include clearfix;
 	margin: 2em auto;
 	text-align: center;
-	color: lighten($text-color,20);
+	color: $cream;
 
 	a {
-		color: lighten($text-color,20);
+		color: $cream;
+	}
+
+	a:hover {
+		color: $dark-crimson;
+	}
+
+	a:focus {
+		color: $dark-crimson;
 	}
 }
 

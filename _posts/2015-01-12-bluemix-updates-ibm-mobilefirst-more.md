@@ -7,8 +7,8 @@ description: "We’ve got some exciting Bluemix updates to kick off 2015 which i
 tags: [ibm mobilefirst, bluemix, bluemix ui, bluemix updates, ios, mobile, ibm]
 modified_time: '2015-01-12T04:00:06.205-06:00'
 image:
-    feature: "/2015-01-12-bluemix-updates-ibm-mobilefirst-more/imfBoilerplateFeatured.png"
-    thumb: "/2015-01-12-bluemix-updates-ibm-mobilefirst-more/imfBoilerplateIcon300x220.png"
+    feature: "2015-01-12-bluemix-updates-ibm-mobilefirst-more/imfBoilerplateFeatured.png"
+    thumb: "2015-01-12-bluemix-updates-ibm-mobilefirst-more/imfBoilerplateIcon300x220.png"
 ---
 
 ![Bluemix Updates: IBM MobileFirst for iOS!](/images/2015-01-12-bluemix-updates-ibm-mobilefirst-more/imfBoilerplateIcon300x220.png){: .paragraph-thumbnail }

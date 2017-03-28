@@ -32,8 +32,8 @@ sitemap: false
 /* Site header (from https://github.com/jglovier/jekyll-new/blob/gh-pages/css/main.css) */
 
 .site-header {
-  background: #7d110c;
-  border-bottom: 1px solid #333;
+  background: $site-header-color;
+  border-bottom: 1px solid $mahogany;
   min-height: 56px;
 }
 
@@ -41,7 +41,7 @@ sitemap: false
 .site-title:hover,
 .site-title:visited {
   display: block;
-  color: #e1d8b7;
+  color: $cream;
   font-size: 26px;
   letter-spacing: -1px;
   float: left;
@@ -59,7 +59,7 @@ sitemap: false
 
 .site-nav .page-link {
   margin-left: 20px;
-  color: #e1d8b7;
+  color: $cream;
   letter-spacing: -.5px;
 }
 
@@ -69,7 +69,7 @@ sitemap: false
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;
@@ -78,10 +78,17 @@ sitemap: false
 /* ***************************
    Custom Styles
 ***************************** */
-.center-image
-{
-    margin: 0 auto;
-    display: block;
+.center-image {
+  margin: 0 auto;
+  max-width: 90%;
+  display: block;
+}
+
+.center-image-with-vertical-padding {
+  margin: 0 auto;
+  padding: 20px 0px;
+  max-width: 90%;
+  display: block;
 }
 
 /* ***************************
@@ -89,8 +96,8 @@ sitemap: false
 ***************************** */
 .button-link-container {
 	text-align:center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 // TODO: Verify I need all of these:
@@ -98,23 +105,24 @@ sitemap: false
    YouTube Video Wrapper
 ***************************** */
 .videowrapper { 
-        float: none;
-        clear: both;
-        width: 70%;
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 25px;
-        height: 0;
-        margin: 20px auto 20px auto;
+  float: none;
+  clear: both;
+  width: 70%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin: 10px auto 50px auto;
 }
+
 .videowrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        max-width: 700px;
-        max-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 400px;
 }
 
 
@@ -140,7 +148,6 @@ sitemap: false
 .about-cleared {
   clear: both;
 }
-
 
 .paragraph-thumbnail {
 	display: block; 

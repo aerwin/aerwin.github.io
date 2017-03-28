@@ -36,20 +36,21 @@ a {
 	color: $link-color; 
 
 	&:visited { 
-		color: lighten($link-color, 20); 
+		color: $visited-link-color;
 	}
 
 	&:hover { 
-		color: darken($link-color, 20);
+		color: $hover-link-color;
 	}
 
 	&:focus { 
 		outline: thin dotted; 
-		color: darken($link-color, 20);
+		color: $hover-link-color;
 	}
 
 	&:hover, 
 	&:active { 
+		text-decoration: underline;
 		outline: 0; 
 	}
 }

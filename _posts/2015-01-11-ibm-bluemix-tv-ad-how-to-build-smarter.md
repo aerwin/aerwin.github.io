@@ -7,11 +7,60 @@ description: "It's definitely pretty cool to be watching an NFL playoff game, th
 tags: [bluemix, bluemix ui, youtube, tv ad, video, nfl playoffs]
 modified_time: '2015-01-11T18:53:15.975-06:00'
 image:
-    feature: "/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/tvCapture2to1.JPG"
+    feature: "2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/tvCapture2to1.JPG"
 ---
 
 It's definitely pretty cool to be watching an NFL playoff game between your home state [Indianapolis Colts](http://www.colts.com/){:target="_blank"} and the [Denver Broncos](http://www.denverbroncos.com/){:target="_blank"} (not to mention [Peyton Manning](http://www.nfl.com/player/peytonmanning/2501863/profile){:target="_blank"}), then see a 30-second commercial for your product come on the screen. That was the case a little before 4:00 pm CST this afternoon when the new [IBM Bluemix](https://www.bluemix.net){:target="_blank"} ad aired. And, more than just Bluemix as a whole being featured on TV &mdash; the Bluemix UI was also shown prominently! 
 
-![Bluemix TV Ad Capture](/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/tvCapture.JPG){: .center-image }
+![Bluemix TV Ad Capture](/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/tvCapture.JPG){: .center-image-with-vertical-padding }
 
-That's especially exciting for me because I'm the lead dev architect for the Bluemix UI and have been involved with it since we started the first prototypes two years ago. During that time, we've released the open beta last February, reached <a target="_blank" href="https://developer.ibm.com/bluemix/2014/06/30/general-availability/">general availability</a> at the end of June, and added a lot of awesome functionality over the rest of 2014. Along the way, there's been lots and lots of IBMers (from both development and <a target="_blank" href="https://www.ibm.com/design/">IBM Design</a>) who have shed a lot of blood, sweat, and tears to make it all happen. Now, as we prepare for the upcoming <a target="_blank" href="http://www.ibm.com/cloud-computing/us/en/interconnect/">IBM InterConnect 2015</a>, it's really gratifying to see these ads!<br /><br />So, with that intro, I mainly wanted to share some of my favorite captures from the <a target="_blank" href="https://www.youtube.com/watch?v=hpVkDHhFj2Q">YouTube version</a> of the video:<br /><figure><a href="http://1.bp.blogspot.com/-g924tPwF7EI/VLL3IkE944I/AAAAAAAEA8U/-FenLsjGeGg/s1600/youTube1.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: How to Build a Smarter App" src="http://1.bp.blogspot.com/-g924tPwF7EI/VLL3IkE944I/AAAAAAAEA8U/-FenLsjGeGg/s1600/youTube1.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>How to Build a Smarter App (0:02)</figcaption></figure><figure><a href="http://4.bp.blogspot.com/-M3xY4167m7M/VLL3JgJYqqI/AAAAAAAEA8k/7XHFfPdSRIA/s1600/youTube2.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Banner and Catalog" src="http://4.bp.blogspot.com/-M3xY4167m7M/VLL3JgJYqqI/AAAAAAAEA8k/7XHFfPdSRIA/s1600/youTube2.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>Bluemix UI Banner and Catalog (0:11)</figcaption></figure><figure><a href="http://4.bp.blogspot.com/-f6PWiO720Wg/VLL3KGI535I/AAAAAAAEA8c/5Ouiyt1w2RE/s1600/youTube3.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Business Analytics" src="http://4.bp.blogspot.com/-f6PWiO720Wg/VLL3KGI535I/AAAAAAAEA8c/5Ouiyt1w2RE/s1600/youTube3.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>Bluemix UI Catalog for Business Analytics (0:13)</figcaption></figure><figure><a href="http://4.bp.blogspot.com/-3SwBBJqpJg4/VLL3KK_E_aI/AAAAAAAEA8g/ALBwgb8WIqE/s1600/youTube4.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Watson" src="http://4.bp.blogspot.com/-3SwBBJqpJg4/VLL3KK_E_aI/AAAAAAAEA8g/ALBwgb8WIqE/s1600/youTube4.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>Bluemix UI Catalog for Watson (0:16)</figcaption></figure><figure><a href="http://2.bp.blogspot.com/-OhcNvOEpPFs/VLL3LUrF8wI/AAAAAAAEA80/6G0jpmTl3_g/s1600/youTube5.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Dashboard" src="http://2.bp.blogspot.com/-OhcNvOEpPFs/VLL3LUrF8wI/AAAAAAAEA80/6G0jpmTl3_g/s1600/youTube5.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>Bluemix UI Dashboard (0:20)</figcaption></figure><figure><a href="http://4.bp.blogspot.com/-Pf84rYJplE4/VLL3M22xuLI/AAAAAAAEA88/E4y4VLx7qhE/s1600/youTube6.png" target="_blank"><img class="tonyImg" alt="Bluemix YouTube: With IBM Bluemix Developers Can Work Better, Faster, Smarter" src="http://4.bp.blogspot.com/-Pf84rYJplE4/VLL3M22xuLI/AAAAAAAEA88/E4y4VLx7qhE/s1600/youTube6.png" scale="0" style="max-height: 1000px; max-width: 1600px; position: relative; text-align: center; width: 75%;"/></a><figcaption>With IBM Bluemix Developers Can Work Better, Faster, Smarter (0:27)</figcaption></figure>And, finally, I wanted to share a link to the video itself:<br /><div class="videowrapper"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/hpVkDHhFj2Q" frameborder="0" allowfullscreen></iframe></div></div>
+That's especially exciting for me because I'm the lead dev architect for the Bluemix UI and have been involved with it since we started the first prototypes two years ago. During that time, we've released the open beta last February, reached [general availability](https://www.ibm.com/blogs/bluemix/2014/06/general-availability){:target="_blank"} at the end of June, and added a lot of awesome functionality over the rest of 2014. Along the way, there's been lots and lots of IBMers (from both development and [IBM Design](https://www.ibm.com/design/){:target="_blank"}) who have shed a lot of blood, sweat, and tears to make it all happen. Now, as we prepare for the upcoming [IBM InterConnect 2015](http://www.ibm.com/cloud-computing/us/en/interconnect/){:target="_blank"}, it's really gratifying to see these ads!
+
+So, with that intro, I mainly wanted to share some of my favorite captures from the [YouTube version](https://www.youtube.com/watch?v=hpVkDHhFj2Q){:target="_blank"} of the video:
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube1.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: How to Build a Smarter App" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube1.png" scale="0" class="center-image"/>
+    </a>
+
+    <figcaption>How to Build a Smarter App (0:02)</figcaption></figure>
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube2.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Banner and Catalog" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube2.png" scale="0" class="center-image"/>
+    </a><figcaption>Bluemix UI Banner and Catalog (0:11)</figcaption>
+</figure>
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube3.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Business Analytics" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube3.png" scale="0" class="center-image"/>
+    </a>
+
+    <figcaption>Bluemix UI Catalog for Business Analytics (0:13)</figcaption>
+</figure>
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube4.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Watson" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube4.png" scale="0" class="center-image"/>
+        
+    </a><figcaption>Bluemix UI Catalog for Watson (0:16)</figcaption>
+</figure>
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube5.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Dashboard" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube5.png" scale="0" class="center-image"/>
+    </a>
+
+    <figcaption>Bluemix UI Dashboard (0:20)</figcaption>
+</figure>
+
+<figure>
+    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube6.png" target="_blank">
+        <img class="tonyImg" alt="Bluemix YouTube: With IBM Bluemix Developers Can Work Better, Faster, Smarter" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube6.png" scale="0" class="center-image"/>
+    </a>
+    <figcaption>With IBM Bluemix Developers Can Work Better, Faster, Smarter (0:27)</figcaption>
+</figure>
+
+And, finally, I wanted to share a link to the video itself:
+
+<div class="videowrapper"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/hpVkDHhFj2Q" frameborder="0" allowfullscreen></iframe></div>

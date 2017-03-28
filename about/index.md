@@ -2,7 +2,8 @@
 layout: page
 title: About Tony
 comments: false
-modified: 2016-08-07
+modified: 2017-03-26
+share: false
 ---
 
 <div class="about-wrapper">
