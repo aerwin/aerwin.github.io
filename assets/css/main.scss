@@ -91,6 +91,28 @@ sitemap: false
   display: block;
 }
 
+
+.tonySidebar {
+     background-color:  $cream;
+     border: 1px solid $mahogany; 
+     float: right; 
+     font-size: 16px; 
+     margin: 5px 0px 10px 10px; 
+     padding: 10px; 
+     width: 40%; 
+     z-index: 1000;
+}
+
+.tonySidebar > h4 {
+      font-size: .9em;
+      margin: 0px; 
+      text-align: center;
+}
+
+.tonySidebar > div {
+      font-size: 0.8em;
+}
+
 /* ***************************
    Button Links
 ***************************** */

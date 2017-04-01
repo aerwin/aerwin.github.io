@@ -1,4 +1,4 @@
-'---
+---
 layout: post
 title: 'Past Work: Maqetta'
 date: '2014-05-26T17:15:00.001-05:00'
@@ -16,15 +16,24 @@ tags:
 modified_time: '2014-05-26T17:15:00.001-05:00'
 blogger_orig_url: http://www.tonyerwin.com/2014/05/past-work-maqetta.html
 image:
-    feature: ""
-    thumb: ""
+    feature: "2014-05-26-past-work-maqetta/"
+    thumb: "2014-05-26-past-work-maqetta/maqettaIconThumb.png"
 ---
 
-![Bluemix UI Updates: Bluemix & Big Ben](/images/2014-11-20-bluemix-london-now-live/bluemixBigBen300.png){: .paragraph-thumbnail }
+![Maqetta Logo](/images/2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png){: .paragraph-thumbnail }{:style="max-height: 76px; max-width: 250px;width:25%;border: 1px solid;margin-bottom:10px;""}
 
-<div class="tonyBlog">As the UI lead for the IBM Bluemix web interface, I've had the chance to write about new functionality as it's been released over the last few months. We've just gone live with our updates for May, so please check out <a href="https://developer.ibm.com/bluemix/2014/05/28/bluemix-ui-exciting-may-updates/" target="_blank">my post<b>&nbsp;</b></a>on the&nbsp;<a href="https://developer.ibm.com/bluemix/blog/" target="_blank">official Bluemix blog</a>. The updates include:<br /><ul><li>Addition of "Bring your Own Buildpack" to the catalog</li><li>Enhanced navigation with collapsible navigation area.&nbsp;</li><li>Improved handling of app-related data changes on the server.&nbsp;</li><li>Refreshed styling of banner, Dashboard header, App/Service Detail headers, and input dialogs.&nbsp;</li><li>Updated documentation.</li><li>Numerous usability improvements and bug fixes.&nbsp;</li></ul><a href="http://1.bp.blogspot.com/-dqQFeZ0CMXg/U4ZPUie14wI/AAAAAAADfbE/X_9DqwvvNlM/s1600/mayDashboard.png" target="_blank"><img alt="Bluemix Dashboard" class="tonyImg" src="http://1.bp.blogspot.com/-dqQFeZ0CMXg/U4ZPUie14wI/AAAAAAADfbE/X_9DqwvvNlM/s1600/mayDashboard.png" scale="0" style="max-height: 956px; max-width: 1600px; width: 70%;margin-top:10px;margin-bottom:10px;" title="Bluemix Dashboard" /></a>And, for reference, here are pointers to my earlier blog posts regarding Bluemix UI updates:<ul><li><a href="http://bit.ly/1tMyGUL" target="_blank">April</a><a href="https://www.blogger.com/"></a></li><li><a href="http://bit.ly/1hudaP1" target="_blank">March</a></li></ul></div>
+Prior to my current work on <a href="http://www.bluemix.net/" target="_blank">BlueMix</a>, I was a committer on <a href="http://maqetta.org/" target="_blank">Maqetta</a>. Maqetta is an open source project that provides WYSIWYG visual authoring of HTML5 user interfaces (desktop and mobile). It is made available as part of the <a href="http://dojofoundation.org/" target="_blank">Dojo Foundation</a>.
 
-{: .button-link-container}
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/11/bluemix-london/){: .btn }{:target="_blank"}{: .center-text }
+I no longer work on Maqetta, and IBM no longer invests resources in it. But, as I start a new blog presence here, I wanted to consolidate links to my previous Maqetta-related articles and blog posts in one place.
 
-![Bluemix UI Updates: Region Selector](/images/2014-11-20-bluemix-london-now-live/bluemixRegionsPulldown_annotated.png){: .center-image }
+## Maqetta Means Mock-up Article Series
+- <a href="http://www.ibm.com/developerworks/web/library/mo-maqetta-1/index.html" target="_blank">Maqetta means mockup, Part 1: Design an HTML5 mobile UI</a> -- learn about Maqetta's major features while creating a prototype for a rich mobile application without writing any code!
+- <a href="http://www.ibm.com/developerworks/mobile/library/mo-maqetta-2/index.html" target="_blank">Maqetta means mockup, Part 2: Write custom JavaScript for your Maqetta mobile UI</a> -- take your prototype application to the next level by writing custom JavaScript using the Dojo toolkit to add interactive functionality
+- <a href="http://www.ibm.com/developerworks/mobile/library/mo-maqetta-3/index.html" target="_blank">Maqetta means mockup, Part 3: Deploy your Maqetta UI prototype with PhoneGap</a> -- use PhoneGap to turn a Maqetta-generated mobile prototype into a native app that is ready to deploy to actual devices
+
+## Blog Posts
+- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_integration_with_rad_8_53" target="_blank">Maqetta to RAD 8.5 Workflow</a>
+- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_gridx_configuration_wizard12" target="_blank">Maqetta GridX Configuration Wizard</a>
+- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/adding_custom_javascript3" target="_blank">Adding Your Own JavaScript to Maqetta Prototypes</a>
+- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_to_rad_8_5_workflow_part_ii1" target="_blank">Maqetta to RAD 8.5 Workflow, Part II: Mobile Browser Simulator</a>
+- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_widget_spotlight_html_tables" target="_blank">Maqetta Widget Spotlight: HTML Tables</a>
