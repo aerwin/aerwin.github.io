@@ -53,6 +53,8 @@ permalink:   /:year/:month/:title.html
 # Amount of post to show on home page
 paginate: 5
 
+logo: avatar.png
+
 kramdown:
   input: GFM
   auto_ids: true
