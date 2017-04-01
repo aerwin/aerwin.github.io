@@ -91,7 +91,7 @@ If you follow that link, the redirect from `http` to `https` still occurs. But, 
 
 Basically, the same certificate that was present for the `*.mybluemix.net` domain is still being served, but its domain info doesn't match my `tonyerwin.com` custom domain. So, Chrome tells me I should probably stay clear and not continue.
 
-Clearly, you wouldn't want this kind message appearing for your production apps. The only way to solve this problem is to upload an SSL certificate which matches `*.tonyerwin.com`. You can learn all about using your own SSL certificates in my post called <a target="_blank" href="http://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html"><i>Bluemix UI: SSL Certificates and Custom Domains</i></a>.
+Clearly, you wouldn't want this kind message appearing for your production apps. The only way to solve this problem is to upload an SSL certificate which matches `*.tonyerwin.com`. You can learn all about using your own SSL certificates in my post called <a target="_blank" href="https://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html"><i>Bluemix UI: SSL Certificates and Custom Domains</i></a>.
 
 ## Conclusion
 
