@@ -16,7 +16,7 @@ body {
 .entry,
 .hentry {
 	max-width: 1000px; /* AWE TODO: Added */
-	margin: 50px auto 0px auto; /* AWE TODO: Added */
+	margin: 30px auto 0px auto; /* AWE TODO: Added */
     background-color: #fff; /* AWE TODO: Added */
 
 	@include clearfix;
@@ -62,7 +62,11 @@ body {
 /* AWE TODO: added */
 .entry-title {
 	text-align: center;
-	margin: 5px 20px 5px 20px;
+	margin: 20px 20px 5px 20px;
+
+	@media #{$medium} {
+		margin-top: 5px;
+	}
 }
 
 .header-title {
