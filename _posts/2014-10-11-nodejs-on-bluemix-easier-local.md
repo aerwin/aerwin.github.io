@@ -19,7 +19,7 @@ modified_time: '2015-01-13T15:08:25.367-06:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-7414599619318526008
 blogger_orig_url: http://www.tonyerwin.com/2014/10/nodejs-on-bluemix-easier-local.html
 image:
-    feature: "2014-10-11-nodejs-on-bluemix-easier-local/catalogFiltering.png"
+    feature: "2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_EnvVars.png"
     thumb: "2014-10-11-nodejs-on-bluemix-easier-local/googleThumb72.png"
 ---
 

@@ -15,7 +15,7 @@ modified_time: '2014-10-08T09:12:46.301-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-9107523616307972497
 blogger_orig_url: http://www.tonyerwin.com/2014/10/bluemix-ui-updates-say-hello-to-watson.html
 image:
-    feature: "2014-10-08-bluemix-ui-updates-say-hello-to-watson/"
+    feature: "2014-10-08-bluemix-ui-updates-say-hello-to-watson/WatsonForBluemix2-to-1_880.png"
     thumb: "2014-10-08-bluemix-ui-updates-say-hello-to-watson/watsonLogo_thumb.png"
 ---
 

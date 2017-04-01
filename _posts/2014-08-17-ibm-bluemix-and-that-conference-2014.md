@@ -17,7 +17,7 @@ modified_time: '2014-09-27T20:19:10.594-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-2088248814310201783
 blogger_orig_url: http://www.tonyerwin.com/2014/08/ibm-bluemix-and-that-conference-2014.html
 image:
-    feature: "2014-08-17-ibm-bluemix-and-that-conference-2014/"
+    feature: "2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG"
     thumb: "2014-08-17-ibm-bluemix-and-that-conference-2014/bluemixThatConferenceThumb2.png"
 ---
 

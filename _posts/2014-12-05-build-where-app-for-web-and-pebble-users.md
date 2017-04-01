@@ -27,7 +27,7 @@ modified_time: '2015-01-11T18:23:29.570-06:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-4238120236195489858
 blogger_orig_url: http://www.tonyerwin.com/2014/12/build-where-app-for-web-and-pebble-users.html
 image:
-    feature: "2014-12-05-build-where-app-for-web-and-pebble-users/blogger_thumb72.pn"
+    feature: "2014-12-05-build-where-app-for-web-and-pebble-users/whereApp_pebble1.png"
     thumb: "2014-12-05-build-where-app-for-web-and-pebble-users/bluemix_logo_multi_181_Thumb.png"
 ---
 

@@ -21,8 +21,8 @@ modified_time: '2016-07-29T22:23:13.710-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-8278641163248189864
 blogger_orig_url: http://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html
 image:
-    feature: "2014-09-15-bluemix-ui-ssl-certificates-and-custom/Padlock-gold-small-72_with_label.png"
-    thumb: "2014-09-15-bluemix-ui-ssl-certificates-and-custom/ustDomainSSL6_nohead_annotated.png"
+    feature: "2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL6_nohead_annotated.png"
+    thumb: "2014-09-15-bluemix-ui-ssl-certificates-and-custom/Padlock-gold-small-72_with_label.png"
 ---
 
 ![Bluemix UI: SSL Certificates for Custom Domains](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/mime-certificate300_withLabel.png){: .paragraph-thumbnail }

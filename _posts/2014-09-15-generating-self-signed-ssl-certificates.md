@@ -20,7 +20,7 @@ modified_time: '2014-09-21T15:20:30.478-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-2361234527744687307
 blogger_orig_url: http://www.tonyerwin.com/2014/09/generating-self-signed-ssl-certificates.html
 image:
-    feature: "2014-09-15-generating-self-signed-ssl-certificates/padlock200test.png"
+    feature: "2014-09-15-generating-self-signed-ssl-certificates/padlock_with_label.png"
     thumb: "2014-09-15-generating-self-signed-ssl-certificates/padlock_thumb.png"
 ---
 
