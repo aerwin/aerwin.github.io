@@ -23,6 +23,8 @@ owner:
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
   google_plus:    +TonyErwin
+  # Facebook App ID
+  fb_appId:       716104001772657
 
 # Background image to be tiled on all pages
 background: 
