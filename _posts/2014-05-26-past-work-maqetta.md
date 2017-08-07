@@ -16,7 +16,7 @@ tags:
 modified_time: '2014-05-26T17:15:00.001-05:00'
 blogger_orig_url: http://www.tonyerwin.com/2014/05/past-work-maqetta.html
 image:
-    feature: "2014-05-26-past-work-maqetta/"
+    feature: "2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png"
     thumb: "2014-05-26-past-work-maqetta/maqettaIconThumb.png"
 ---
 
