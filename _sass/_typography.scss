@@ -25,6 +25,8 @@ h1 {
 	@media #{$medium} {
 		@include font-rem(32);
 	}
+
+	margin-bottom: 5px;
 }
 
 /* 

@@ -84,6 +84,12 @@ sitemap: false
   display: block;
 }
 
+.emoticon-image {
+  max-width: 20px;
+  max-height: 20px;
+  margin-top: -3px;
+}
+
 .center-image-with-vertical-padding {
   margin: 0 auto;
   padding: 20px 0px;
@@ -93,24 +99,24 @@ sitemap: false
 
 
 .tonySidebar {
-     background-color:  $cream;
-     border: 1px solid $mahogany; 
-     float: right; 
-     font-size: 16px; 
-     margin: 5px 0px 10px 10px; 
-     padding: 10px; 
-     width: 40%; 
-     z-index: 1000;
+   background-color:  $cream;
+   border: 1px solid $mahogany; 
+   float: right; 
+   font-size: 16px; 
+   margin: 5px 0px 10px 10px; 
+   padding: 10px; 
+   width: 40%; 
+   z-index: 1000;
 }
 
 .tonySidebar > h4 {
-      font-size: .9em;
-      margin: 0px; 
-      text-align: center;
+  font-size: .9em;
+  margin: 0px; 
+  text-align: center;
 }
 
 .tonySidebar > div {
-      font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 /* ***************************
