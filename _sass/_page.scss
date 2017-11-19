@@ -62,7 +62,8 @@ body {
 /* AWE TODO: added */
 .entry-title {
 	text-align: center;
-	margin: 20px 20px 5px 20px;
+	margin: 20px auto 5px auto;
+	padding: 0px 80px;
 
 	@media #{$medium} {
 		margin-top: 5px;
