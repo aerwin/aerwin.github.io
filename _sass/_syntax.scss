@@ -6,7 +6,18 @@ pre.highlight {
 	padding: 1em;
 }
 
-.highlight {
+	.highlight {
+
+	::-moz-selection { /* Code for Firefox */
+		color: black;
+		background: white;
+	}
+
+	::selection {
+		color: black; 
+		background: white;
+	}
+
 	margin-bottom: 1.5em;
 	@include font-rem(12);
 	line-height: 1.5;
