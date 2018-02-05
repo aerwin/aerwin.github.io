@@ -183,7 +183,9 @@ If you prefer to edit the route of the existing app, follow the steps below:
 At this point, we have an app using a route making use of our custom domain. However, if you tried to access your app via the route, it would fail. To resolve this, you need to do some DNS configuration. Specifically, you need to add a `CNAME` record that maps your domain to the hostname of the Bluemix router. Since we plan to use our own SSL certificates, the hostname we want to reference is `secure.us-south.bluemix.net`. NOTE: The host to use varies by the region your app is hosted in:
 
 - US South: `secure.us-south.bluemix.net`
+- US Easty: `secure.us-east.bluemix.net`
 - London: `secure.eu-gb.bluemix.net`
+- Frankfurt: `secure.eu-de.bluemix.net`
 - Sydney: `secure.au-syd.bluemix.net`
 
 The mechanism for adding a `CNAME` record is going to vary depending on your provider. For GoDaddy, it's rather simple. I go to the `DNS Management` configuration page for my `tonyerwin.com` domain. From there, I click the `Add` button. This brings up a panel like the one in the screenshot below. On it, I've set `Type` to _CNAME_, the `Host` to `*.bluemix` (the `tonyerwin.com` part is assumed), and `Points to` to `secure.us-south.bluemix.net`.
