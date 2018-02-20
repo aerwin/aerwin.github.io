@@ -1,5 +1,5 @@
 title:            Tony Erwin's Tech Blog
-description:      Blog on technical topics related to my work at IBM -- in particular Bluemix, JavaScript, and user interfaces. Thoughts here are my own.
+description:      Blog on technical topics related to my work at IBM -- in particular cloud, UI/UX, JavaScript, Node.js, microservices, etc. Thoughts here are my own.
 disqus_shortname: tonyerwin
 reading_time:     false
 words_per_minute: 200
@@ -11,7 +11,7 @@ url: https://www.tonyerwin.com
 owner:
   name:           Tony Erwin
   avatar:         avatar.png
-  bio:            "Senior Software Engineer at IBM. Lead Architect for Bluemix UI. Interests in cloud, UI/UX, JavaScript, Node.js, microservices, etc."
+  bio:            "Senior Software Engineer at IBM. Lead Architect for IBM Cloud UI. Interests in cloud, UI/UX, JavaScript, Node.js, microservices, etc."
   email:          tony@tonyerwin.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        tonyerwin  
