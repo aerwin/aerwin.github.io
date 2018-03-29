@@ -14,7 +14,7 @@ image:
     thumb: "2016-03-01-new-bluemix-look/bluemix_logo_multi_181_Thumb.png"
 ---
 
-We have been listening to your feedback on the [Bluemix UI](https://console.ng.bluemix.net/) and have used that to design a brand new user experience (UX) that we believe will streamline your workflows. The new experience is now live for your immediate use. When you visit the Bluemix UI, you can choose to opt-in for the new experience via a “Try the new Bluemix” link in the header bar:
+We have been listening to your feedback on the [Bluemix UI](https://console.bluemix.net/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-NewLook2016) and have used that to design a brand new user experience (UX) that we believe will streamline your workflows. The new experience is now live for your immediate use. When you visit the Bluemix UI, you can choose to opt-in for the new experience via a “Try the new Bluemix” link in the header bar:
 
 ![Try New Bluemix Screenshot](/images/2016-03-01-new-bluemix-look/try-new-bluemix.png){: .center-image }
 

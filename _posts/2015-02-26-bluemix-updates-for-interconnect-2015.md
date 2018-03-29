@@ -17,7 +17,7 @@ I’m writing this edition of the blog from Las Vegas as [IBM InterConnect 2015]
 
 - Integration of Container and Virtual Machines as first-class citizens in the Dashboard.
 - Introduction of a Guided Experience section in the Dashboard to help you get started.
-- Addition of new zone pages for [Open Architecture](https://console.ng.bluemix.net/solutions/open-architecture){:target="_blank"}, [Hybrid Cloud](https://console.ng.bluemix.net/solutions/hybrid-cloud){:target="_blank"}, [Watson](https://console.ng.bluemix.net/solutions/watson){:target="_blank"}, and [Internet of Things](https://console.ng.bluemix.net/solutions/iot){:target="_blank"}. 
+- Addition of new zone pages for [Open Architecture](https://console.bluemix.net/solutions/open-architecture){:target="_blank"}, [Hybrid Cloud](https://console.bluemix.net/solutions/hybrid-cloud){:target="_blank"}, [Watson](https://console.bluemix.net/solutions/watson){:target="_blank"}, and [Internet of Things](https://console.bluemix.net/solutions/iot){:target="_blank"}. 
 - Updated landing/home page.
 - Ability to receive billing/usage notifications.
 - Capability to purchase third-party service plans.

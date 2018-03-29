@@ -15,8 +15,8 @@ image:
 
 We’re following up some [cool Bluemix updates near the end of 2014](https://developer.ibm.com/bluemix/2014/12/19/bluemix-updates-warm-winter-gifts/){:target="_blank"} with more exciting updates to kick off 2015. The latest refresh includes:
 
-- Integration of the [IBM MobileFirst Platform for iOS](https://console.ng.bluemix.net/#/store/cloudOEPaneId=store&amp;appTemplateGuid=mobileFirstPlatform){:target="_blank"} (beta) making it easier than ever to create high-powered iOS apps with Bluemix
-- Enhancements to the [iOS Solutions page](https://console.ng.bluemix.net/#/solutions/solution=iOS){:target="_blank"} including getting started references and the ability to create samples
+- Integration of the [IBM MobileFirst Platform for iOS](https://console.bluemix.net/#/store/cloudOEPaneId=store&amp;appTemplateGuid=mobileFirstPlatform){:target="_blank"} (beta) making it easier than ever to create high-powered iOS apps with Bluemix
+- Enhancements to the [iOS Solutions page](https://console.bluemix.net/#/solutions/solution=iOS){:target="_blank"} including getting started references and the ability to create samples
 - Ability to enable an existing Node.js app to serve as the backend for mobile clients
 - Addition of a brand new, simplified path for creating both web and mobile apps.
 

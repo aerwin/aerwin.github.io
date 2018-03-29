@@ -18,7 +18,7 @@ image:
 ---
 
 # Introduction
-In June, I had the honor of attending the [Cloud Foundry Summit Silicon Valley 2017](https://www.cloudfoundry.org/event/summit-silicon-valley-2017/){:target="_blank"} conference in Santa Clara, CA. My two submissions related to [Bluemix UI](https://console.bluemix.net){:target="_blank"} architecture were selected, and I got the chance to present them as part of the conference's Cloud Native Node.js track. In this post, I'll briefly describe my talks as well as share some general takeaways from the conference.
+In June, I had the honor of attending the [Cloud Foundry Summit Silicon Valley 2017](https://www.cloudfoundry.org/event/summit-silicon-valley-2017/){:target="_blank"} conference in Santa Clara, CA. My two submissions related to [Bluemix UI](https://console.bluemix.net/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CFSummit2017){:target="_blank"} architecture were selected, and I got the chance to present them as part of the conference's Cloud Native Node.js track. In this post, I'll briefly describe my talks as well as share some general takeaways from the conference.
 
 # Topic 1: Microservices Architecture of the Bluemix UI
 The full title of my first topic was [_To Kill a Monolith: Slaying the Demons of a Monolith with Node.js Microservices on Cloud Foundry_](http://sched.co/AJmh){:target="_blank"}. The intent of the talk to was to trace my team's journey migrating the Bluemix UI from a monolithic app to a microservices architecture. 

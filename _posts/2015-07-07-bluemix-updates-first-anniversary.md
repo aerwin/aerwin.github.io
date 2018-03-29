@@ -18,7 +18,7 @@ image:
 
 ![Bluemix Updates: First Anniversary Celebration!](/images/2015-07-07-bluemix-updates-first-anniversary/bluemixToast300dark.png){: .paragraph-thumbnail }
 
-It’s hard to believe it’s already been a year since we [announced](https://developer.ibm.com/bluemix/2014/06/30/general-availability/){:target="_blank"} the general availability of [Bluemix](https://console.ng.bluemix.net){:target="_blank"}. But, in honor of [our first anniversary](https://developer.ibm.com/bluemix/2015/06/18/happy-birthday-bluemix/){:target="_blank"}, we’ve got some big news to share. The exciting updates that went live late last week include:
+It’s hard to believe it’s already been a year since we [announced](https://developer.ibm.com/bluemix/2014/06/30/general-availability/){:target="_blank"} the general availability of [Bluemix](https://console.bluemix.net/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-NewLook2016){:target="_blank"}. But, in honor of [our first anniversary](https://developer.ibm.com/bluemix/2015/06/18/happy-birthday-bluemix/){:target="_blank"}, we’ve got some big news to share. The exciting updates that went live late last week include:
 
 - Official release of IBM Containers making it easier to deliver production applications across hybrid environments
 - Addition of service keys to facilitate connecting to services from outside of Bluemix

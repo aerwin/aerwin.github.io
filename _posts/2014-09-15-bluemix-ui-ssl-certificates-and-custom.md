@@ -27,7 +27,7 @@ image:
 
 ![Bluemix UI: SSL Certificates for Custom Domains](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/mime-certificate300_withLabel.png){: .paragraph-thumbnail }
 
-In my previous post [_Redirecting HTTP to HTTPS with Node.js &amp; Express on IBM Bluemix_](https://www.tonyerwin.com/2014/09/redirecting-http-to-https-with-nodejs.html){:target="_blank"}, I described how you automatically get basic SSL support if you use the default domain when configuring your apps to run on [IBM Bluemix](https://www.bluemix.net/){:target="_blank"}. However, if you use a custom domain, you'll get domain mismatch errors in the browser. These errors are ugly and likely to scare away users. In this post, I'll show you how to fix this problem by associating your own SSL certificate with your custom domain. This new functionality went live in the [August 2014 refresh](https://www.tonyerwin.com/2014/09/bluemix-ui-updates-august-2014.html){:target="_blank"} of the Bluemix UI. Along the way, you'll learn how to do the following:
+In my previous post [_Redirecting HTTP to HTTPS with Node.js &amp; Express on IBM Bluemix_](https://www.tonyerwin.com/2014/09/redirecting-http-to-https-with-nodejs.html){:target="_blank"}, I described how you automatically get basic SSL support if you use the default domain when configuring your apps to run on [IBM Bluemix](?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts){:target="_blank"}. However, if you use a custom domain, you'll get domain mismatch errors in the browser. These errors are ugly and likely to scare away users. In this post, I'll show you how to fix this problem by associating your own SSL certificate with your custom domain. This new functionality went live in the [August 2014 refresh](https://www.tonyerwin.com/2014/09/bluemix-ui-updates-august-2014.html){:target="_blank"} of the Bluemix UI. Along the way, you'll learn how to do the following:
 
 1. [Add a custom domain.](#AddCustomDomain)
 2. [Setup an app to use the custom domain.](#CreateAppUsingCustomDomain)
@@ -77,7 +77,8 @@ When it comes time to associate a certificate with your domain, you will need th
 - **Intermediate certificate**
     - You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third-party. You might not require an intermediate certificate if using a self-signed certificate for testing your application prior to deploying it to production.
 
-See the [_Securing Apps_](https://www.ng.bluemix.net/docs/#manageapps/index-gentopic4.html){:target="_blank"} article in the [Bluemix Documentation](https://www.ng.bluemix.net/docs){:target="_blank"} for the most current information on supported certificate types.
+
+See the [_Uploading SSL Certificates_](https://console.bluemix.net/docs/apps/secapps.html#ssl_csr?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts){:target="_blank"} article in the [Bluemix Documentation](https://console.bluemix.net/docs/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts){:target="_blank"} for the most current information on supported certificate types.
 
 <h2 id="AddCustomDomain">Adding a Custom Domain</h2>
 
@@ -89,7 +90,7 @@ See the [_Securing Apps_](https://www.ng.bluemix.net/docs/#manageapps/index-gent
 
 Now that we have the prerequisites out of the way, let's start by adding a custom domain via the Bluemix UI. (NOTE: You can also create domains with the [`cf` command line tool](http://docs.cloudfoundry.org/devguide/deploy-apps/domains-routes.html){:target="_blank"}.)
 
-1. Log in to the <a target="_blank" href="https://www.bluemix.net">Bluemix UI</a>.
+1. Log in to the <a target="_blank" href="https://console.bluemix.net/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts">Bluemix UI</a>.
 2. In the banner, open the _Organizations_ menu and choose **Manage Organizations**.
 
 [![Bluemix UI: Select Manage Organizations from Banner](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png){: .center-image }](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)
