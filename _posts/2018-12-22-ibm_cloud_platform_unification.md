@@ -34,7 +34,7 @@ Prior to this unification, there were two distinct UI's at different URLs -- one
 &nbsp;
 [![IBM Cloud Console Dashboard](/images/2018-12-22-ibm_cloud_platform_unification_project/ibm_cloud_console_dashboard.png){: .center-image }](/images/2018-12-22-ibm_cloud_platform_unification_project/ibm_cloud_console_dashboard.png)
 
-# Rollout of `cloud.ibm.com`
+# Rollout of cloud.ibm.com
 With such massive changes, we faced a number of interesting questions about how to best rollout the new experience. I will summarize our thought process here, but for more details about our strategy, see _[A/B Test Deployment — Rollout of cloud.ibm.com](https://www.ibm.com/blogs/bluemix/2018/11/a-b-test-deployment-rollout-of-cloud-ibm-com/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification){:target="_blank"}_ written by myself and colleague [Nic Sauriol](https://www.linkedin.com/in/nsauriol/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification){:target="_blank"}.
 
 We were very sensitive to the fact that the holiday season is a key time of year for many of our clients, and we did not want to do anything to disrupt their operations. On the other hand, we believe the new experience offers improvements that our clients could benefit from immediately. Ultimately, we decided to go with an A/B rollout strategy with two consoles running side by side. The diagram below shows a very high-level architecture. Both consoles are deployed separately, but use exactly the same set of [IBM Cloud Platform APIs](https://cloud.ibm.com/apidocs?category=platform_services&cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification){:target="_blank"} on the backend.
