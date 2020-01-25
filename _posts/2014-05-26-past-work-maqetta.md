@@ -32,8 +32,8 @@ I no longer work on Maqetta, and IBM no longer invests resources in it. But, as 
 - <a href="/images/2014-05-26-past-work-maqetta/mo-maqetta-3.pdf" target="_blank">Maqetta means mockup, Part 3: Deploy your Maqetta UI prototype with PhoneGap</a> -- use PhoneGap to turn a Maqetta-generated mobile prototype into a native app that is ready to deploy to actual devices
 
 ## Blog Posts
-- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_integration_with_rad_8_53" target="_blank">Maqetta to RAD 8.5 Workflow</a>
-- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_gridx_configuration_wizard12" target="_blank">Maqetta GridX Configuration Wizard</a>
-- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/adding_custom_javascript3" target="_blank">Adding Your Own JavaScript to Maqetta Prototypes</a>
-- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_to_rad_8_5_workflow_part_ii1" target="_blank">Maqetta to RAD 8.5 Workflow, Part II: Mobile Browser Simulator</a>
-- <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_widget_spotlight_html_tables" target="_blank">Maqetta Widget Spotlight: HTML Tables</a>
+- <a href="/images/2014-05-26-past-work-maqetta/Maqetta to RAD 8_Part1.pdf" target="_blank">Maqetta to RAD 8.5 Workflow</a>
+- <a href="/images/2014-05-26-past-work-maqetta/Maqetta GridX Configuration Wizard (Maqetta_ Visual Authoring of HTML5 User Interfaces).pdf" target="_blank">Maqetta GridX Configuration Wizard</a>
+- <a href="/images/2014-05-26-past-work-maqetta/Adding Your Own JavaScript to Maqetta Prototypes (Maqetta_ Visual Authoring of HTML5 User Interfaces).pdf" target="_blank">Adding Your Own JavaScript to Maqetta Prototypes</a>
+- <a href="/images/2014-05-26-past-work-maqetta/Maqetta to RAD 8_Part2.pdf" target="_blank">Maqetta to RAD 8.5 Workflow, Part II: Mobile Browser Simulator</a>
+- <a href="/images/2014-05-26-past-work-maqetta/Maqetta Widget Spotlight_ HTML Tables (Maqetta_ Visual Authoring of HTML5 User Interfaces).pdf" target="_blank">Maqetta Widget Spotlight: HTML Tables</a>
