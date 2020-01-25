@@ -27,9 +27,9 @@ Prior to my current work on <a href="http://www.bluemix.net/" target="_blank">Bl
 I no longer work on Maqetta, and IBM no longer invests resources in it. But, as I start a new blog presence here, I wanted to consolidate links to my previous Maqetta-related articles and blog posts in one place.
 
 ## Maqetta Means Mock-up Article Series
-- <a href="http://www.ibm.com/developerworks/web/library/mo-maqetta-1/index.html" target="_blank">Maqetta means mockup, Part 1: Design an HTML5 mobile UI</a> -- learn about Maqetta's major features while creating a prototype for a rich mobile application without writing any code!
-- <a href="http://www.ibm.com/developerworks/mobile/library/mo-maqetta-2/index.html" target="_blank">Maqetta means mockup, Part 2: Write custom JavaScript for your Maqetta mobile UI</a> -- take your prototype application to the next level by writing custom JavaScript using the Dojo toolkit to add interactive functionality
-- <a href="http://www.ibm.com/developerworks/mobile/library/mo-maqetta-3/index.html" target="_blank">Maqetta means mockup, Part 3: Deploy your Maqetta UI prototype with PhoneGap</a> -- use PhoneGap to turn a Maqetta-generated mobile prototype into a native app that is ready to deploy to actual devices
+- <a href="/images/2014-05-26-past-work-maqetta/mo-maqetta-1.pdf" target="_blank">Maqetta means mockup, Part 1: Design an HTML5 mobile UI</a> -- learn about Maqetta's major features while creating a prototype for a rich mobile application without writing any code!
+- <a href="/images/2014-05-26-past-work-maqetta/mo-maqetta-2.pdf" target="_blank">Maqetta means mockup, Part 2: Write custom JavaScript for your Maqetta mobile UI</a> -- take your prototype application to the next level by writing custom JavaScript using the Dojo toolkit to add interactive functionality
+- <a href="/images/2014-05-26-past-work-maqetta/mo-maqetta-3.pdf" target="_blank">Maqetta means mockup, Part 3: Deploy your Maqetta UI prototype with PhoneGap</a> -- use PhoneGap to turn a Maqetta-generated mobile prototype into a native app that is ready to deploy to actual devices
 
 ## Blog Posts
 - <a href="https://www.ibm.com/developerworks/community/blogs/MaqettaAuthoring/entry/maqetta_integration_with_rad_8_53" target="_blank">Maqetta to RAD 8.5 Workflow</a>
