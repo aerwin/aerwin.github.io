@@ -13,7 +13,7 @@ tags:
 - micro-frontends
 modified_time: '2021-08-22T11:20:00.000-06:00'
 image:
-    feature: "2021-01-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png"
+    feature: "2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png"
 ---
 
 # Introduction
@@ -22,7 +22,7 @@ The <a href="https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-About" targ
 I became the lead full-stack architect in 2014, and had the opportunity to work with a countless number of talented developers, UI designers, and offering managers as the console’s architecture and user experience (UX) were regularly updated and improved to keep pace with the maturing IBM Cloud. Last year, I left this amazing team for another role as an architect on the <a href="https://www.ibm.com/cloud/financial-services" target="_blank">IBM Cloud for Financial Services</a>. As I reflect on the experience, I’ll share with you how the console architecture has evolved from its monolithic origins into a highly scalable, modern <a href="https://martinfowler.com/articles/microservices.html" target="_blank">microservice-based</a> system composed of dozens of <a href="https://martinfowler.com/articles/micro-frontends.html" target="_blank">micro front ends</a>. In particular, I’ll highlight the critical role that <a href="https://nodejs.org/" target="_blank">Node.js</a> played in this evolution.
 
 &nbsp;
-[![IBM Cloud Console Architecture Diagram](/images/2021-01-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png){: .center-image }](/images/2021-01-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png)
+[![IBM Cloud Console Architecture Diagram](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png)
 
 {: .button-link-container}
 [Read the Full Article on IBM Developer](https://developer.ibm.com/articles/evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/){: .btn }{:target="_blank"}{: .center-text }
