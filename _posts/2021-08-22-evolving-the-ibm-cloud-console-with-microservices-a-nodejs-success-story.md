@@ -111,7 +111,7 @@ The insertion of the common header is one of the most important parts of the pro
 
 [![IBM Cloud Console: Page Composition](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg)
 
-## Executing the migration From monolith to microservices
+## Executing the migration from monolith to microservices
 
 Armed with these ideas and the dreams of numerous benefits, we started down the path of transitioning to the new architecture. One problem every team faces when migrating from monolith to microservices is determining how best to partition the existing monolith into microservices. Unfortunately, there's no one-size-fits-all paradigm for making this determination, and it's often more art than science.
 
