@@ -7,3 +7,7 @@ node_modules
 Gemfile.lock
 .sass-cache
 .jekyll-metadata
+_drafts
+vendor/
+.bundle/
+

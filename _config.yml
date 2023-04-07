@@ -22,7 +22,7 @@ owner:
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +TonyErwin
+  # google_plus:    +TonyErwin
   # Facebook App ID
   fb_appId:       716104001772657
 
@@ -90,3 +90,9 @@ exclude:
   - package.json
   - spec
   - tmp
+  - .ruby-gemset
+  - .ruby-version
+  - Gemfile.lock
+  - Makefile
+  - README.md
+  - vendor/
