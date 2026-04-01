@@ -2,7 +2,7 @@
 layout: post
 title: IBM Bluemix and That Conference 2014
 date: '2014-08-17T20:17:00.000-05:00'
-author: Tony Erwin
+
 description: "Last week, I attended That Conference 2014 in WI. The conference is a major tech event with 1000+ attendees. I was there to share IBM Bluemix with this large group of developers. This post describes the highlights of that experience."
 tags:
 - bluemix
@@ -13,15 +13,17 @@ tags:
 - paas
 - cloud
 - user interface
+categories: [Architecture]
 modified_time: '2014-09-27T20:19:10.594-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-2088248814310201783
 blogger_orig_url: http://www.tonyerwin.com/2014/08/ibm-bluemix-and-that-conference-2014.html
+
 image:
-    feature: "2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG"
-    thumb: "2014-08-17-ibm-bluemix-and-that-conference-2014/bluemixThatConferenceThumb2.png"
+  path: "/images/2014-08-17-ibm-bluemix-and-that-conference-2014/bluemixThatConferenceThumb2.png"
+  show: false
 ---
 
-[![IBM Bluemix Banners](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG){: .paragraph-thumbnail }{:style="width: 20%;max-height: 800px; max-width: 1600px;"}](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)
+[![IBM Bluemix Banners](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)
 
 About this time a week ago, I was in the middle of the opening night meet-and-greet at <a href="https://www.thatconference.com/" target="_blank">That Conference 2014</a> held at the <a href="http://www.kalahariresorts.com/wisconsin" target="_blank">Kalahari Resort</a> in Wisconsin Dells, WI. While the "Dells" (as we in the region refer to it) is the self-proclaimed <a href="http://www.wisdells.com/wisconsin-dells.htm" target="_blank">"Water Park Capital of the World"</a>, That Conference is a major tech event with 1000+ software developers, designers, and IT professionals getting together to share information about happenings in mobile, web, and cloud. I was there to represent <a href="https://www.ibm.com/" target="_blank">IBM</a> (the Principal Sponsor of the conference) with the goal of sharing <a href="https://www.bluemix.net/" target="_blank">IBM Bluemix</a> with a new group of developers.
 
@@ -29,7 +31,7 @@ _For those readers who may not know, Bluemix is IBM's new Platform-as-a-Service 
 
 ## Working the Bluemix Booth
 
-[![IBM Bluemix: T-shirts](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG){: .paragraph-thumbnail }{:style="width: 25%;max-height: 800px; max-width: 1600px;"}](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)
+[![IBM Bluemix: T-shirts](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)
 
 I drove over from MN and met up with colleagues <a href="https://twitter.com/MarkVanderwiele" target="_blank">Mark VanderWiele</a> and <a href="https://twitter.com/CloudsWithCarl" target="blank">Carl Osipov</a>. We spent most of our time from Sunday night through Wednesday at the IBM booth talking Bluemix with attendees. There was regular traffic and we ended up running out of the very popular t-shirts we were handing out as SWAG. :) <br /><br />The vast majority of visitors to the booth (like 99%) had never heard of Bluemix. This wasn't terribly surprising since we just <a href="https://developer.ibm.com/bluemix/2014/06/30/general-availability/" target="_blank">GA'ed at the end of June</a>, so it offered us a great opportunity to spread the word. Folks who stayed at the booth long enough to see demos of the Bluemix UI and/or sample apps seemed to leave with a favorable impression. For example, I tweeted the following after <a href="https://twitter.com/FarahPrasla" target="_blank">Farah Prasla</a> got her introduction to Bluemix:
 
@@ -37,7 +39,7 @@ I drove over from MN and met up with colleagues <a href="https://twitter.com/Mar
 
 ## Bluemix Break-out Sessions
 
-[![IBM Bluemix: Carl Osipov Presenting](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG){: .paragraph-thumbnail }{:style="width: 25%;max-height: 800px; max-width: 1600px;"}](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)
+[![IBM Bluemix: Carl Osipov Presenting](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)
 
 The team also held two Bluemix breakout sessions on Tuesday afternoon. These sessions were intended to take people through a deeper dive to see how easy it was to construct the sample apps shown at the booth: 
 
@@ -69,5 +71,5 @@ In short, we had a great time last week at That Conference 2014. The conference 
 
 Most importantly, we were able to connect with a lot of people who had never heard of Bluemix. For those people, please let us know if you have any post-conference questions or other feedback. And, if you haven't already, be sure to go out to <a href="https://www.bluemix.net/" target="_blank">Bluemix.net</a> and sign-up for a free 30-day trial. Also, check out the <a href="https://developer.ibm.com/answers?community=bluemix" target="_blank">Bluemix Dev-to-Dev Community</a> and follow <a href="https://twitter.com/IBMBlueMix" target="_blank">@IBMBluemix</a> on Twitter. 
 
-![IBM Bluemix and That Conference 2014](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/bluemixThatConference.png){: .center-image }
+![IBM Bluemix and That Conference 2014](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/bluemixThatConference.png)
 

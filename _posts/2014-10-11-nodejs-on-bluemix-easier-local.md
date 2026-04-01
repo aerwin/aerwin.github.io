@@ -2,7 +2,7 @@
 layout: post
 title: 'Node.js on Bluemix: Easier Local Development with cfenv'
 date: '2014-10-11T15:01:00.001-05:00'
-author: Tony Erwin
+
 description: "I'm a fan of the cfenv package for Node.js written by Patrick Mueller. It parses environment info in a Bluemix (or Cloud Foundry) application and provides functions to make it convenient to retrieve all of the service attributes you need from VCAP_SERVICES. I've written a simple wrapper to make local development of apps a little easier by parsing a local copy of your app's env.log file and initializing cfenv with that info. After this initialization, you can use the same cfenv interface just as if you were running in the cloud."
 tags:
 - bluemix
@@ -15,17 +15,19 @@ tags:
 - node.js
 - vcap_services
 - cloud foundry
+categories: [Cloud]
 modified_time: '2015-01-13T15:08:25.367-06:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-7414599619318526008
 blogger_orig_url: http://www.tonyerwin.com/2014/10/nodejs-on-bluemix-easier-local.html
+
 image:
-    feature: "2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_EnvVars.png"
-    thumb: "2014-10-11-nodejs-on-bluemix-easier-local/googleThumb72.png"
+  path: "/images/2014-10-11-nodejs-on-bluemix-easier-local/thumb72.png"
+  show: false
 ---
 
 _Updated: Nov. 22, 2014 to reflect deprecation of `env.log`._
 
-I'm a fan of the [`cfenv`](https://github.com/cloudfoundry-community/node-cfenv){:target="_blank"} package for [Node.js](http://nodejs.org/){:target="_blank"} written by [Patrick Mueller](https://twitter.com/pmuellr){:target="_blank"}. It parses environment info in a [Bluemix](https://console.bluemix.net){:target="_blank"} (or [Cloud Foundry](http://cloudfoundry.org/){:target="_blank"}) application, and provides functions to make it easy to retrieve all of the service data you need from [`VCAP_SERVICES`](https://console.bluemix.net/docs/services/rules/index-gentopic4.html#programming){:target="_blank"}. It also gives access to other important attributes for port, host name/ip address, URL of the application, etc. On top of that, it detects whether your app is running locally or in the cloud. And, when running locally, it provides handy defaults.
+I'm a fan of the [`cfenv`](https://github.com/cloudfoundry-community/node-cfenv) package for [Node.js](http://nodejs.org/) written by [Patrick Mueller](https://twitter.com/pmuellr). It parses environment info in a [Bluemix](https://console.bluemix.net) (or [Cloud Foundry](http://cloudfoundry.org/)) application, and provides functions to make it easy to retrieve all of the service data you need from [`VCAP_SERVICES`](https://console.bluemix.net/docs/services/rules/index-gentopic4.html#programming). It also gives access to other important attributes for port, host name/ip address, URL of the application, etc. On top of that, it detects whether your app is running locally or in the cloud. And, when running locally, it provides handy defaults.
 
 I've written a simple wrapper (a local module called `cfenv-wrapper`) to make local development of Bluemix/Cloud Foundry apps a little easier. My code parses a local copy of your app's environment data, and extracts the data for `VCAP_SERVICES` and `VCAP_APPLICATION`. Then, it passes that information to `cfenv`'s initialization function, `getAppEnv`. After this initialization, you can use the same `cfenv` interface just as if you were running in the cloud.
 
@@ -34,7 +36,7 @@ The local environment data can be in JSON or properties files meeting the follow
 - `env.json` -- JSON file with `VCAP_SERVICES` info as retrieved by `cf env`. If `env.json` is present, the code will also load `env_custom.json`,  which should hold JSON representing your app's user-defined environment variables.
 - `env.log` file (deprecated) -- If there's no `env.json` file, the wrapper will load a local copy of your app's `env.log` file. This is provided for backwards compatibility with earlier versions of `cfenv-wrapper`. After CF 182, CF stopped providing an `env.log` file for <a href="https://github.com/cloudfoundry/dea_ng/pull/147">security reasons</a>.
 
-**NOTE:** Many cloud services can be accessed with no changes when running locally. In Bluemix, a partial list of these includes [Cloudant](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db){:target="_blank"}, [Pitney Bowes](https://console.ng.bluemix.net/catalog/services/apis-from-pitney-bowes){:target="_blank"}, and [Twilio](https://console.ng.bluemix.net/catalog/services/twilio){:target="_blank"}. In those cases, you can use `env.json` and `env.log` with the exact data provided by CF. However, there are services that don't yet allow connections from outside of Bluemix. For those services, you would need to modify your local file so that it uses info specific to installations of those services in your local environment.
+**NOTE:** Many cloud services can be accessed with no changes when running locally. In Bluemix, a partial list of these includes [Cloudant](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db), [Pitney Bowes](https://console.ng.bluemix.net/catalog/services/apis-from-pitney-bowes), and [Twilio](https://console.ng.bluemix.net/catalog/services/twilio). In those cases, you can use `env.json` and `env.log` with the exact data provided by CF. However, there are services that don't yet allow connections from outside of Bluemix. For those services, you would need to modify your local file so that it uses info specific to installations of those services in your local environment.
 
 #### New Functions
 My wrapper also adds two new functions, not in the original `cfenv` interface:
@@ -59,15 +61,15 @@ You can run a working version of the code deployed to Bluemix by using the link 
 
 When you run it, you should see something like the following screenshot split into three sections for Base Info, Services, and Environment Variables. The Services section shows the names of any services the app is bound to. The Environment Variables section shows the standard environment variables common to Cloud Foundry apps plus any custom environment variables. NOTE: The code intentionally prunes `VCAP_SERVICES` from the Environment Variable output because it typically contains sensitive service credentials.
 
-![Screenshot of Running cfenv-wrapper](/images/2014-10-11-nodejs-on-bluemix-easier-local/cfenvWrapperLive.png){: .center-image }
+![Screenshot of Running cfenv-wrapper](/images/2014-10-11-nodejs-on-bluemix-easier-local/cfenvWrapperLive.png)
 
 Below, you can see the details for my app in the Bluemix UI. Notice the list of services matches the `cfenv-wrapper` output:<br />
 
-![Bluemix UI: App Details for cfenv-wrapper](/images/2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_AppDetails.png){: .center-image }
+![Bluemix UI: App Details for cfenv-wrapper](/images/2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_AppDetails.png)
 
 Also, for this deployment of the app, I've set three custom environment variables (e.g., `CUSTOM_ENV_VAR1`, `CUSTOM_ENV_VAR2`, and `CUSTOM_ENV_VAR3`). 
 
-![Bluemix UI: Environment Variables for cfenv-wrappe](/images/2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_EnvVars.png){: .center-image }
+![Bluemix UI: Environment Variables for cfenv-wrappe](/images/2014-10-11-nodejs-on-bluemix-easier-local/bluemixUI_EnvVars.png)
 
 You can set custom environment variables either in the UI (above) or via the command line: `cf set-env cfenv-wrapper CUSTOM_ENV_VAR1 "Value 1"`
 

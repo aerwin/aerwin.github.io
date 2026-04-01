@@ -2,7 +2,7 @@
 layout: post
 title:  "Evolving the IBM Cloud Console with Microservices: A Node.js Success Story"
 date: '2021-08-22T11:20:00.000-06:00'
-author: Tony Erwin
+
 description: "Learn how the IBM Cloud console architecture evolved from its monolithic origins into a highly scalable, modern microservice-based system, and the role Node.js played."
 tags:
 - ibm 
@@ -11,9 +11,12 @@ tags:
 - microservices
 - nodejs
 - micro-frontends
+categories: [Architecture]
 modified_time: '2023-04-06T12:00:00.000-06:00'
+
 image:
-    feature: "2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png"
+  path: "/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-current-architecture.png"
+  show: false
 ---
 
 # Introduction
@@ -36,7 +39,7 @@ The IBM Cloud console serves as a UX consolidation point for the entire IBM Clou
 
 The following image shows the console's dashboard.
 
-[![IBM Cloud Console: Dashboard UI](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-dashboard.jpg){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-dashboard.jpg)
+[![IBM Cloud Console: Dashboard UI](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-dashboard.jpg)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-dashboard.jpg)
 
 ## Origins as a monolith
 
@@ -44,7 +47,7 @@ The original console was deployed to the IBM public <a href="https://www.cloudfo
 
 The following image shows the original architecture.
 
-[![IBM Cloud console: Original monolithic architecture](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-history-monolith.png){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-history-monolith.png)
+[![IBM Cloud console: Original monolithic architecture](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-history-monolith.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-history-monolith.png)
 
 ## Cracks begin to show
 
@@ -93,7 +96,7 @@ To that end, we made a key early decision to strongly recommend Node.js for back
 
 The diagram shows the general micro front-end architectural pattern that was proposed.
 
-[![IBM Cloud Console: Typical Micro Front end Pattern](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png)
+[![IBM Cloud Console: Typical Micro Front end Pattern](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png)
 
 The pattern's flow (based heavily on <a href="https://dejanglozic.com/2014/10/20/micro-services-and-page-composition-problem/" target="_blank">work done by colleague Dejan Glozic</a>) involved the following steps:
 
@@ -109,7 +112,7 @@ The pattern's flow (based heavily on <a href="https://dejanglozic.com/2014/10/20
 
 The insertion of the common header is one of the most important parts of the process. All of the pages in the console, regardless of what service produced them, needed to look like they were part of one seamless application. Including the same header on every page would serve to unify the entire experience. This is shown in more detail in the following image.
 
-[![IBM Cloud Console: Page Composition](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg)
+[![IBM Cloud Console: Page Composition](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-page-composition.jpg)
 
 ## Executing the migration from monolith to microservices
 
@@ -117,13 +120,13 @@ Armed with these ideas and the dreams of numerous benefits, we started down the 
 
 In our case, we wanted to start small, and we chose two relatively simple, mostly static parts of our UI -- the home page and marketing solutions pages -- for the initial proof-of-concept (PoC). The following image shows that architecture.
 
-[![IBM Cloud Console: Early Interim Architecture](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-first-attempt-microservices.png){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-first-attempt-microservices.png)
+[![IBM Cloud Console: Early Interim Architecture](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-first-attempt-microservices.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-first-attempt-microservices.png)
 
 In the image, you see that we added a proxy plus micro front ends for Home, Solutions, and Common Header. Additionally, the Java monolith continued to run alongside these new microservices. As alluded to earlier, it was key that we could stage the migration to the new architecture because it wasn't feasible to start over. This meant slowly breaking out logical pieces of the monolith and rewriting them for the new architecture.
 
 Over the course of the next two years, we were able to entirely eliminate all vestiges of the original monolith and complete the migration to the new architecture. We were also able to greatly increase the number of developers and teams who could independently contribute plug-ins to the larger console on their own schedules. This was done by enabling the console proxy to route requests outside of the console cluster and out to microservices deployed and managed by other teams. All of this can be seen in the following figure:
 
-[![IBM Cloud Console: Current Architecture with External Plugins](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-current-architecture.jpg){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-current-architecture.jpg)
+[![IBM Cloud Console: Current Architecture with External Plugins](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-current-architecture.jpg)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-current-architecture.jpg)
 
 ## New challenges
 
@@ -226,7 +229,7 @@ The decision that made an even greater impact on our availability was implementi
 
 The production console is deployed to clusters in 9 different regions all around the world. <a href="https://www.ibm.com/cloud/cloud-internet-services" target="_blank">IBM Cloud Internet Services</a> monitors the health of these deployments through a health check endpoint on each cluster provided by the console team. When a request goes to our single global URL (<a href="https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-About" target="_blank">https://cloud.ibm.com</a>), Cloud Internet Services returns the IP address for the nearest console deployment. If a health check in a particular region shows a problem, then Cloud Internet Services returns the IP address for the next closest healthy region​.
 
-[![IBM Cloud Console: Geo Load Balancing](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png){: .center-image }](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png)
+[![IBM Cloud Console: Geo Load Balancing](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png)
 
 ## Conclusion
 

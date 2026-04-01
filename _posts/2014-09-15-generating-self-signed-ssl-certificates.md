@@ -2,7 +2,7 @@
 layout: post
 title: Generating Self-Signed SSL Certificates for Use with Bluemix Custom Domains
 date: '2014-09-15T00:39:00.000-05:00'
-author: Tony Erwin
+
 description: "This is a companion piece to another post on SSL Certificates and Custom Domains in the IBM Bluemix UI. It's intended for Bluemix users who wish to use self-signed SSL certificates with their custom domains for testing and development. This can be useful before acquiring a wildcard certificate issued by a trusted third-party certificate authority."
 tags:
 - custom domain
@@ -16,17 +16,19 @@ tags:
 - cloud foundry
 - https
 - mac
+categories: [Architecture]
 modified_time: '2014-09-21T15:20:30.478-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-2361234527744687307
 blogger_orig_url: http://www.tonyerwin.com/2014/09/generating-self-signed-ssl-certificates.html
+
 image:
-    feature: "2014-09-15-generating-self-signed-ssl-certificates/padlock_with_label.png"
-    thumb: "2014-09-15-generating-self-signed-ssl-certificates/padlock_thumb.png"
+  path: "/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedGenerator.png"
+  show: false
 ---
 
-!["Generating Self-Signed SSL Certificates for Use with Bluemix Custom Domains](/images/2014-09-15-generating-self-signed-ssl-certificates/padlock_with_label.png){: .paragraph-thumbnail }
+!["Generating Self-Signed SSL Certificates for Use with Bluemix Custom Domains](/images/2014-09-15-generating-self-signed-ssl-certificates/padlock_with_label.png)
 
-This is a companion piece to my [_Bluemix UI: SSL Certificates and Custom Domains_](https://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html){:target="_blank"} post. It's intended for [Bluemix](https://www.bluemix.net){:target="_blank"} users who wish to use [self-signed SSL certificates](http://www.sslshopper.com/article-when-are-self-signed-certificates-acceptable.html){:target="_blank"} with their custom domains for testing and development. This can be useful before moving to production with a [wildcard certificate](http://www.sslshopper.com/best-ssl-wildcard-certificate.html){:target="_blank"} issued by a trusted third-party [certificate authority](http://www.sslshopper.com/certificate-authority-reviews.html){:target="_blank"}.
+This is a companion piece to my [_Bluemix UI: SSL Certificates and Custom Domains_](https://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html) post. It's intended for [Bluemix](https://www.bluemix.net) users who wish to use [self-signed SSL certificates](http://www.sslshopper.com/article-when-are-self-signed-certificates-acceptable.html) with their custom domains for testing and development. This can be useful before moving to production with a [wildcard certificate](http://www.sslshopper.com/best-ssl-wildcard-certificate.html) issued by a trusted third-party [certificate authority](http://www.sslshopper.com/certificate-authority-reviews.html).
 
 I'll discuss three different approaches using:
 
@@ -34,23 +36,23 @@ I'll discuss three different approaches using:
 - [the `openssl` command line tool](#OpenSSLCommandLineTool)
 - [the Mac's Keychain Access app](#MacKeyChainAccess) (which facilitates acting as your own certificate authority)
 
-Once you've generated a self-signed certificate using one of these approaches (or by one of the many approaches found doing a [Google search](https://www.google.com/search?q=generate+self+signed+certificate){:target="_blank"}, please see my previously mentioned post to learn how to associate it with a Bluemix custom domain.
+Once you've generated a self-signed certificate using one of these approaches (or by one of the many approaches found doing a [Google search](https://www.google.com/search?q=generate+self+signed+certificate), please see my previously mentioned post to learn how to associate it with a Bluemix custom domain.
 
 <h2 id="OnlineGenerator">Online Self-Signed Certificate Generator</h2>
 
-A really straightforward way to generate a self-signed certificate is the online [_Self-Signed Certificate Generator_](http://www.selfsignedcertificate.com/){:target="_blank"}. All you have to do is enter a wildcard domain and hit the **Generate** button.
+A really straightforward way to generate a self-signed certificate is the online [_Self-Signed Certificate Generator_](http://www.selfsignedcertificate.com/). All you have to do is enter a wildcard domain and hit the **Generate** button.
 
-[![Entering Domain in Online Self-Signed Certificate Generator](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedGenerator.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedGenerator.png)
+[![Entering Domain in Online Self-Signed Certificate Generator](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedGenerator.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedGenerator.png)
 
-The site then uses [OpenSSL](https://www.openssl.org/){:target="_blank"} in the background to generate a certificate and private key. After the process completes, you will see two links: one allows you to download a `cert` file and the other a `key` file. Download the files, and then you can use the Bluemix UI to upload and associate them with your domain.
+The site then uses [OpenSSL](https://www.openssl.org/) in the background to generate a certificate and private key. After the process completes, you will see two links: one allows you to download a `cert` file and the other a `key` file. Download the files, and then you can use the Bluemix UI to upload and associate them with your domain.
 
 I did this myself for one of my domains. When I accessed the app in Chrome, it provided me with the certificate details shown below. As you can see, the generated certificate only has the Common Name field filled in. And, of course, Chrome doesn't trust it.
 
-[![Browser Info For Cert Generated by Online Self-Signed Certificate Generator](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedFromOnlineGeneratorInChrome2.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedFromOnlineGeneratorInChrome2.png)
+[![Browser Info For Cert Generated by Online Self-Signed Certificate Generator](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedFromOnlineGeneratorInChrome2.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedFromOnlineGeneratorInChrome2.png)
 
 <h2 id="OpenSSLCommandLineTool">Using OpenSSL to Generate Self-Signed Certificate</h2>
 
-If you want more control over the generated certificate, you can use the `openssl` command directly. It may already be installed on your system, but if not, you should be able to install it. The steps below are adapted from the first 4 steps of [_How to Create a Self-signed SSL Certificate_](http://www.akadia.com/services/ssh_test_certificate.html){:target="_blank"} by Akadia.com. That article gives additional background information and guidance that you may find useful.
+If you want more control over the generated certificate, you can use the `openssl` command directly. It may already be installed on your system, but if not, you should be able to install it. The steps below are adapted from the first 4 steps of [_How to Create a Self-signed SSL Certificate_](http://www.akadia.com/services/ssh_test_certificate.html) by Akadia.com. That article gives additional background information and guidance that you may find useful.
 
 1. Generate a private key.
 
@@ -63,7 +65,6 @@ e is 65537 (0x10001)
 Enter pass phrase for server.key:<br />Verifying - Enter pass phrase for server.key:
 ```
 
-{:start="2"}
 2. Generate a CSR (Certificate Signing Request). For use with Bluemix, the most important thing to remember is to specify a wildcard domain for the Common Name field. I've highlighted the `openssl` prompt for that in the console output below.
 
 ```
@@ -89,7 +90,6 @@ A challenge password []:
 An optional company name []:
 ```
 
-{:start="3"}
 3. Remove the passphrase from key.
 
 ```
@@ -99,7 +99,6 @@ Enter pass phrase for server.key.org:
 writing RSA key
 ```
 
-{:start="4"}
 4. Generate a self-signed certificate.
 
 ```
@@ -111,9 +110,9 @@ Getting Private key
 
 At the end of this process, you'll have two files: `server.crt` and `server.key`. Like before, these files can be uploaded via the Bluemix UI. The screenshot below shows the details as provided by Chrome when I access my app. The certificate is still untrusted, but you can see many more fields are populated with data.
 
-[![Browser Info For Cert Generated by OpenSSL](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedOpensslInChrome.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedOpensslInChrome.png)
+[![Browser Info For Cert Generated by OpenSSL](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedOpensslInChrome.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/selfsignedOpensslInChrome.png)
 
-If you want to go deeper with `openssl`, you can even generate your own intermediate certificates and use them to sign your main certificate. For example, see the article [_How to act as your own certificate authority (CA)_](https://jamielinux.com/articles/2013/08/act-as-your-own-certificate-authority/){:target="_blank"} by Jamie Nguyen.
+If you want to go deeper with `openssl`, you can even generate your own intermediate certificates and use them to sign your main certificate. For example, see the article [_How to act as your own certificate authority (CA)_](https://jamielinux.com/articles/2013/08/act-as-your-own-certificate-authority/) by Jamie Nguyen.
 
 <h2 id="MacKeyChainAccess">Using Keychain Access on Mac to Be Your Own Certificate Authority</h2>
 
@@ -133,17 +132,15 @@ First, follow the steps below to create a new certificate authority:
     - Optionally uncheck **Make this CA the default**.
     - Specify a value for **Email from**.
 
-[![Keychain Access: Create Certificate Authority](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant2_createCA2.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant2_createCA2.png)
+[![Keychain Access: Create Certificate Authority](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant2_createCA2.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant2_createCA2.png)
 
-{:start="4"}
 4. Click the **Create** button.
 5. Close the dialog which says _Conclusion_ and tells you creation was successful.
 6. Within the main Keychain Assistant window, find your new certificate and open it (either double-click on it or invoke the **Get Info** context menu item).
 7. On the resulting dialog, change the select box for **When using this certificate** to _Always Trust_.
 
-[![Keychain Access: Trust New Certificate Authority](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant5_trustCA.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant5_trustCA.png)
+[![Keychain Access: Trust New Certificate Authority](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant5_trustCA.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant5_trustCA.png)
 
-{:start="8"}
 8. Close the dialog. You will then be prompted for an administrator user name and password. After entering your credentials, click the **Update Settings** button.
 
 You now have a self-signed certificate authority that is trusted by your local system.
@@ -158,52 +155,44 @@ Next, you will create the main certificate for your domain. We will issue it usi
     - Set the **Certificate Type** field to _SSL Server_.
     - Check the box next to the **Let me override defaults** option.
     
-[![Keychain Access: Create New Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert1.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert1.png)
+[![Keychain Access: Create New Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert1.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert1.png)
 
-{:start="3"}
 3. Click the **Continue** button.
 4. On the next panel, you can optionally adjust the **Serial Number** and **Validity Period** fields. Then, click the **Continue** button.
 5. You will then see a panel with a number of important attributes. Fill in all of the fields, but pay particular attention to the **Name (Common Name)** field. This field _must_ be the wildcard version of the domain you wish to secure in Bluemix.
 
-[![Keychain Access: Main Certificate Attributes](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert3.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert3.png)
+[![Keychain Access: Main Certificate Attributes](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert3.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert3.png)
 
-{:start="6"}
 6. Click the **Continue** button.
 7. You will then be given the option to choose the issuer for your new certificate. You will want to make sure to choose the certificate authority you created in the previous section.
 
-[![Keychain Access: Choose Certificate Issuer](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert4.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert4.png)
+[![Keychain Access: Choose Certificate Issuer](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert4.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert4.png)
 
-{:start="8"}
 8. Click the **Continue** button.
 9. On the next panel, you can leave the **Key Size** and **Algorithm Fields** alone. Then, click **Continue**.
 10. On the _Key Usage Extension_ panel, you have a variety of options. The only item I enabled is the **Signature** field.
 
-[![Keychain Access: Key Usage Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert6.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert6.png)
+[![Keychain Access: Key Usage Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert6.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert6.png)
 
-{:start="11"}
 11. Click the **Continue** button.
 12. On the _Extended Key Usage Extension_ panel, check the box next to the **SSL Server Authentication Option**.
 
-[![Keychain Access: Extended Key Usage Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert7.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert7.png)
+[![Keychain Access: Extended Key Usage Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert7.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert7.png)
 
-{:start="13"}
 13. Click the **Continue** button.
 14. For the _Basic Constraints Extension_ panel, you can leave the checkbox unchecked and then click the **Continue** button.
 15. For the _Subject Alternate Name Extension_ panel, uncheck the box next to the **Include Subject Alternate Name Extension** field.
 
-[![Keychain Access: Subject Alternate Name Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert9.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert9.png)
+[![Keychain Access: Subject Alternate Name Extension](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert9.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert9.png)
 
-{:start="16"}
 16. Click the **Continue** button to arrive at the _Specify a Location for the Certificate_ panel. You can leave the **Keychain** field set to _login_.
 
-[![Keychain Access: Specify a Location for the Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert10.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert10.png)
+[![Keychain Access: Specify a Location for the Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert10.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert10.png)
 
-{:start="17"}
 17. Click the **Create** button and the Conclusion panel will be made visible. You should see a summary of the information for your new certificate.
 
-[![Keychain Access: Create Certificate Conclusion](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert11.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert11.png)
+[![Keychain Access: Create Certificate Conclusion](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert11.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant8_createCert11.png)
 
-{:start="18"}
 18. Click **Done**.
 
 ### Export Certificates
@@ -211,20 +200,17 @@ Now, you have created a certificate authority and used it to issue a new certifi
 
 1. In the main Keychain Assistant window, find your main certificate. In the context menu, choose the **Export** option.
 
-[![Keychain Access: Export Main Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant9_exportMainCertMenu_annotated.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant9_exportMainCertMenu_annotated.png)
+[![Keychain Access: Export Main Certificate](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant9_exportMainCertMenu_annotated.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant9_exportMainCertMenu_annotated.png)
 
-{:start="2"}
 2. You then get to choose the location for your exported certificate. You can choose whatever you want for filename (for example,  `server`), but it's very important you choose _Certificate (.cer)_ for the **File Format**.
 
-[![Keychain Access: Export Main Certificate File Choose](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant10_exportMainCertFileChooser_annotated.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant10_exportMainCertFileChooser_annotated.png)
+[![Keychain Access: Export Main Certificate File Choose](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant10_exportMainCertFileChooser_annotated.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant10_exportMainCertFileChooser_annotated.png)
 
-{:start="3"}
 3. Click the **Save** button.
 4. Now, find your private key in the Keychain Assistant window. You will need to expand you main certificate to see it. Right-click on it and choose the **Export** option.
 
-[![Keychain Access: Export Private Key](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant11_exportKeyMenu.png){: .center-image }](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant11_exportKeyMenu.png)
+[![Keychain Access: Export Private Key](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant11_exportKeyMenu.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant11_exportKeyMenu.png)
 
-{:start="5"}
 5. You will then see a dialog asking for a password to use to protect your file. Enter a password and confirm it (also be sure to remember it for later!), and click **OK**.
 6. Next you will be asked for an administrator password for your system. After entering your credentials, click **Allow**.
 7. You will then be asked for a location for the exported key. You can enter a file name (for example, `server`), and you'll want to pick the same directory you chose for your exported certificate. For **File Format**, choose _Personal Information Exchange (.p12)_. Click **Save**.
@@ -233,7 +219,7 @@ Now, you have created a certificate authority and used it to issue a new certifi
 
 ### Convert Your Private Key
 
-You've exported the required files, and you're almost done! But, there's one more important step. Because Bluemix does not yet support `p12` key files, you will need to use `openssl` to do a quick conversion. If you've gotten this far, it should be pretty straightforward because `openssl` is installed on your Mac.   Go to the command line and change to the directory where you exported all of your files. Then, execute the command below (which came from a [StackOverflow post](http://stackoverflow.com/questions/9497719/how-to-extract-a-public-private-key-from-a-pkcs12-file-with-openssl-for-later-us){:target="_blank"}). If you chose `server.p12` for your key file name, then you can execute the command as is. Otherwise, you will need to enter your personal file name. When it asks for a password, use the same password you specified to protect the private key file when you exported it. 
+You've exported the required files, and you're almost done! But, there's one more important step. Because Bluemix does not yet support `p12` key files, you will need to use `openssl` to do a quick conversion. If you've gotten this far, it should be pretty straightforward because `openssl` is installed on your Mac.   Go to the command line and change to the directory where you exported all of your files. Then, execute the command below (which came from a [StackOverflow post](http://stackoverflow.com/questions/9497719/how-to-extract-a-public-private-key-from-a-pkcs12-file-with-openssl-for-later-us)). If you chose `server.p12` for your key file name, then you can execute the command as is. Otherwise, you will need to enter your personal file name. When it asks for a password, use the same password you specified to protect the private key file when you exported it. 
 
 ```
 $ openssl pkcs12 -in server.p12 -nocerts -nodes | openssl rsa > server.key
@@ -245,8 +231,8 @@ writing RSA key
 ### Final Result with Keychain Assistant
 At this point, you should have a `.cer` file for your main certificate, a `.key` file for your private key, and a `.cer` file for your intermediate certificate. You can now use the Bluemix UI to upload those files and secure your own domain.  I did this myself. And, when I access my app using Chrome on my personal Mac, I see the identity is verified and there are no security warnings. However, this is because we told Keychain Access to trust our self-signed certificate authority. So, of course, if someone tries to access the app from another system they will still get a security warning. 
 
-[![Chrome Details Using Trusted Self-Signed Intermediat](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant20_protectionInChrome.png){: .center-image }{:style="max-height: 400px;"}](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant20_protectionInChrome.png)
+[![Chrome Details Using Trusted Self-Signed Intermediat](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant20_protectionInChrome.png)](/images/2014-09-15-generating-self-signed-ssl-certificates/keychainAssistant20_protectionInChrome.png)
 
 ## Conclusion
 
-Self-signed certificates should never be used for production apps, but you've seen they have value for testing and development. I presented steps for three different approaches to creating self-signed certificates appropriate for use with your Bluemix apps. These included online generation, manually executing `openssl` commands, and using the Mac's Keychain Access app. In the last case, you also saw how a self-signed intermediate certificate can be marked as "trusted" to eliminate browser security warnings when running locally.  After using any of these approaches, you can upload the resulting certificate and key files using the Bluemix UI to associate them with a custom domain. See my [other post](https://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html){:target="_blank"} for full details on how to do that.
+Self-signed certificates should never be used for production apps, but you've seen they have value for testing and development. I presented steps for three different approaches to creating self-signed certificates appropriate for use with your Bluemix apps. These included online generation, manually executing `openssl` commands, and using the Mac's Keychain Access app. In the last case, you also saw how a self-signed intermediate certificate can be marked as "trusted" to eliminate browser security warnings when running locally.  After using any of these approaches, you can upload the resulting certificate and key files using the Bluemix UI to associate them with a custom domain. See my [other post](https://www.tonyerwin.com/2014/09/bluemix-ui-ssl-certificates-and-custom.html) for full details on how to do that.

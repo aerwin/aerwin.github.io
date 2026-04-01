@@ -2,7 +2,7 @@
 layout: post
 title: 'Bluemix UI: Exciting May Updates!'
 date: '2014-05-28T17:30:00.001-05:00'
-author: Tony Erwin
+
 description: ""
 tags:
 - bluemix
@@ -10,11 +10,14 @@ tags:
 - ibm
 - cloud
 - user interface
+categories: [Cloud]
 modified_time: '2014-10-11T13:23:24.478-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-4502615116529171492
 blogger_orig_url: http://www.tonyerwin.com/2014/05/bluemix-ui-exciting-may-updates.html
+
 image:
-    feature: "2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png"
+  path: "/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png"
+  show: false
 ---
 
 As the UI lead for the IBM Bluemix web interface, I've had the chance to write about new functionality as it's been released over the last few months. We've just gone live with our updates for May, so please check out <a href="https://www.ibm.com/blogs/bluemix/2014/05/bluemix-ui-exciting-may-updates/" target="_blank">my post<b>&nbsp;</b></a>on the&nbsp;<a href="https://www.ibm.com/blogs/bluemix/" target="_blank">official Bluemix blog</a>. The updates include:
@@ -26,7 +29,7 @@ As the UI lead for the IBM Bluemix web interface, I've had the chance to write a
 - Updated documentation.
 - Numerous usability improvements and bug fixes.
 
-[![Bluemix UI Updates: Dashboard](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png){: .center-image-with-vertical-padding }](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)
+[![Bluemix UI Updates: Dashboard](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)
 
 And, for reference, here are pointers to my earlier blog posts regarding Bluemix UI updates:
 

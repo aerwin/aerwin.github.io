@@ -2,7 +2,7 @@
 layout: post
 title: IBM Bluemix General Availability!
 date: '2014-06-30T08:08:00.000-05:00'
-author: Tony Erwin
+
 description: ""
 tags:
 - bluemix
@@ -10,12 +10,14 @@ tags:
 - ibm
 - cloud
 - user interface
+categories: [Cloud]
 modified_time: '2015-01-11T15:09:27.803-06:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-7568258104018776212
 blogger_orig_url: http://www.tonyerwin.com/2014/06/ibm-bluemix-general-availability.html
+
 image:
-    feature: "2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png"
-    thumb: "2014-06-30-ibm-bluemix-general-availability/bluemix_logo_multi_181_Thumb.png"
+  path: "/images/2014-06-30-ibm-bluemix-general-availability/bluemix_logo_multi_181_Thumb.png"
+  show: false
 ---
 
 <a href="https://www.bluemix.net/" target="_blank"><img class="tonyImg" alt="IBM Bluemix Now Open!" src="http://2.bp.blogspot.com/-mInNqE0fERE/U7FZnAkjVBI/AAAAAAADgiA/CO35xgOYbU0/s1600/blueMixNowOpen.png" style="max-height: 160px; max-width: 1284px; width: 100%;margin-top:10px;margin-bottom:15px;" /></a> 
@@ -31,10 +33,7 @@ Today marks the&nbsp;general availability of&nbsp;<a href="https://www.bluemix.n
 - Eclipse Tools for Bluemix
 - and more!
 
-{: .button-link-container}
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/06/general-availability/){: .btn }{:target="_blank"}{: .center-text }
+[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/06/general-availability/)
 
-[![Bluemix UI Updates: Region Selector](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png){: .center-image }](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)
-
-
+[![Bluemix UI Updates: Region Selector](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)
 

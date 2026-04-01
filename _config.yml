@@ -1,98 +1,236 @@
-title:            Tony Erwin's Tech Blog
-description:      Blog on technical topics related to my work at IBM -- in particular cloud, UI/UX, JavaScript, Node.js, microservices, etc. Thoughts here are my own.
-disqus_shortname: tonyerwin
-reading_time:     false
-words_per_minute: 200
-# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url: https://www.tonyerwin.com
+# The Site Configuration
 
-# Owner/author information
-owner:
-  name:           Tony Erwin
-  avatar:         avatar.png
-  bio:            "Senior Technical Staff Member (STSM) at IBM. Lead Architect for IBM Cloud UI. Interests in cloud, UI/UX, JavaScript, Node.js, microservices, etc."
-  email:          tony@tonyerwin.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        tonyerwin  
-  facebook:       tonyerwin
-  github:         aerwin
-  linkedin:       tonyerwin
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  # google_plus:    +TonyErwin
-  # Facebook App ID
-  fb_appId:       716104001772657
+# Import the theme
+theme: jekyll-theme-chirpy
 
-# Background image to be tiled on all pages
-background: 
+# The language of the site layout › http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
+lang: en
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-58388474-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: America/Chicago
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Chicago
-future:      true
-highlighter: rouge
-markdown:    kramdown
-gems:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
-sass:
-  sass_dir: _sass
-  style: compressed
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:year/:month/:title.html
+title: Tony Erwin's Tech Blog
 
-# Amount of post to show on home page
-paginate: 5
+tagline: Exploring AI, Cloud Architecture, and Modern Software Engineering
 
-logo: avatar.png
+description: >-
+  Technical blog focused on AI, machine learning, agentic systems, cloud architecture,
+  microservices, and modern software engineering practices. Insights from building
+  enterprise-scale systems at IBM and beyond.
+
+# Fill in the protocol & hostname for your site.
+# e.g. 'https://username.github.io', note that it does not end with a '/'.
+url: "https://www.tonyerwin.com"
+
+# The base path of your site
+# For custom domains (like www.tonyerwin.com), this should be empty for both local and production
+# If you were using username.github.io/repo-name, you would set this to "/repo-name"
+baseurl: ""
+
+github:
+  username: aerwin
+
+twitter:
+  username: tonyerwin
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Tony Erwin
+  email: tony@tonyerwin.com
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/tonyerwin
+    - https://github.com/aerwin
+    - https://www.linkedin.com/in/tonyerwin
+    - https://www.facebook.com/tonyerwin
+
+# Site Verification Settings
+webmaster_verifications:
+  google: # Your Google verification code
+  bing: # Your Bing verification code
+  alexa: # Your Alexa verification code
+  yandex: # Your Yandex verification code
+  baidu: # Your Baidu verification code
+  facebook: # Your Facebook verification code
+
+# ↑ --------------------------
+# The end of `jekyll-seo-tag` settings
+
+# Web Analytics Settings
+analytics:
+  google:
+    id: UA-58388474-1
+  goatcounter:
+    id: # Your GoatCounter ID
+  umami:
+    id: # Your Umami ID
+    domain: # Your Umami domain
+  matomo:
+    id: # Your Matomo ID
+    domain: # Your Matomo domain
+  cloudflare:
+    id: # Your Cloudflare Web Analytics token
+
+# Pageviews settings
+pageviews:
+  provider: # now only supports 'goatcounter'
+
+# Prefer color scheme setting.
+#
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
+#
+#     light  - Use the light color scheme
+#     dark   - Use the dark color scheme
+#
+theme_mode: # [light | dark]
+
+# The CDN endpoint for media resources.
+# Notice that once it is assigned, the CDN url
+# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
+#
+# e.g. 'https://cdn.com'
+cdn:
+
+# the avatar on sidebar, support local or CORS resources
+avatar: /images/avatar.jpg
+
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+# It can be overridden by a customized `page.image` in front matter.
+social_preview_image: /images/avatar.jpg # string, local or CORS resources
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+comments:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: disqus # [disqus | utterances | giscus | staticman]
+  # The provider options are as follows:
+  disqus:
+    shortname: tonyerwin
+  # utterances settings › https://utteranc.es/
+  utterances:
+    repo: # <gh-username>/<repo>
+    issue_term: # < url | pathname | title | ...>
+  # Giscus options › https://giscus.app
+  giscus:
+    repo: # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
+    input_position: # optional, default to 'bottom'
+    lang: # optional, default to the value of `site.lang`
+    reactions_enabled: # optional, default to the value of `1`
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled: # boolean, keep empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env: # [development | production]
+
+pwa:
+  enabled: true # the option for PWA feature (installable)
+  cache:
+    enabled: true # the option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-include: 
-  - .htaccess
-exclude: 
-  - "*.less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /:year/:month/:title.html
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
   - LICENSE
-  - README
-  - Rakefile
-  - config
-  - gulpfile.js
-  - lib
-  - log
+  - "*.config.js"
+  - package*.json
+  - Gruntfile.js
   - node_modules
-  - package.json
-  - spec
-  - tmp
-  - .ruby-gemset
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - .ruby-version
+  - .ruby-gemset
   - Gemfile.lock
   - Makefile
-  - README.md
-  - vendor/
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+# Made with Bob

@@ -2,7 +2,7 @@
 layout: post
 title: 'Past Work: Maqetta'
 date: '2014-05-26T17:15:00.001-05:00'
-author: Tony Erwin
+
 description: ""
 tags:
 - dojo
@@ -13,14 +13,16 @@ tags:
 - phonegap
 - user interface
 - web
+categories: [Cloud]
 modified_time: '2014-05-26T17:15:00.001-05:00'
 blogger_orig_url: http://www.tonyerwin.com/2014/05/past-work-maqetta.html
+
 image:
-    feature: "2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png"
-    thumb: "2014-05-26-past-work-maqetta/maqettaIconThumb.png"
+  path: "/images/2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png"
+  show: false
 ---
 
-![Maqetta Logo](/images/2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png){: .paragraph-thumbnail }{:style="max-height: 76px; max-width: 250px;width:25%;border: 1px solid;margin-bottom:10px;""}
+![Maqetta Logo](/images/2014-05-26-past-work-maqetta/Maqetta_Logo_250x76.png)
 
 Prior to my current work on <a href="http://www.bluemix.net/" target="_blank">BlueMix</a>, I was a committer on <a href="http://maqetta.org/" target="_blank">Maqetta</a>. Maqetta is an open source project that provides WYSIWYG visual authoring of HTML5 user interfaces (desktop and mobile). It is made available as part of the <a href="http://dojofoundation.org/" target="_blank">Dojo Foundation</a>.
 

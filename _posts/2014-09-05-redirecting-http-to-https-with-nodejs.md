@@ -2,7 +2,7 @@
 layout: post
 title: Redirecting HTTP to HTTPS with Node.js & Express on IBM Bluemix
 date: '2014-09-05T19:23:00.001-05:00'
-author: Tony Erwin
+
 description: "Both http and https is enabled for IBM Bluemix apps using the default mybluemix.net domain. Code is presented for a Node.js app that uses the Express web app framework to cause http requests to be redirected to https. This ensures data shared between your app and the user's browser is trusted and encrypted. A pointer to the deployable sample on GitHub is also provided."
 tags:
 - custom domain
@@ -17,15 +17,17 @@ tags:
 - ibm
 - node.js
 - github
+categories: [Architecture]
 modified_time: '2014-09-15T00:51:29.325-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-8325991612350778889
 blogger_orig_url: http://www.tonyerwin.com/2014/09/redirecting-http-to-https-with-nodejs.html
+
 image:
-    feature: "2014-09-05-redirecting-http-to-https-with-nodejs/Padlock-gold-small_with_label.png"
-    thumb: "2014-09-05-redirecting-http-to-https-with-nodejs/Padlock-gold-small-72_with_label.png"
+  path: "/images/2014-09-05-redirecting-http-to-https-with-nodejs/Padlock-gold-small-72_with_label.png"
+  show: false
 ---
 
-![Redirecting HTTP to HTTPS with Node.js on IBM Bluemix](/images/2014-09-05-redirecting-http-to-https-with-nodejs/Padlock-gold-small_with_label.png){: .paragraph-thumbnail }
+![Redirecting HTTP to HTTPS with Node.js on IBM Bluemix](/images/2014-09-05-redirecting-http-to-https-with-nodejs/Padlock-gold-small_with_label.png)
 
 Colleague <a href="https://twitter.com/jsloyer" target="_blank">Jeff Sloyer</a> points out in his recent blog post, <a href="https://developer.ibm.com/bluemix/2014/08/18/inbound-ssl-bluemix/" target="_blank"><em>Inbound SSL in Bluemix</em></a>, that an app using the default domain for <a href="https://www.bluemix.net/" target="_blank">IBM Bluemix</a> (which is `mybluemix.net`) gets SSL support automatically. This means without taking any other action, the app is accessible via `https` and traffic is secured by a fully trusted certificate provided by IBM. However, if not careful, your app will continue to be accessible via `http`, which completely bypasses SSL. In this post, I'll show code for a simple approach (which differs from Sloyer's) to make a <a href="http://nodejs.org/" target="_blank">Node.js</a> app redirect `http` requests to `https` by leveraging parts of the <a href="http://expressjs.com/" target="_blank">Express</a> web app framework. In addition, I'll touch on issues with custom domains that occur when using the built-in, default SSL certificate.
 
@@ -38,11 +40,11 @@ To show what happens "out-of-the-box", I've created an app in the Bluemix UI usi
 
 In either case, you'll see a web page like the following:
 
-[![Screenshot of Node.js Starter App](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png){: .center-image }](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)
+[![Screenshot of Node.js Starter App](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)
 
 However, when you use `https`, notice that the browser shows a lock icon in the address bar. And, if you dig into the certificate details, you should see something like the following (which happens to be from Chrome):
 
-[![Certificate info for mybluemix.net](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png){: .center-image }](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)
+[![Certificate info for mybluemix.net](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)
 
 This indicates that the certificate for `*.mybluemix.net` was issued by <a href="https://www.digicert.com/" target="_blank">DigiCert</a> and is trusted. You can rest assured the web site is coming from a server running on `mybluemix.net`, and the data is encrypted. On the other hand, if you use `http` there is no certificate info, and web traffic is unencrypted.
 
@@ -71,7 +73,7 @@ You can access a live Bluemix deployment of the code with the URLs below (one us
 
 In both cases, you should see a page like the one below (and using `https`):
 
-[![Screenshot of HTTPS Redirect Demo](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png){: .center-image }](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)
+[![Screenshot of HTTPS Redirect Demo](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)
 
 <h4>Alternative Approach: Inspect X-Forwarded-Proto</h4>
 
@@ -87,7 +89,7 @@ To allow you to easily see this for yourself, I've added a route to the `https-r
 
 If you follow that link, the redirect from `http` to `https` still occurs. But, your browser is going to tell you that you can't trust the identity of the site. For example, here's what I see in Chrome:
 
-[![Security Warning in Chrome With Custom Domain](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png){: .center-image }](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)
+[![Security Warning in Chrome With Custom Domain](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)
 
 Basically, the same certificate that was present for the `*.mybluemix.net` domain is still being served, but its domain info doesn't match my `tonyerwin.com` custom domain. So, Chrome tells me I should probably stay clear and not continue.
 

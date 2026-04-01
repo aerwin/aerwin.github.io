@@ -1,0 +1,12 @@
+/* Custom styles to hide featured images in post content */
+/* Target the wrapper div that contains the preview image */
+div.mt-3.mb-3:has(> a.preview-img) {
+  display: none !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.img-link.preview-img {
+  display: none !important;
+}
+
+// Made with Bob

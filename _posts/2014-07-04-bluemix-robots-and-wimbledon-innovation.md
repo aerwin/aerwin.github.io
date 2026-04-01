@@ -2,7 +2,7 @@
 layout: post
 title: Bluemix, Robots, and the Wimbledon Innovation Challenge
 date: '2014-07-04T09:38:00.001-05:00'
-author: Tony Erwin
+
 description: "I encourage you to take part in the Wimbledon Innovation Challenge. When the Robot Apocalypse starts, I think you'll see robots playing tennis all the time. For the human race to survive, it will be critical for us to learn as much as we can from the large amount of data generated at the Wimbledon tennis championships and collected by IBM."
 tags:
 - bluemix
@@ -10,12 +10,14 @@ tags:
 - ibm
 - cloud
 - wimbledon innovation challenge
+categories: [Cloud]
 modified_time: '2014-10-11T13:37:40.438-05:00'
 blogger_id: tag:blogger.com,1999:blog-5914472037415701789.post-5456657761509708144
 blogger_orig_url: http://www.tonyerwin.com/2014/07/bluemix-robots-and-wimbledon-innovation.html
+
 image:
-    feature: "2014-07-04-bluemix-robots-and-wimbledon-innovation/robots_tennis.png"
-    thumb: "2014-07-04-bluemix-robots-and-wimbledon-innovation/robot_tennisThumbRatio.png"
+  path: "/images/2014-07-04-bluemix-robots-and-wimbledon-innovation/robot_tennisThumbRatio.png"
+  show: false
 ---
 
 Do you think robots like tennis? My guess is that when the <a href="https://www.youtube.com/watch?v=DBAYIK8CdPc" target="_blank">Robot Apocalypse</a> starts, you'll see them playing all the time. So, for the human race to survive, it will be critical for us to learn as much as we can from the large amount of data generated at the <a href="http://www.wimbledon.com/index.html" target="_blank">Wimbledon tennis championships</a> and <a href="http://wimbledoninsights.com/ibm-wimbledon/" target="_blank">collected by IBM</a>.
@@ -28,6 +30,6 @@ Now, maybe my fears of tennis-playing robots are paranoid and irrational. But, i
 
 **NOTE:** Entry deadline is October 24, 2014.
 
-![Bluemix, Robots, and the Wimbledon Innovation Challenge](/images/2014-07-04-bluemix-robots-and-wimbledon-innovation/robots_tennis.png){: .center-image }
+![Bluemix, Robots, and the Wimbledon Innovation Challenge](/images/2014-07-04-bluemix-robots-and-wimbledon-innovation/robots_tennis.png)
 
 _Special thanks to IBM colleague <a href="https://twitter.com/angelajbates" target="_blank">Angela Bates</a> for the background info on the <a href="http://www-05.ibm.com/uk/wimbledon_innovation_challenge/index.html" target="_blank">Wimbledon Innovation Challenge</a>._
