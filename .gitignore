@@ -21,9 +21,10 @@ vendor/
 /test/tmp/
 /test/version_tmp/
 /tmp/
-
 # Bundler
-Gemfile.lock
+# Note: Gemfile.lock is committed for reproducible builds in CI/CD
+# .bundle/ directory is still ignored
+
 
 # macOS
 .DS_Store
