@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# Use the latest stable Ruby version
-ruby "3.3.6"
+# Use Ruby 3.3.x (compatible with 3.3.6 and newer patch versions)
+ruby "~> 3.3.0"
 
 # Jekyll 4.x - latest stable version
 gem "jekyll", "~> 4.3"
