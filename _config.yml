@@ -65,12 +65,12 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: UA-58388474-1
+    id: # UA-58388474-1 (replaced by Umami)
   goatcounter:
     id: # Your GoatCounter ID
   umami:
-    id: # Your Umami ID
-    domain: # Your Umami domain
+    id: 9e38bcda-8546-480c-b4aa-e8f1a5e48df1
+    domain: cloud.umami.is
   matomo:
     id: # Your Matomo ID
     domain: # Your Matomo domain
