@@ -70,7 +70,7 @@ analytics:
     id: # Your GoatCounter ID
   umami:
     id: 9e38bcda-8546-480c-b4aa-e8f1a5e48df1
-    domain: cloud.umami.is
+    domain: https://cloud.umami.is
   matomo:
     id: # Your Matomo ID
     domain: # Your Matomo domain
