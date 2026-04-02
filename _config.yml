@@ -223,6 +223,7 @@ exclude:
   - .ruby-gemset
   - Gemfile.lock
   - Makefile
+  - tmp/
 
 jekyll-archives:
   enabled: [categories, tags]
