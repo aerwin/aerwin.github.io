@@ -85,5 +85,15 @@ layout: compress
 
     <!-- Custom CSS to hide preview images in post content -->
     <link rel="stylesheet" href="/assets/css/custom.css">
+
+    <!-- Open external links in a new tab -->
+    <script>
+      document.querySelectorAll('a[href^="http"]').forEach(function(a) {
+        if (!a.href.startsWith('{{ site.url }}')) {
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+    </script>
   </body>
 </html>

@@ -23,9 +23,9 @@ image:
 
 ![Bluemix UI Updates: Bluemix &amp; Watson Logos](/images/2014-10-08-bluemix-ui-updates-say-hello-to-watson/twoLogos.png)
 
-We’re pleased to announce another round of [Bluemix UI](https://www.bluemix.net) updates. This refresh is especially exciting as we welcome IBM® Watson™ services to the Bluemix Catalog. With this addition, you can now rapidly prototype and build cognitive apps in the cloud!
+We’re pleased to announce another round of Bluemix UI updates. This refresh is especially exciting as we welcome IBM® Watson™ services to the Bluemix Catalog. With this addition, you can now rapidly prototype and build cognitive apps in the cloud!
 
-Along with Watson, we’ve made a number of other major improvements since our [August release](https://www.ibm.com/blogs/bluemix/2014/09/bluemix-ui-updates-august-2014/). These include:
+Along with Watson, we’ve made a number of other major improvements since our [August release](https://www.tonyerwin.com/2014/09/bluemix-ui-updates-august-2014.html). These include:
 
 - Upgrade of three services from beta to general availability: Business Rules, Delivery Pipeline, and MQ Light
 - Update of the Cloud Integration add-on, including the ability to create private services
@@ -34,7 +34,7 @@ Along with Watson, we’ve made a number of other major improvements since our [
 - Single sign-on with Bluemix Documentation to provide more personalized sample code snippets
 - Numerous usability improvements and bug fixes
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/10/bluemix-ui-updates-watson/)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix UI Updates: Watson Comes to Bluemix](/images/2014-10-08-bluemix-ui-updates-say-hello-to-watson/WatsonForBluemix2-to-1_880.png)
 

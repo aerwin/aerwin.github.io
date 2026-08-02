@@ -18,6 +18,6 @@ image:
   show: false
 ---
 
-I've recently jumped on the <a href="http://paper.li/" target="_blank">Paper.li</a> bandwagon and created <a href="https://paper.li/tonyerwin/1404445691" target="_blank">Tony's #Bluemix Journal</a>. Hopefully, it will contain interesting articles related to IBM Bluemix, cloud, and related technologies. So, please check it out!
+I created Tony's #Bluemix Journal on [Paper.li](http://paper.li/) to aggregate interesting articles related to IBM Bluemix, cloud, and related technologies. _Note: The Paper.li page is no longer available._
 
-[![Tony's #Bluemix Journal](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)](https://paper.li/tonyerwin/1404445691)
+[![Tony's #Bluemix Journal](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)

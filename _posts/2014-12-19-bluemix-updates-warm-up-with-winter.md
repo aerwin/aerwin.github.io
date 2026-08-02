@@ -18,15 +18,15 @@ image:
 
 ![Bluemix UI Updates: Bluemix & Winter!](/images/2014-12-19-bluemix-updates-warm-up-with-winter/bluemixWinter300_2.png)
 
-Winter is ramping up here in the Northern Hemisphere, and we wanted to give you some year-end [Bluemix](https://www.bluemix.net/) updates to help you warm up by the fire. So, we’re following the introduction of [Bluemix London](https://developer.ibm.com/bluemix/2014/11/20/bluemix-london/) in November with some cool new features:
+Winter is ramping up here in the Northern Hemisphere, and we wanted to give you some year-end Bluemix updates to help you warm up by the fire. So, we’re following the introduction of Bluemix London in November with some cool new features:
 
 - Translation of the Bluemix UI into 8 languages
-- Addition of starter apps for three new runtimes to the [Catalog](https://console.ng.bluemix.net/catalog/?category=cf-apps)
+- Addition of starter apps for three new runtimes to the Catalog
 - Improved getting started info for apps
 - Increased limits for associating SSL certificates with your custom domains
 - Documentation updates including quick reference card, better integration of app context, improved search, and globalization support
 - Miscellaneous usability enhancements and bug fixes
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/12/bluemix-updates-warm-winter-gifts/)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix UI Updates: Landing Page in Chinese](/images/2014-12-19-bluemix-updates-warm-up-with-winter/bluemixHome_Chinese.png)

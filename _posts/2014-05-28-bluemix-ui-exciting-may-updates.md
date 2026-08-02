@@ -20,7 +20,7 @@ image:
   show: false
 ---
 
-As the UI lead for the IBM Bluemix web interface, I've had the chance to write about new functionality as it's been released over the last few months. We've just gone live with our updates for May, so please check out <a href="https://www.ibm.com/blogs/bluemix/2014/05/bluemix-ui-exciting-may-updates/" target="_blank">my post<b>&nbsp;</b></a>on the&nbsp;<a href="https://www.ibm.com/blogs/bluemix/" target="_blank">official Bluemix blog</a>. The updates include:
+As the UI lead for the IBM Bluemix web interface, I've had the chance to write about new functionality as it's been released over the last few months. We've just gone live with our updates for May. The original post on the IBM Bluemix blog is no longer available, but the updates included:
 
 - Addition of "Bring your Own Buildpack" to the catalog
 - Enhanced navigation with collapsible navigation area.
@@ -31,7 +31,4 @@ As the UI lead for the IBM Bluemix web interface, I've had the chance to write a
 
 [![Bluemix UI Updates: Dashboard](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)
 
-And, for reference, here are pointers to my earlier blog posts regarding Bluemix UI updates:
-
-- <a href="http://bit.ly/1tMyGUL" target="_blank">April</a>
-- <a href="http://bit.ly/1hudaP1" target="_blank">March</a>
+And, for reference, I also wrote posts about Bluemix UI updates from earlier months (March and April 2014), though those links are no longer available.

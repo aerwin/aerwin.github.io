@@ -47,7 +47,7 @@ I'll say more about these requirements in the next couple of sections.
 
 ### Registered Domain Name
 
-We will be creating a custom domain in Bluemix, and for it to function properly, you will need to own the domain name that you plan to use. In addition, it must be registered with a [DNS hosting service](http://en.wikipedia.org/wiki/DNS_hosting_service) that allows you to make configuration changes. For example, I own the `tonyerwin.com` domain (which points at the blog you're reading right now) and use [GoDaddy](https://www.godaddy.com/) for DNS hosting. (NOTE: GoDaddy is just one of many [suitable providers](http://www.digitaltrends.com/computing/best-domain-name-registrars/).)
+We will be creating a custom domain in Bluemix, and for it to function properly, you will need to own the domain name that you plan to use. In addition, it must be registered with a [DNS hosting service](https://en.wikipedia.org/wiki/DNS_hosting_service) that allows you to make configuration changes. For example, I own the `tonyerwin.com` domain (which points at the blog you're reading right now) and use GoDaddy for DNS hosting.
 
 [![GoDaddy Domain Dashboard](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/dnsHostingProviderDashboard.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/dnsHostingProviderDashboard.png)
 
@@ -57,7 +57,7 @@ Even if you don't own a domain or have access to your DNS provider, you can stil
 
 <div class="tonySidebar">
     <h4>What If I Don't Have a Certificate?</h4>
-    <div style="margin-bottom: 0px; margin-top: 5px;">So, you want to try this cool feature out, but you're not ready to purchase a certificate from a certificate authority? If so, self-signed certificates could be a good option for you. While not appropriate for production apps, they do have a place during development. Check out my companion post which describes three different ways to create self-signed certificates: <a target="_blank" href="https://www.tonyerwin.com/2014/09/generating-self-signed-ssl-certificates.html"><i>Generating Self-Signed SSL Certificates for Use with Bluemix Custom Domains</i></a>.
+    <div style="margin-bottom: 0px; margin-top: 5px;">So, you want to try this cool feature out, but you're not ready to purchase a certificate from a certificate authority? If so, self-signed certificates could be a good option for you. While not appropriate for production apps, they do have a place during development. Check out my companion post which describes three different ways to create self-signed certificates: [*Generating Self-Signed SSL Certificates for Use with Bluemix Custom Domains*](https://www.tonyerwin.com/2014/09/generating-self-signed-ssl-certificates.html).
     </div>
 </div>
 
@@ -79,7 +79,7 @@ When it comes time to associate a certificate with your domain, you will need th
 - **Intermediate certificate**
     - You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third-party. You might not require an intermediate certificate if using a self-signed certificate for testing your application prior to deploying it to production.
 
-See the [_Uploading SSL Certificates_](https://console.bluemix.net/docs/apps/secapps.html#ssl_csr?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts) article in the [Bluemix Documentation](https://console.bluemix.net/docs/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts) for the most current information on supported certificate types.
+See the [_Uploading SSL Certificates_](https://cloud.ibm.com/docs/apps/secapps.html) article in the [IBM Cloud Documentation](https://cloud.ibm.com/docs) for the most current information on supported certificate types.
 
 <h2 id="AddCustomDomain">Adding a Custom Domain</h2>
 
@@ -89,9 +89,9 @@ See the [_Uploading SSL Certificates_](https://console.bluemix.net/docs/apps/sec
     </div>
 </div>
 
-Now that we have the prerequisites out of the way, let's start by adding a custom domain via the Bluemix UI. (NOTE: You can also create domains with the [`cf` command line tool](http://docs.cloudfoundry.org/devguide/deploy-apps/domains-routes.html).)
+Now that we have the prerequisites out of the way, let's start by adding a custom domain via the Bluemix UI. (NOTE: You can also create domains with the [`cf` command line tool](https://docs.cloudfoundry.org/devguide/deploy-apps/routes-domains.html).)
 
-1. Log in to the <a target="_blank" href="https://console.bluemix.net/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-SSLCerts">Bluemix UI</a>.
+1. Log in to the [IBM Cloud console](https://cloud.ibm.com).
 2. In the banner, open the _Organizations_ menu and choose **Manage Organizations**.
 
 [![Bluemix UI: Select Manage Organizations from Banner](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)
@@ -150,7 +150,7 @@ If you prefer to edit the route of the existing app, follow the steps below:
 
 <div class="tonySidebar">
     <h4>What if I Don't Own a Domain?</h4>
-    <div style="margin-bottom: 0px; margin-top: 5px;">You may still wish to experiment with this functionality even if you don't own a domain or have access to your DNS provider. An option for you would be to edit your <a target="_blank" href="http://en.wikipedia.org/wiki/Hosts_(file)">`hosts` file</a>. The mechanism for doing this will depend on your operating system, but in the end you'll want to add an entry like one of the following for your app's route:<br />
+    <div style="margin-bottom: 0px; margin-top: 5px;">You may still wish to experiment with this functionality even if you don't own a domain or have access to your DNS provider. An option for you would be to edit your [`hosts` file](https://en.wikipedia.org/wiki/Hosts_(file)). The mechanism for doing this will depend on your operating system, but in the end you'll want to add an entry like one of the following for your app's route:<br />
 
 <pre>
 # For an app running in Dallas 
@@ -207,7 +207,7 @@ Address: 75.126.81.68
 
 We're now at a point where you can access your app in the browser using a route that includes your custom domain. But, if you try to access it using the `https` protocol, you'll get a browser warning. You can try this for yourself using the link to one of my apps below:
 
-- [https://ssl-demo.bluemix2.tonyerwin.com](https://ssl-demo.bluemix2.tonyerwin.com/)
+- `https://ssl-demo.bluemix2.tonyerwin.com` _(demo app no longer running)_
 
 If you follow that link, your browser is going to report that you can't trust the identity of the server because it identifies itself as `*.mybluemix.net` rather than the domain in the URL. For example, here's what I see in Chrome:
 
@@ -254,7 +254,7 @@ But, for full disclosure, if you visit my app (see [https://ssl-demo.bluemix.ton
 
 ## Redirecting HTTP to HTTPS
 
-So, we're in pretty shape now, but there's one more important item to consider. In my previous post on [redirecting `http` to `https`](https://www.tonyerwin.com/2014/09/redirecting-http-to-https-with-nodejs.html), I explained that unless you take steps (either in your app code or app configuration), unencrypted `http` traffic will still be allowed. You can see an example of that if you visit my live app using the `http` protocol at [http://ssl-demo.bluemix.tonyerwin.com](http://ssl-demo.bluemix.tonyerwin.com/).  In the other post, I go into the problem in much more detail, and I describe a [sample Node.js](https://github.com/aerwin/https-redirect-demo) app that demonstrates one approach to solving it. That sample is also running live using my custom domain (and certificates) at [http://redirect-demo.bluemix.tonyerwin.com](http://redirect-demo.bluemix.tonyerwin.com). 
+So, we're in pretty shape now, but there's one more important item to consider. In my previous post on [redirecting `http` to `https`](https://www.tonyerwin.com/2014/09/redirecting-http-to-https-with-nodejs.html), I explained that unless you take steps (either in your app code or app configuration), unencrypted `http` traffic will still be allowed. In the other post, I go into the problem in much more detail, and I describe a [sample Node.js](https://github.com/aerwin/https-redirect-demo) app that demonstrates one approach to solving it.
 
 ## Conclusion
 

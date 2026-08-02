@@ -21,9 +21,9 @@ image:
 
 # Introduction
 
-The <a href="https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-About" target="_blank">IBM Cloud console</a> provides the web front end for <a href="https://www.ibm.com/cloud" target="_blank">IBM Cloud</a>, an open and secure public cloud providing enterprise-class IaaS and PaaS capabilities with over 170 managed services covering data, AI, IoT, security, blockchain, and more. I've had the pleasure of working on the console for most of the last decade. As a more junior developer, I wrote the first lines of proof-of-concept front-end code before IBM Cloud even had a name. This cloud was made <a href="https://www.ibm.com/blogs/cloud-archive/2014/06/general-availability/" target="_blank">generally available as IBM Bluemix in 2014</a>, <a href="https://www.ibm.com/cloud/blog/announcements/bluemix-is-now-ibm-cloud" target="_blank">rebranded as IBM Cloud in 2017</a>, and <a href="https://www.ibm.com/blogs/cloud-archive/2018/11/enhanced-platform-experience/" target="_blank">incorporated the fully integrated SoftLayer experience in 2018</a>.
+The [IBM Cloud console](https://cloud.ibm.com) provides the web front end for [IBM Cloud](https://www.ibm.com/products/cloud), an open and secure public cloud providing enterprise-class IaaS and PaaS capabilities with over 170 managed services covering data, AI, IoT, security, blockchain, and more. I've had the pleasure of working on the console for most of the last decade. As a more junior developer, I wrote the first lines of proof-of-concept front-end code before IBM Cloud even had a name. This cloud was made generally available as IBM Bluemix in 2014, rebranded as IBM Cloud in 2017, and incorporated the fully integrated SoftLayer experience in 2018.
 
-I became the lead full-stack architect in 2014, and had the opportunity to work with a countless number of talented developers, UI designers, and offering managers as the console's architecture and user experience (UX) were regularly updated and improved to keep pace with the maturing IBM Cloud. Last year, I left this amazing team for another role as an architect on the <a href="https://www.ibm.com/cloud/financial-services" target="_blank">IBM Cloud for Financial Services</a>. As I reflect on the experience, I'll share with you how the console architecture has evolved from its monolithic origins into a highly scalable, modern <a href="https://martinfowler.com/articles/microservices.html" target="_blank">microservice-based</a> system composed of dozens of <a href="https://martinfowler.com/articles/micro-frontends.html" target="_blank">micro front ends</a>. In particular, I’ll highlight the critical role that <a href="https://nodejs.org/" target="_blank">Node.js</a> played in this evolution.
+I became the lead full-stack architect in 2014, and had the opportunity to work with a countless number of talented developers, UI designers, and offering managers as the console's architecture and user experience (UX) were regularly updated and improved to keep pace with the maturing IBM Cloud. Last year, I left this amazing team for another role as an architect on the [IBM Cloud for Financial Services](https://www.ibm.com/products/cloud/financial-services). As I reflect on the experience, I'll share with you how the console architecture has evolved from its monolithic origins into a highly scalable, modern [microservice-based](https://martinfowler.com/articles/microservices.html) system composed of dozens of [micro front ends](https://martinfowler.com/articles/micro-frontends.html). In particular, I’ll highlight the critical role that [Node.js](https://nodejs.org/) played in this evolution.
 
 ## What is the IBM Cloud console?
 
@@ -43,7 +43,7 @@ The following image shows the console's dashboard.
 
 ## Origins as a monolith
 
-The original console was deployed to the IBM public <a href="https://www.cloudfoundry.org/" target="_blank">Cloud Foundry</a> instance as a single monolithic <a href="https://www.java.com/" target="_blank">Java</a> application on the back end. This application served APIs as well as the static resources for the monolithic front end that was written using the <a href="https://dojotoolkit.org/" target="_blank">Dojo Toolkit</a>. The front end was a single-page application (SPA) where all HTML, CSS, and JavaScript resources were loaded within a single web page​. The front end made AJAX calls to consume APIs provided by the Java server. At the time, this monolithic Dojo/Java combination was one of the most common architectural patterns in IBM.
+The original console was deployed to the IBM public [Cloud Foundry](https://www.cloudfoundry.org/) instance as a single monolithic [Java](https://www.java.com/) application on the back end. This application served APIs as well as the static resources for the monolithic front end that was written using the [Dojo Toolkit](https://dojotoolkit.org/). The front end was a single-page application (SPA) where all HTML, CSS, and JavaScript resources were loaded within a single web page​. The front end made AJAX calls to consume APIs provided by the Java server. At the time, this monolithic Dojo/Java combination was one of the most common architectural patterns in IBM.
 
 The following image shows the original architecture.
 
@@ -67,7 +67,7 @@ For these reasons, it became clear that the monolithic architecture was not goin
 
 ### Microservices and micro front ends
 
-As we looked to break free of the constraints of the monolith, we settled on a microservices architecture with many smaller, loosely coupled services that we called "plug-ins." Each plug-in would be a micro front end, or vertical slice representing a distinct area of responsibility within the overall UX. The plug-ins would be independent entities made up of client-side functions as well as a corresponding stateless, server-side <a href="https://samnewman.io/patterns/architectural/bff/" target="_blank">backend-for-frontend</a> (BFF) that would host the UI resources and provide any APIs needed by the front end. The composition of these plug-ins would form an experience that looked and behaved like one cohesive web application.
+As we looked to break free of the constraints of the monolith, we settled on a microservices architecture with many smaller, loosely coupled services that we called "plug-ins." Each plug-in would be a micro front end, or vertical slice representing a distinct area of responsibility within the overall UX. The plug-ins would be independent entities made up of client-side functions as well as a corresponding stateless, server-side [backend-for-frontend](https://samnewman.io/patterns/architectural/bff/) (BFF) that would host the UI resources and provide any APIs needed by the front end. The composition of these plug-ins would form an experience that looked and behaved like one cohesive web application.
 
 We expected this approach to provide numerous benefits, including:
 
@@ -86,7 +86,7 @@ Even though one of the selling points of the new architecture was flexibility in
 
 To that end, we made a key early decision to strongly recommend Node.js for back-end microservice development. Node.js was a great fit for several reasons, including:
 
-* **JavaScript runtime**: JavaScript is relatively easy to learn, and it's used by nearly 68% of all developers (according to the <a href="https://insights.stackoverflow.com/survey/2020#most-popular-technologies" target="_blank">2020 Stack Overflow survey</a>.
+* **JavaScript runtime**: JavaScript is relatively easy to learn, and it's used by nearly 68% of all developers (according to the [2020 Stack Overflow survey](https://insights.stackoverflow.com/survey/2020#most-popular-technologies).
 
 * **Transfer of skills up and down the stack**: The use of JavaScript would enable our developers to transfer front-end JavaScript skills to the back end, and vice versa. This meant developers would be able to effectively work on the full stack without having to become proficient in a second language.
 * **Robust ecosystem**: We believed developers would be able to do more, with less effort by virtue of the rich Node.js ecosystem. For example, the public NPM registry includes thousands (now millions) of open source tools and modules written and supported by developers all over the world.
@@ -98,13 +98,13 @@ The diagram shows the general micro front-end architectural pattern that was pro
 
 [![IBM Cloud Console: Typical Micro Front end Pattern](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story/console-typical-ui-microservice.png)
 
-The pattern's flow (based heavily on <a href="https://dejanglozic.com/2014/10/20/micro-services-and-page-composition-problem/" target="_blank">work done by colleague Dejan Glozic</a>) involved the following steps:
+The pattern's flow (based heavily on [work done by colleague Dejan Glozic](https://dejanglozic.com/2014/10/20/micro-services-and-page-composition-problem/)) involved the following steps:
 
 1. The page request comes into server-side proxy.
 1. The proxy routes the request to the appropriate Node.js microservice based on the URL (for example, a request for `/catalog` would get routed to our Catalog microservice acting as the BFF for the Catalog UI).
 1. The microservice handles the request to return HTML to the client:
     * Consults the shared session store (for example, Redis) for the user token (which would have been inserted in cache during the login process).
-    * Collects information needed for the initial page rendering by invoking back-end <a href="https://cloud.ibm.com/docs?tab=api-docs" target="_blank">IBM Cloud APIs</a>, other microservices, databases, and so on. Special attention would need to be paid here to not make expensive calls on the server-side that would delay the HTML response and leave the user seeing a blank screen for an extended period.
+    * Collects information needed for the initial page rendering by invoking back-end [IBM Cloud APIs](https://cloud.ibm.com/docs?tab=api-docs), other microservices, databases, and so on. Special attention would need to be paid here to not make expensive calls on the server-side that would delay the HTML response and leave the user seeing a blank screen for an extended period.
     * Invokes the Common Header API (provided by a special purpose microservice) to get HTML for a shared header to include in the initial payload​.
     * Uses server-side templating to insert all data into one HTML payload.
 1. The browser renders the pages and loads any required (and hopefully lightweight) JavaScript and CSS.
@@ -170,13 +170,13 @@ These plug-in best practices were made mandatory as part of the internal IBM Clo
 
 #### Opinionated Node.js starter app
 
-One important requirement we levied is that new plug-ins must be based on a minimal standard UI starter app written with Node.js. The starter app includes everything needed for a basic micro front end and is intended to help developers adhere to the best practices laid out in the previous section. The starter uses the <a href="https://expressjs.com/" target="_blank">Express</a> web application framework and pulls in custom modules acting as Express middleware to enable authentication, session management, and so on.
+One important requirement we levied is that new plug-ins must be based on a minimal standard UI starter app written with Node.js. The starter app includes everything needed for a basic micro front end and is intended to help developers adhere to the best practices laid out in the previous section. The starter uses the [Express](https://expressjs.com/) web application framework and pulls in custom modules acting as Express middleware to enable authentication, session management, and so on.
 
 In support of front-end development, the starter includes packages for:
 
-* <a href="https://www.carbondesignsystem.com/" target="_blank">Carbon Design System</a>: The IBM external open source design system for products and digital experiences. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.
-* Cloud Pattern and Asset Library (PAL): Internal to IBM, this library provides service team developers with reusable <a href="https://reactjs.org/" target="_blank">React</a> components and hooks to build user interfaces on IBM Cloud. The library is built using the Carbon Design System and components from  <a href="https://github.com/carbon-design-system/carbon-components-react" target="_blank">Carbon Components React</a> to create other components and patterns that are consistent across IBM Cloud.
-* <a href="https://webpack.js.org/" target="_blank">webpack</a>: This is used to produce nicely packaged modules of UI resources that can be served to the browser.
+* [Carbon Design System](https://www.carbondesignsystem.com/): The IBM external open source design system for products and digital experiences. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.
+* Cloud Pattern and Asset Library (PAL): Internal to IBM, this library provides service team developers with reusable [React](https://reactjs.org/) components and hooks to build user interfaces on IBM Cloud. The library is built using the Carbon Design System and components from  [Carbon Components React](https://github.com/carbon-design-system/carbon-components-react) to create other components and patterns that are consistent across IBM Cloud.
+* [webpack](https://webpack.js.org/): This is used to produce nicely packaged modules of UI resources that can be served to the browser.
 
 The use of these UI libraries is a key element in promoting uniformity and consistency in the UX, while still giving teams freedom to be creative.
 
@@ -211,7 +211,7 @@ It became a matter of self-preservation to add monitoring so that we could quick
 
 In the early days of our microservice migration, we developed a bespoke monitoring system to track status codes and response times for every inbound/outbound request on every microservice with results available in Grafana dashboards. After this system was in place, we were no longer "flying blind" and were often able to identify problems in various parts of IBM Cloud even before the affected teams knew there was an issue.
 
-The system has evolved, but is still in place today. One of our most recent and important changes was to leverage <a href="https://opencensus.io/" target="_blank">OpenCensus</a> (now merged with <a href="https://opentelemetry.io/" target="_blank">OpenTelemetry</a>). This has enabled us to construct distributed traces in <a href="https://www.jaegertracing.io/" target="_blank">Jaeger</a> to see how requests flow from microservice to microservice in our system.
+The system has evolved, but is still in place today. One of our most recent and important changes was to leverage [OpenCensus](https://opencensus.io/) (now merged with [OpenTelemetry](https://opentelemetry.io/)). This has enabled us to construct distributed traces in [Jaeger](https://www.jaegertracing.io/) to see how requests flow from microservice to microservice in our system.
 
 ### Improved high availability and resiliency
 
@@ -219,7 +219,7 @@ Moving to a microservice architecture was important for high availability and re
 
 #### Adopting Kubernetes
 
-You might recall that our first microservices architecture ran on Cloud Foundry. A critical part of the evolution of the console was replatforming to the <a href="https://www.ibm.com/cloud/container-service/" target="_blank">IBM Cloud Kubernetes Service</a>. We moved to Kubernetes because it allowed us to achieve greater performance, scalability, reliability, and security than we had on Cloud Foundry.
+You might recall that our first microservices architecture ran on Cloud Foundry. A critical part of the evolution of the console was replatforming to the [IBM Cloud Kubernetes Service](https://www.ibm.com/products/kubernetes-service). We moved to Kubernetes because it allowed us to achieve greater performance, scalability, reliability, and security than we had on Cloud Foundry.
 
 Each console deployment uses a Kubernetes cluster with 9 worker nodes running on 16 cores with 64 GB of memory.
 
@@ -227,7 +227,7 @@ Each console deployment uses a Kubernetes cluster with 9 worker nodes running on
 
 The decision that made an even greater impact on our availability was implementing geo-load balancing and failover. This basically means routing a user's request to the geographically closest console deployment which is also healthy. The odds of all deployments being unhealthy at the same time is much less than one deployment being unhealthy.
 
-The production console is deployed to clusters in 9 different regions all around the world. <a href="https://www.ibm.com/cloud/cloud-internet-services" target="_blank">IBM Cloud Internet Services</a> monitors the health of these deployments through a health check endpoint on each cluster provided by the console team. When a request goes to our single global URL (<a href="https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-About" target="_blank">https://cloud.ibm.com</a>), Cloud Internet Services returns the IP address for the nearest console deployment. If a health check in a particular region shows a problem, then Cloud Internet Services returns the IP address for the next closest healthy region​.
+The production console is deployed to clusters in 9 different regions all around the world. [IBM Cloud Internet Services](https://www.ibm.com/products/cloud-internet-services) monitors the health of these deployments through a health check endpoint on each cluster provided by the console team. When a request goes to our single global URL ([https://cloud.ibm.com](https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-About)), Cloud Internet Services returns the IP address for the nearest console deployment. If a health check in a particular region shows a problem, then Cloud Internet Services returns the IP address for the next closest healthy region​.
 
 [![IBM Cloud Console: Geo Load Balancing](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png)](/images/2021-08-22-evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story//console-geo-load-balancing.png)
 

@@ -22,7 +22,7 @@ image:
 
 ![Bluemix UI Updates: Bluemix Pumpkin](/images/2014-10-31-trick-or-treat-halloween-is-here-in-u/pumpkin-bluemix.png)
 
-Trick or treat! Halloween is here in the U.S., and we have a fresh round of [Bluemix](https://www.bluemix.net) announcements and Bluemix UI updates. Keep reading for details on all of the new "treats" this month:
+Trick or treat! Halloween is here in the U.S., and we have a fresh round of Bluemix announcements and Bluemix UI updates. Keep reading for details on all of the new "treats" this month:
 
 - New IBM and Twitter partnership
 - Addition of Ustream Service<
@@ -37,6 +37,6 @@ Trick or treat! Halloween is here in the U.S., and we have a fresh round of [Blu
     - Removal of "Add-on" Terminology
     - Miscellaneous Usability improvements and Defects
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/10/bluemix-ui-updates-october-2014/)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix UI Updates: Catalog Filtering](/images/2014-10-31-trick-or-treat-halloween-is-here-in-u/catalogFiltering.png)

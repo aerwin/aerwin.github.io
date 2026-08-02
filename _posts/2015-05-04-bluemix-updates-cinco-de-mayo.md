@@ -16,7 +16,7 @@ image:
 
 ![Bluemix Updates: Cinco de Mayo!](/images/2015-05-04-bluemix-updates-cinco-de-mayo/logo_dark300x300_dark.png)
 
-It’s been a couple months since my last [Bluemix Updates blog](https://developer.ibm.com/bluemix/2015/02/26/bluemix-updates-interconnect-2015/). But, the team has kept working, and on the eve of Cinco de Mayo I thought it was time to share some great new features and functions that have recently gone live. These include:
+It's been a couple months since my last Bluemix Updates blog. But, the team has kept working, and on the eve of Cinco de Mayo I thought it was time to share some great new features and functions that have recently gone live. These include:
 
 - Unveiling of a new and improved Pricing page.
 - Introduction of a Labs section in the Bluemix Catalog.
@@ -28,6 +28,6 @@ It’s been a couple months since my last [Bluemix Updates blog](https://develop
 - Updates to IBM Eclipse Tools for Bluemix.
 - Miscellaneous usability improvements and fixed defects.
 
-[Read Post on Bluemix Developer's Blog](https://developer.ibm.com/bluemix/2015/05/04/bluemix-updates-cinco-de-mayo)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix Update: New Pricing Page](/images/2015-05-04-bluemix-updates-cinco-de-mayo/new_pricing2_2to1ratio.png)

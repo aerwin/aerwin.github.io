@@ -24,7 +24,7 @@ image:
 
 ![IBM Bluemix Banners](/images/2014-09-02-bluemix-ui-updates-august-2014/augustFeatured.png)
 
-The Bluemix UI updates for August are now live in 85 countries! The team kept busy this month and put together a lot of awesome new features since our <a target="_blank" href="https://www.ibm.com/blogs/bluemix/2014/08/bluemix-ui-updates-for-july/">July refresh</a>. We think you'll enjoy these enhancements, which include:
+The Bluemix UI updates for August are now live in 85 countries! The team kept busy this month and put together a lot of awesome new features. We think you'll enjoy these enhancements, which include:
 
 - Better Allowances for Runtime Usage
 - Cost Estimator &mdash; estimate costs for your apps and services based on configurations you specify
@@ -36,7 +36,7 @@ The Bluemix UI updates for August are now live in 85 countries! The team kept bu
 - Documentation Updates &mdash; navigation improvements and updated styling
 - Many bug fixes and usability improvements
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/09/bluemix-ui-updates-august-2014/)
+_Read Post on Bluemix Developer's Blog — link no longer available_
 
 [![Bluemix UI Updates: August 2014](/images/2014-09-02-bluemix-ui-updates-august-2014/appDetailsFull.png)](/images/2014-09-02-bluemix-ui-updates-august-2014/appDetailsFull.png)
 

@@ -20,9 +20,9 @@ image:
   show: false
 ---
 
-<a href="https://www.bluemix.net/" target="_blank"><img class="tonyImg" alt="IBM Bluemix Now Open!" src="http://2.bp.blogspot.com/-mInNqE0fERE/U7FZnAkjVBI/AAAAAAADgiA/CO35xgOYbU0/s1600/blueMixNowOpen.png" style="max-height: 160px; max-width: 1284px; width: 100%;margin-top:10px;margin-bottom:15px;" /></a> 
+<img class="tonyImg" alt="IBM Bluemix Now Open!" src="http://2.bp.blogspot.com/-mInNqE0fERE/U7FZnAkjVBI/AAAAAAADgiA/CO35xgOYbU0/s1600/blueMixNowOpen.png" style="max-height: 160px; max-width: 1284px; width: 100%;margin-top:10px;margin-bottom:15px;" />
 
-Today marks the&nbsp;general availability of&nbsp;<a href="https://www.bluemix.net/" target="bluemixGA">IBM Bluemix</a>&nbsp;with more than 50 services and flexible, pay-as-you-go pricing. &nbsp;The GA brings a lot of cool, new functions since our last beta refresh at the end of May including:
+Today marks the&nbsp;general availability of&nbsp;IBM Bluemix&nbsp;with more than 50 services and flexible, pay-as-you-go pricing. &nbsp;The GA brings a lot of cool, new functions since our last beta refresh at the end of May including:
 
 - Pricing
 - Solutions Pages
@@ -33,7 +33,7 @@ Today marks the&nbsp;general availability of&nbsp;<a href="https://www.bluemix.n
 - Eclipse Tools for Bluemix
 - and more!
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/06/general-availability/)
+_Read Post on Bluemix Developer's Blog — link no longer available_
 
 [![Bluemix UI Updates: Region Selector](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)
 

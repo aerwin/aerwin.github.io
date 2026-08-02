@@ -25,10 +25,10 @@ image:
 
 We’ve got, not just one, but <i>two</i> big announcements for you in today’s blog:
 
-- With the introduction of Bluemix London, the original U.S.-hosted Bluemix has a European twin! This means you can exploit the power of Bluemix to deploy apps that run in the [United Kingdom](https://console.eu-gb.bluemix.net) or the [United States](https://www.bluemix.net). With your existing account, you can easily choose to work with either region from both the Bluemix UI or the <code>cf</code> command line.
+- With the introduction of Bluemix London, the original U.S.-hosted Bluemix has a European twin! This means you can exploit the power of Bluemix to deploy apps that run in the United Kingdom or the United States. With your existing account, you can easily choose to work with either region from both the Bluemix UI or the <code>cf</code> command line.
 - As an alternative to our two public deployments, we're also introducing Bluemix Dedicated. This is a private Bluemix environment managed and hosted by IBM. By letting us do the heavy lifting, your development team is freed up to build apps rather than maintain hardware and software installations.
  
 
-[Read Post on Bluemix Developer's Blog](https://www.ibm.com/blogs/bluemix/2014/11/bluemix-london/)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix UI Updates: Region Selector](/images/2014-11-20-bluemix-london-now-live/bluemixRegionsPulldown_annotated.png)

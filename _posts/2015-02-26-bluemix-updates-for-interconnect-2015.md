@@ -20,13 +20,13 @@ I’m writing this edition of the blog from Las Vegas as [IBM InterConnect 2015]
 
 - Integration of Container and Virtual Machines as first-class citizens in the Dashboard.
 - Introduction of a Guided Experience section in the Dashboard to help you get started.
-- Addition of new zone pages for [Open Architecture](https://console.bluemix.net/solutions/open-architecture), [Hybrid Cloud](https://console.bluemix.net/solutions/hybrid-cloud), [Watson](https://console.bluemix.net/solutions/watson), and [Internet of Things](https://console.bluemix.net/solutions/iot). 
+- Addition of new zone pages for Open Architecture, Hybrid Cloud, Watson, and Internet of Things.
 - Updated landing/home page.
 - Ability to receive billing/usage notifications.
 - Capability to purchase third-party service plans.
 - Improvements to SSL certificate support for custom domains.
 - Miscellaneous usability improvements and squashed bugs.
 
-[Read Post on Bluemix Developer's Blog](https://developer.ibm.com/bluemix/2015/02/26/bluemix-updates-interconnect-2015/)
+*Read Post on Bluemix Developer's Blog (link no longer available)*
 
 ![Bluemix Updates: IBM InterConnect 2015](/images/2015-02-26-bluemix-updates-for-interconnect-2015/bluemixOverHills2to1_1000.JPG)
