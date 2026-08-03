@@ -41,17 +41,17 @@ AI applications carry all the familiar risks: inadequate access controls, unencr
 - **Sensitive information disclosure** — the model inadvertently reveals training data, confidential context, or personal information in its outputs
 - **Supply chain attacks** — vulnerabilities introduced through third-party models, libraries, datasets, or toolchains
 
-These aren't hypothetical concerns. OWASP maintains a [Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) that makes the threat landscape concrete, and IBM's [AI Risk Atlas](https://dataplatform.cloud.ibm.com/docs/content/wsj/ai-risk-atlas/ai-risk-atlas.html?context=wx&audience=wdp) classifies AI risks as _traditional_ (carried over from prior forms of AI), _amplified_ (intensified by the generative capabilities of foundation models), and _new_ (emerging risks intrinsic to generative AI itself). A working framework needs to address all three categories without overwhelming the engineering teams it's supposed to guide.
+These aren't hypothetical concerns. OWASP maintains a [Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) that makes the threat landscape concrete, and IBM's [AI Risk Atlas](https://dataplatform.cloud.ibm.com/docs/content/wsj/ai-risk-atlas/ai-risk-atlas.html?context=wx&audience=wdp) classifies AI risks as _traditional_ (carried over from prior forms of AI), _amplified_ (intensified by the generative capabilities of foundation models), and _new_ (emerging risks intrinsic to generative AI itself). Any useful guide needs to address all three categories without overwhelming the engineering teams it's supposed to help.
 
 There's a second challenge that's less technical but just as real: **governance debt**. Enterprise teams building AI proofs-of-concept often defer security and privacy assessments because the system "isn't in production yet." That logic has never been sound, and it's even less defensible for AI applications — where the data handling patterns, model choices, and access control designs made during prototyping often survive intact into production.
 
-# The Guide: Five Pillars, Five Layers, One Pipeline
+# The Guide: Pillars, Layers, and a Pipeline
 
 The AI Solution Guide is organized around three interlocking structures: a set of **well-architected framework pillars**, a **layered security and controls model**, and an **AI application pipeline**.
 
 ## Well-Architected Framework Pillars
 
-Good AI applications need to be well-architected applications first. The guide adapts the [IBM Well-Architected Framework](https://www.ibm.com/think/architectures/well-architected) to include the realities of AI workloads. The framework is organized around six pillars:
+Good AI applications need to be well-architected applications first. The guide adapts the [IBM Well-Architected Framework](https://www.ibm.com/think/architectures/well-architected) to include the realities of AI workloads. It is organized around six pillars:
 
 | Pillar | What it covers |
 |---|---|
@@ -134,7 +134,7 @@ I led the development of this guide from early conception through its current pu
 
 # Conclusion
 
-Building AI applications well — securely, compliantly, and in a way that earns trust — requires more than good intentions and a capable model. It requires a coherent framework that engineering teams can actually use: one that covers the full application lifecycle, addresses both the familiar and the novel risks, and makes governance questions unavoidable rather than easy to defer.
+Building AI applications well — securely, compliantly, and in a way that earns trust — requires more than good intentions and a capable model. It requires a coherent guide that engineering teams can actually use: one that covers the full application lifecycle, addresses both the familiar and the novel risks, and makes governance questions unavoidable rather than easy to defer.
 
 The problems this guide addresses are not unique to one organization. Whether your team is shipping its first RAG-based chatbot or scaling a broader generative AI program across the enterprise, the same questions arise: What data are you using, and how was it cleared? What happens if the model is attacked? Who is accountable if something goes wrong?
 
