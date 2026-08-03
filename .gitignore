@@ -65,3 +65,7 @@ yarn-error.log*
 
 # Chirpy theme specific
 assets/js/dist/
+
+# AI assistant
+.bob/
+.claude/

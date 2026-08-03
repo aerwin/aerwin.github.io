@@ -53,7 +53,7 @@ The framework provides detailed implementation and evidence guidance for each co
 2. **IBM Cloud® Satellite** — Builds a hybrid environment that brings the scalability and on-demand flexibility of public cloud services to applications and data running in your secure private cloud (for example, on-premises).
 3. **IBM Cloud for VMware® Regulated Workloads** — An extension of the VMware vCenter Server® offering that delivers a secure, high-performance platform for workloads already rooted in VMware infrastructure.
 
-Each of these architectures demonstrates how to stitch together Financial Services Validated ecosystem components as a secure basis for running your own financial services workloads on IBM Cloud. I made significant contributions to the implementation guidance accompanying the control requirements, and served as the lead architect and author for the VPC and Satellite architectures — with a focus on resilience, data integrity, security, and disaster recovery.
+Each of these architectures demonstrates how to stitch together Financial Services Validated ecosystem components as a secure basis for running your own financial services workloads on IBM Cloud. I made significant contributions to the implementation guidance accompanying the control requirements, and served as the lead architect and author for the VPC and Satellite architectures — with a focus on security, data integrity, resilience, and disaster recovery.
 
 # Automated Deployable Architectures
 
