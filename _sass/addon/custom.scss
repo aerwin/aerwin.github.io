@@ -19,9 +19,9 @@ div.mt-3.mb-3:has(> a.preview-img) {
      Forest    #006338  (IU secondary cool accent)
    ============================================================================= */
 
-/* --- Light mode overrides --- */
-[data-mode='light'],
-:root:not([data-mode='dark']) {
+/* --- Mixins --- */
+
+@mixin light-iu-theme {
   /* Sidebar: IU Crimson background */
   --sidebar-bg: #990000;
   --sidebar-border-color: #7a0000;
@@ -63,8 +63,7 @@ div.mt-3.mb-3:has(> a.preview-img) {
   --checkbox-checked-color: #990000;
 }
 
-/* --- Dark mode overrides --- */
-[data-mode='dark'] {
+@mixin dark-iu-theme {
   /* Sidebar: deep IU crimson (slightly darkened for dark UI) */
   --sidebar-bg: #5c0000;
   --sidebar-border-color: #450000;
@@ -82,6 +81,9 @@ div.mt-3.mb-3:has(> a.preview-img) {
   /* Links: IU cream / gold tone — readable on dark backgrounds */
   --link-color: #edcf7a;
   --link-underline-color: rgba(237, 207, 122, 0.3);
+
+  /* Headings: light cream — readable on dark backgrounds */
+  --heading-color: #f2e6c2;
 
   /* TOC highlight: IU gold */
   --toc-highlight: #edcf7a;
@@ -101,6 +103,37 @@ div.mt-3.mb-3:has(> a.preview-img) {
 
   /* Checkbox accent */
   --checkbox-checked-color: #edcf7a;
+}
+
+/* --- Light mode overrides ---
+   Mirror Chirpy's selector structure so our variables win in all cases. */
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]),
+  html[data-mode='light'] {
+    @include light-iu-theme;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-mode='light'] {
+    @include light-iu-theme;
+  }
+}
+
+/* --- Dark mode overrides ---
+   Mirror Chirpy's own selector structure from base/_base.scss so our
+   variables always win regardless of the OS color-scheme preference. */
+@media (prefers-color-scheme: light) {
+  html[data-mode='dark'] {
+    @include dark-iu-theme;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]),
+  html[data-mode='dark'] {
+    @include dark-iu-theme;
+  }
 }
 
 /* ---- Sidebar: ensure nav link text is always legible on crimson ---- */
