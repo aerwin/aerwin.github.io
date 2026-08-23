@@ -165,4 +165,30 @@ div.mt-3.mb-3:has(> a.preview-img) {
   color: #ffffff;
 }
 
+/* ---- Tables: allow text wrapping in wide-content tables ---- */
+.wrapped-table {
+  .table-wrapper > table {
+    display: table;
+    width: 100%;
+  }
+
+  th, td {
+    white-space: normal !important;
+    word-break: break-word;
+  }
+}
+
+/* ---- TL;DR / .prompt-info callout — IU crimson accent on warm neutral ----
+ *
+ * CSS custom-property overrides live in assets/css/custom.scss, which loads
+ * after the theme CSS and can win on source order at equal specificity.
+ * Only the border rule lives here; it needs !important to beat Chirpy's
+ * explicit border-left: 0 on [class^='prompt-'] in _typography.scss.
+ * -------------------------------------------------------------------- */
+
+[class~='prompt-info'] {
+  border-left: 4px solid var(--tldr-accent) !important;
+  border-radius: 4px;
+}
+
 // Made with Bob

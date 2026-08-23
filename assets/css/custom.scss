@@ -11,4 +11,61 @@ div.mt-3.mb-3:has(> a.preview-img) {
   display: none !important;
 }
 
+/* ---- TL;DR / .prompt-info callout — IU crimson accent on warm neutral ----
+ *
+ * Chirpy declares --prompt-info-bg and --prompt-info-icon-color inside:
+ *   @media (prefers-color-scheme: light/dark) {
+ *     html:not([data-mode]), html[data-mode='light/dark'] { @include light/dark.styles }
+ *   }
+ * Specificity of those selectors is 0-1-1 (html + attribute). Our :root (0-0-0)
+ * loses. We must mirror the exact same selector shape so we win on source order,
+ * loaded here in assets/css/custom.scss which Jekyll injects after the theme CSS.
+ *
+ * We also add --tldr-accent so border and icon are independently controllable.
+ * -------------------------------------------------------------------- */
+
+/* Light mode: OS prefers light, no toggle or explicit light toggle */
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]),
+  html[data-mode='light'] {
+    --prompt-info-bg:         #faf5f3;
+    --prompt-info-icon-color: #990000;
+    --tldr-accent:            #990000;
+  }
+}
+
+/* Light mode: OS prefers dark but user forced light */
+@media (prefers-color-scheme: dark) {
+  html[data-mode='light'] {
+    --prompt-info-bg:         #faf5f3;
+    --prompt-info-icon-color: #990000;
+    --tldr-accent:            #990000;
+  }
+}
+
+/* Dark mode: OS prefers dark, no toggle or explicit dark toggle */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]),
+  html[data-mode='dark'] {
+    --prompt-info-bg:         #241c1b;
+    --prompt-info-icon-color: #c2555a;
+    --tldr-accent:            #c2555a;
+  }
+}
+
+/* Dark mode: OS prefers light but user forced dark */
+@media (prefers-color-scheme: light) {
+  html[data-mode='dark'] {
+    --prompt-info-bg:         #241c1b;
+    --prompt-info-icon-color: #c2555a;
+    --tldr-accent:            #c2555a;
+  }
+}
+
+/* Border: !important to beat Chirpy's border-left: 0 on [class^='prompt-'] */
+[class~='prompt-info'] {
+  border-left: 4px solid var(--tldr-accent) !important;
+  border-radius: 4px;
+}
+
 // Made with Bob

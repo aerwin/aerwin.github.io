@@ -13,7 +13,7 @@ tags:
 - performance
 - akamai
 - dyn
-- cloud Foundry
+- cloud foundry
 - kubernetes
 categories: [Architecture]
 modified_time: '2018-02-19T20:45:00.000-06:00'
