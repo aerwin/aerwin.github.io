@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 92 1230 408" width="1230" height="408">
+<defs><filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#0B1F3A" flood-opacity="0.055"/></filter></defs>
+<text x="220.0" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#8A93A1" letter-spacing="0.6">INBOUND  ·  AS A PROVIDER</text>
+<text x="1010.0" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#8A93A1" letter-spacing="0.6">OUTBOUND  ·  AS AN ORCHESTRATOR</text>
+<rect x="450" y="102" width="280" height="350" rx="10" fill="#F8FAFC" stroke="#D5DBE3" stroke-width="1.2"/>
+<text x="590.0" y="128" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#69727E" text-anchor="middle" letter-spacing="0.3">TLS Agentic Platform</text>
+<path d="M 370 198.0 L 464 198.0" fill="none" stroke="#3B6FB6" stroke-width="2.0"/>
+<path d="M 472 198.0 L 463 193.5 L 463 202.5 Z" fill="#3B6FB6"/>
+<text x="421" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3B6FB6" text-anchor="middle">A2A</text>
+<path d="M 370 358.0 L 464 358.0" fill="none" stroke="#6E8299" stroke-width="1.8"/>
+<path d="M 472 358.0 L 463 353.5 L 463 362.5 Z" fill="#6E8299"/>
+<text x="421" y="346" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6E8299" text-anchor="middle">MCP</text>
+<path d="M 708 198.0 L 852 198.0" fill="none" stroke="#3B6FB6" stroke-width="2.0"/>
+<path d="M 860 198.0 L 851 193.5 L 851 202.5 Z" fill="#3B6FB6"/>
+<text x="784" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3B6FB6" text-anchor="middle">A2A</text>
+<path d="M 708 224.0 L 774.0 224.0 Q 784.0 224.0 784.0 234.0 L 784.0 348.0 Q 784.0 358.0 794.0 358.0 L 852 358.0" fill="none" stroke="#6E8299" stroke-width="1.8"/>
+<path d="M 860 358.0 L 851 353.5 L 851 362.5 Z" fill="#6E8299"/>
+<text x="770" y="295" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6E8299" text-anchor="end">MCP</text>
+<rect x="472" y="150" width="236" height="96" rx="7" fill="#E3ECFA" stroke="#3B6FB6" stroke-width="1.3" filter="url(#sh)"/>
+<text x="590.0" y="194.6" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#14365E" text-anchor="middle">Supervisor &amp;</text>
+<text x="590.0" y="210.5" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#14365E" text-anchor="middle">Specialist Agents</text>
+
+<rect x="472" y="310" width="236" height="96" rx="7" fill="#DCE3EC" stroke="#93A0B1" stroke-width="1.3" filter="url(#sh)"/>
+<text x="590.0" y="362.6" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#38414D" text-anchor="middle">MCP Tool Servers</text>
+
+<rect x="70" y="150" width="300" height="96" rx="7" fill="#FFFFFF" stroke="#BFC6D1" stroke-width="1.3" stroke-dasharray="4 3" filter="url(#sh)"/>
+<text x="220.0" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">TLS Concierge BFF</text>
+<text x="220.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">Other IBM assistants &amp; apps</text>
+<text x="220.0" y="216.1" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">Any A2A-compliant client</text>
+
+<rect x="70" y="310" width="300" height="96" rx="7" fill="#FFFFFF" stroke="#BFC6D1" stroke-width="1.3" stroke-dasharray="4 3" filter="url(#sh)"/>
+<text x="220.0" y="348.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">Systems that speak MCP —</text>
+<text x="220.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">reach tool servers directly,</text>
+<text x="220.0" y="376.1" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">bypassing the agent layer</text>
+
+<rect x="860" y="150" width="300" height="96" rx="7" fill="#FFFFFF" stroke="#BFC6D1" stroke-width="1.3" stroke-dasharray="4 3" filter="url(#sh)"/>
+<text x="1010.0" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">Salesforce Agentforce</text>
+<text x="1010.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">IBM watsonx Orchestrate</text>
+<text x="1010.0" y="216.1" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">Any A2A-compliant agent</text>
+
+<rect x="860" y="310" width="300" height="96" rx="7" fill="#FFFFFF" stroke="#BFC6D1" stroke-width="1.3" stroke-dasharray="4 3" filter="url(#sh)"/>
+<text x="1010.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">MCP servers hosted</text>
+<text x="1010.0" y="369.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#78818E" text-anchor="middle">on other platforms</text>
+
+</svg>
