@@ -6,36 +6,19 @@ order: 4
 
 ## About Tony Erwin
 
-I'm a technology leader and architect with a passion for building innovative systems at the intersection of **artificial intelligence**, **cloud computing**, and **enterprise software engineering**.
-
-### Current Focus
-
-My current work centers on:
-
-- **AI & Agentic Systems**: Designing and implementing intelligent agent architectures, multi-agent systems, and AI-powered automation platforms
-- **Cloud Architecture**: Building scalable, resilient cloud-native applications and microservices
-- **Enterprise AI**: Applying AI/ML technologies to solve real-world business problems at scale
-- **Technical Leadership**: Mentoring teams and driving architectural decisions for complex systems
+I'm a Senior Technical Staff Member at IBM, where I set technical direction for how large organizations adopt AI — the architecture, the governance, and the standards that turn experimentation into systems people can depend on. Almost three decades in, the work I care about hasn't changed: building the platforms other engineers build on, in environments where getting it wrong is expensive.
 
 ### Background
 
-I'm a Senior Technical Staff Member (STSM) at IBM with 25+ years of experience architecting enterprise software at scale — from early-career infrastructure tooling to cloud platforms to the agentic AI systems I'm building today. Throughout, my focus has been the same: building platforms that other engineers and organizations build on top of.
+Since 2023 I've been part of the AI Center of Excellence in IBM Infrastructure — the business unit responsible for IBM Cloud, Power, Z, and Storage. I led the [AI solution guide](/2024/07/building-trustworthy-ai-a-practical-solution-guide-for-enterprise-ai-teams.html) that became the recommended way to govern AI development across the unit, then spent two years as chief architect for the [TLS Agentic Platform](/2026/08/building-production-agentic-ai-at-ibm.html) in Technology Lifecycle Services — a multi-agent system built from the ground up, with real users in production within months, and a shared Python library that makes LangGraph, A2A, and MCP work together easily and consistently, now an inner source project adopted across the business unit.
 
-Today that means AI. I lead agentic AI architecture within IBM's Technology Lifecycle Services organization — building the platforms, developer frameworks, and governance standards that help large organizations move from AI experimentation to production. I took the TLS Agentic Platform from a six-week proof-of-concept to a production multi-agent system, and created the Infrastructure Agent Utilities — a Python library for LangGraph/MCP agents that's now evolving into a formal inner source project across IBM.
-
-Before that, I spent six years as lead architect for IBM Cloud's primary management console — leading a distributed global team through a full microservices migration, a major infrastructure overhaul that achieved 99.98% availability, and the project that unified IBM's cloud platforms into a single experience. I then moved into financial services as a senior architect for IBM Cloud for Financial Services — driving compliance frameworks, security controls, and reference architectures that financial institutions use to demonstrate regulatory readiness, and leading the first public release of IBM's financial services reference architectures.
-
-### Technical Interests
-
-- **Artificial Intelligence & Machine Learning**: Large language models, agentic systems, prompt engineering, RAG architectures
-- **Cloud & Microservices**: Kubernetes, serverless, distributed systems, API design
-- **Modern Web Development**: Node.js, React, TypeScript, micro-frontends
-- **Software Architecture**: Design patterns, system design, scalability, resilience
-- **Developer Experience**: Tools and practices that make developers more productive
+The foundation was built in regulated infrastructure. As senior architect for [IBM Cloud for Financial Services](/2023/03/making-ibm-cloud-for-financial-services-work-for-you.html), I authored implementation guidance and reference architectures and helped define automated compliance testing for its 565 industry-specific control requirements. Before that, I spent six years as lead architect for the [IBM Cloud console](/2021/08/evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story.html), leading a global team of 30+ engineers through a microservices migration and the platform unification that brought IBM's cloud experiences together. Each earned a Corporate Technical Recognition Award — IBM's top technical achievement award.
 
 ### Writing & Speaking
 
-I write about technical topics to share knowledge and lessons learned from building large-scale systems. My posts cover everything from practical implementation details to high-level architectural patterns, with a recent focus on AI and agentic systems.
+I write here to share what I've learned building large-scale systems — practical implementation details and architectural patterns, lately focused on AI and agentic systems. I've also spoken about this work at industry conferences.
+
+Governance, resilience, and trust turn out to be the same problems in AI as in regulated cloud — harder, and far less settled. That experience shapes how I write and how I build — but building is the point.
 
 ### Connect
 
