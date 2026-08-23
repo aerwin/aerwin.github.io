@@ -31,7 +31,7 @@ image:
 
 As I described in my [previous post on building trustworthy AI](/2024/07/building-trustworthy-ai-a-practical-solution-guide-for-enterprise-ai-teams.html), I'm a senior architect in the **IBM Infrastructure AI Center of Excellence (AI CoE)**, a group focused on accelerating responsible AI adoption across the [IBM Infrastructure](https://www.ibm.com/solutions/it-infrastructure) business unit — putting AI to work for IBM's own employees, not just its clients. For the past couple of years I've been something of a double agent: officially part of the AI CoE, but embedded full-time in IBM's **[Technology Lifecycle Services (TLS)](https://www.ibm.com/services/technology-lifecycle-services)** organization, where I've been serving as Chief Architect for the **TLS Agentic Platform**. TLS is a large organization with thousands of employees within IBM Infrastructure that provides hardware and software support, maintenance, and lifecycle management worldwide.
 
-The **TLS Agentic Platform** is the full system: a multi-agent AI system, the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) tool servers and APIs that connect it to TLS's data, and the cloud environment everything runs on. Its front end is the **TLS Concierge** — a single AI experience built to give every TLS employee one place to go. One interface, one conversation, whether the question is about a support case, a hardware asset, a contract, or a client's history. The goal is to eliminate the context-switching across a dozen different systems that currently consumes so much of a TLS professional's day. We built it from the ground up and had real users in production within months of starting — and have been evolving it ever since.
+The **TLS Agentic Platform** is the full system: a multi-agent AI system, the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) tool servers and APIs that connect it to enterprise data, and the cloud environment everything runs on. Its front end is the **TLS Concierge** — a single AI experience built to give every TLS employee one place to go. One interface, one conversation, whether the question is about a support case, a hardware asset, a contract, or a client's history. The goal is to eliminate the context-switching across a dozen different systems that currently consumes so much of a TLS professional's day. We built it from the ground up and had real users in production within months of starting — and have been evolving it ever since.
 
 If you read my [earlier post on the IBM Cloud console's evolution from monolith to microservices](/2021/08/evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story.html), this post is the next chapter of that same story. The architectural philosophy is the same: decompose complexity into independently deployable units, build shared infrastructure that scales, be honest about what went wrong. But the technology has shifted in ways nobody in the industry fully anticipated — that post predates the ChatGPT moment by over a year. The services are still independently deployed, the patterns are still familiar — but when a service's core logic is an LLM reasoning over tools rather than deterministic code executing a defined path, the differences matter in ways that aren't obvious until you're operating one in production.
 
@@ -64,16 +64,16 @@ From that starting point the platform expanded to cover a broader set of TLS rol
 
 ### TLS Concierge
 
-The **TLS Concierge** is the front end of the platform, a chat interface built on IBM's [Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/) design system that gives every TLS role a single place to work. A TLS professional types a question, and the platform figures out which agents and data sources are needed to answer it.
+The **TLS Concierge** is the front end of the platform, built on IBM's [Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/) design system to give every TLS role a single place to work. Its centerpiece is **AskTLS**, an open-ended chat for any persona: type a question, and the platform figures out which agents and data sources are needed to answer it. Alongside it sit workflows tailored to specific personas — experiences that feature the same conversational core but structure it around a particular role's tasks rather than leaving everything to open-ended chat.
 
-The screenshot below shows an example of the kind of question a Technical Escalation Manager might ask when first picking up a new escalation: a natural-language query about the major events in a case, answered with a synthesized, structured timeline pulled from the case system. Ready to read in seconds rather than assembled manually over the course of hours.
+The screenshot below shows AskTLS handling the kind of question a Technical Escalation Manager might ask when first picking up a new escalation: a natural-language query about the major events in a case, answered with a synthesized, structured timeline pulled from the case system. Ready to read in seconds rather than assembled manually over the course of hours.
 
 <a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png">
   <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png"
        alt="TLS Concierge"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
 </a>
-*The TLS Concierge — a single chat interface giving every TLS role access to the full agentic platform.*
+*The TLS Concierge with AskTLS open — one front end giving every TLS role access to the full agentic platform.*
 
 ## Full System Architecture
 
@@ -90,7 +90,7 @@ The diagram reads top to bottom, from the user interface down through the agents
 
 **Frontend.** The Concierge UI never speaks directly to agents. It routes through a [Next.js](https://nextjs.org/) Backend for Frontend (BFF) layer that handles authentication, session management, rate limiting, and the SSE streaming connection to the browser. The BFF talks to the Supervisor Agent using [Agent2Agent (A2A)](https://a2a-protocol.org/), the same protocol the agents use among themselves. A separate external-facing Support Insights UI, owned by the [IBM Support Insights](https://www.ibm.com/products/support-insights) team, surfaces analytics and reporting over its own data.
 
-**Agents.** Behind the BFF sits the Supervisor Agent, the system's routing intelligence. All agents are built in Python using [LangGraph](https://www.langchain.com/langgraph), initially on a standard ReAct loop and now moving toward the skills-based deep agent pattern described later. The Supervisor receives every user request, determines intent, and delegates to the appropriate specialist agent via A2A rather than an in-process call — a choice I'll come back to below. Each specialist is an independently deployed service responsible for a distinct domain:
+**Agents.** Behind the BFF sits the Supervisor Agent, the system's routing intelligence. All agents are built in Python using [LangGraph](https://www.langchain.com/langgraph); most began on a standard ReAct loop, and the platform is now moving toward the skills-based deep agent pattern described later. The Supervisor receives every user request, determines intent, and delegates to the appropriate specialist agent via A2A rather than an in-process call — a choice I'll come back to below. Each specialist is an independently deployed service responsible for a distinct domain:
 
 <div class="wrapped-table" markdown="1">
 
@@ -148,7 +148,7 @@ The agent workloads — BFF, Supervisor, specialist agents, and MCP tool servers
 
 Model inference is handled by **[Red Hat AI Inference](https://www.ibm.com/products/redhat-ai)** (accessed via **LiteLLM**), keeping model calls within the IBM Cloud boundary. Distributed tracing flows through **Langfuse**, also deployed within the cluster.
 
-The data and storage layer provides each onboarded service with its own instances of:
+The data and storage layer provides each onboarded service with its own instances of whichever data services it needs:
 
 - **[Cloud Object Storage](https://www.ibm.com/products/cloud-object-storage)**
 - **[Cloudant](https://www.ibm.com/products/cloudant)**
@@ -158,7 +158,7 @@ The data and storage layer provides each onboarded service with its own instance
 The security and operations layer includes:
 
 - **[Secrets Manager](https://www.ibm.com/products/secrets-manager)** for credential management
-- **[IBM App ID](https://www.ibm.com/products/app-id)** for authentication
+- **[IBM App ID](https://www.ibm.com/products/app-id)** for authentication and authorization
 - **[IBM Cloud Logs](https://www.ibm.com/products/cloud-logs)** for audit and application logging
 - **[IBM Cloud Monitoring](https://www.ibm.com/products/cloud-monitoring)** for observability
 
@@ -200,7 +200,7 @@ Speaking A2A rather than an interface specific to our Supervisor also made the f
 
 ### Why Deep Agents?
 
-We started with the [ReAct](https://www.ibm.com/think/topics/react-agent) loop — think, act, observe, repeat. It's effective for narrow, well-scoped tasks. But in a support context where queries require multi-step reasoning, synthesizing information across several sources, and maintaining coherent context through a complex interaction, it hits a ceiling. The model works one step at a time without a strong mechanism for planning, chaining intermediate conclusions, or routing to specialized behavior based on the nature of the task.
+Most of our agents started with the [ReAct](https://www.ibm.com/think/topics/react-agent) loop — think, act, observe, repeat. It's effective for narrow, well-scoped tasks. But in a support context where queries require multi-step reasoning, synthesizing information across several sources, and maintaining coherent context through a complex interaction, it hits a ceiling. The model works one step at a time without a strong mechanism for planning, chaining intermediate conclusions, or routing to specialized behavior based on the nature of the task.
 
 The way past it came from looking outward. AI assistants like IBM Bob, Claude, and others were demonstrating noticeably deeper reasoning, and digging into how they worked led us to [LangChain's deep agent harness](https://docs.langchain.com/oss/python/deepagents/overview).
 
@@ -228,7 +228,7 @@ A sampling of what the library provides:
 
 Central to the library is the factory pattern: a factory class that constructs an agent with all its dependencies (LLM, tools, tracing, MCP connections) injected at construction time rather than scattered through application code. The factory is also the single injection point for observability. Wire Langfuse tracing into the factory once, and every agent created by any factory automatically produces traces. Without that clean injection point, adding tracing post-hoc becomes a distributed find-and-update exercise across every agent repo.
 
-What began as TLS glue code turned out not to be TLS-specific. I took it back to my AI CoE team, where it became a formal inner source project across IBM Infrastructure — I led the squad and kept writing code, but much of what the library grew into was other people's work. It's now used by every agent and MCP server in the platform, and by teams beyond TLS: the AI CoE adopted it to build agents in their own AI assistant, and the IBM Power team began using it and contributing code back.
+What began as TLS glue code turned out not to be TLS-specific. I took it back to my AI CoE team, where it became a formal inner source project across IBM Infrastructure — I led the squad and kept writing code, but much of what the library grew into was other people's work. It's now used by every agent and MCP server in the platform, and by teams beyond TLS: the AI CoE adopted it to build agents in their own AI assistant, IBM's Supply Chain team took it up as well, and the IBM Power team began using it and contributing code back.
 
 ## What We Learned Along the Way
 
@@ -292,11 +292,11 @@ We also made a deliberate choice not to run inference ourselves. Standing up and
 
 I'd make that call again, and it has a price: your model menu becomes your inference provider's roadmap. [`gpt-oss-120b`](https://huggingface.co/openai/gpt-oss-120b) became available to us late in 2025 and appeared to meaningfully improve exactly the planning-heavy work the deep agent shift was meant to enable — without changing a single graph, skill, or tool. I say "appeared" deliberately: this was just the kind of claim the eval gap left us unable to prove. Gemma 4 ([`gemma-4-31B-it`](https://huggingface.co/google/gemma-4-31B-it)) was announced in April 2026, but only became available to us when Red Hat AI Inference on IBM Cloud reached general availability the following month. We're evaluating it now against the same workloads, partly on the strength of what other teams have reported.
 
-What you can control is how fast you move once an option appears. LiteLLM had been sitting in front of every model call from the start, so changing inference backends never touched agent code, and pointing agents at a different model was a configuration change rather than a code change. The harder half is qualification — knowing whether a new model is actually better for your workloads, not just newer. Keep the model swappable, keep a set of evals ready to answer that question, and the lag between "available" and "in production" is at least yours to own. The general form: you don't control when a constraint lifts, only how much work it takes to move when it does.
+What you can control is how fast you move once an option appears. We put LiteLLM in front of every model call as part of preparing the move to Red Hat AI Inference — and because the Agent Utils factory already owned how models are constructed and injected, even that migration was a configuration change rather than a rewrite. With LiteLLM in place, changing inference backends never touched agent code, and neither did pointing agents at a different model. The harder half is qualification — knowing whether a new model is actually better for your workloads, not just newer. Keep the model swappable, keep a set of evals ready to answer that question, and the lag between "available" and "in production" is at least yours to own. The general form: you don't control when a constraint lifts, only how much work it takes to move when it does.
 
 ## Conclusion
 
-The plain version first: this worked. A team that started with no agentic system had a multi-agent platform in production within months, and it has been serving real TLS users ever since. Most of the agents running on it were built by teams that didn't build the platform, and they interoperate anyway. The shared library, AI CoE Agent Utils, became an inner source project and was adopted by other teams across IBM Infrastructure. Serving as the platform's chief architect has been one of the best roles I've had at IBM, and working with this team has been the best part of it. Everything in the lessons above is the cost of having actually built the thing, not a reason someone shouldn't.
+The plain version first: this worked. A team that started with no agentic system had a multi-agent platform in production within months, and it has been serving real TLS users ever since. Most of the agents running on it were built by teams that didn't build the platform, and they interoperate anyway. The shared library, AI CoE Agent Utils, became an inner source project and was adopted by other teams across IBM. Serving as the platform's chief architect has been one of the best roles I've had at IBM, and working with this team has been the best part of it. Everything in the lessons above is the cost of having actually built the thing, not a reason someone shouldn't.
 
 I'm writing this at a moment of transition. Like a lot of large organizations, IBM is consolidating: what began as separate agentic efforts in different corners of the business is converging toward shared platforms. That's a natural evolution, and in some ways it's a validation of the approach. The patterns we landed on — skills-based agents, supervisor orchestration, governed data access — are the same ones other teams across IBM arrived at on their own. When you have no uniform platform and have to build one yourself, you tend to discover the same constraints everyone else does.
 

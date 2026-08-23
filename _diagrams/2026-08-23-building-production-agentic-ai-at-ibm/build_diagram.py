@@ -113,7 +113,7 @@ N("ag_clnt",  "Client Management\nAgent", 468, R_AGT, CW, H_AGT, "agent", fs=11)
 N("ag_doc",   "Doc Agent",                740, R_AGT, CW, H_AGT, "agent")
 N("ag_asset", "Asset Agent", SI,  R_AGT, CW, H_AGT, "agent")
 # Not exhaustive: shows the supervisor fanning out to agents not drawn individually
-N("ag_more",  "+ Contract Agent,\nHACoC Agent,\nand others in the future", COL[6], R_AGT, CW, H_AGT,
+N("ag_more",  "+ Contract Agent,\nHACoC Agent,\nand others in the future", COL[6] + 24, R_AGT, CW, H_AGT,
   "ghost", fs=9.5)
 
 # --- MCP tool servers ---
