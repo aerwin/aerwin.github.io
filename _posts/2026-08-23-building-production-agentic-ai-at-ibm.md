@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building Production Agentic AI at IBM: Architecture, Decisions, and What We Learned"
-date: '2026-08-22T09:00:00.000-05:00'
+date: '2026-08-23T09:00:00.000-05:00'
 description: "How IBM's Technology Lifecycle Services built a multi-agent system from scratch — the architecture, the decisions, and the lessons, from its chief architect."
 tags:
 - langgraph
@@ -14,7 +14,7 @@ tags:
 - cloud
 categories: [AI, Agentic AI]
 image:
-  path: "/images/2026-08-22-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
+  path: "/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
   show: false
 ---
 
@@ -68,8 +68,8 @@ The **TLS Concierge** is the front end of the platform, a chat interface built o
 
 The screenshot below shows an example of the kind of question a Technical Escalation Manager might ask when first picking up a new escalation: a natural-language query about the major events in a case, answered with a synthesized, structured timeline pulled from the case system. Ready to read in seconds rather than assembled manually over the course of hours.
 
-<a href="/images/2026-08-22-building-production-agentic-ai-at-ibm/tls_concierge.png">
-  <img src="/images/2026-08-22-building-production-agentic-ai-at-ibm/tls_concierge.png"
+<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png">
+  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png"
        alt="TLS Concierge"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
 </a>
@@ -79,8 +79,8 @@ The screenshot below shows an example of the kind of question a Technical Escala
 
 The **TLS Agentic Platform** spans the full stack: from the Concierge front end through the multi-agent system to the cloud infrastructure described below. It began with the TEM use case; the architecture that emerged from that initial work is what's in production today.
 
-<a href="/images/2026-08-22-building-production-agentic-ai-at-ibm/agent-platform-architecture.png">
-  <img src="/images/2026-08-22-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
+<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png">
+  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
        alt="Multi-Agent Platform Architecture"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
 </a>
@@ -115,7 +115,7 @@ The agents were deliberately designed to serve multiple personas across use case
 
 **Observability and model access.** Two shared services sit alongside the agent layer rather than within it. [Langfuse](https://langfuse.com/) collects distributed traces across every agent invocation. [LiteLLM](https://www.litellm.ai/) provides a unified interface to the underlying language models, making it straightforward to swap or route across model providers without changing agent code.
 
-**Identity across the call path.** The user's authorization token is propagated the full length of a request: BFF to Supervisor, Supervisor to specialist agent, agent to MCP server, MCP server to the underlying API. No hop substitutes a service account, and where the request crosses into a system with its own identity provider — Support Insights for asset data, or an enterprise backend like Salesforce, run by IBM's CIO organization — the token is exchanged rather than dropped. [IBM Verify](https://www.ibm.com/products/verify) performs the [OAuth 2.0 token exchange](https://docs.verify.ibm.com/verify/docs/oauth-20-token-exchange), so the same user arrives on the other side. Propagate or exchange, never substitute. The effect is that each system of record applies the same access controls to an agent's request that it would if that person queried it directly; the platform never becomes the arbiter of who can see what. This is easy to get wrong and hard to retrofit: every delegation in a multi-agent system is a chance to lose the caller's identity, and the moment one hop does, authorization has quietly moved out of the enterprise's existing model and into yours.
+**Identity across the call path.** The user's authorization token is propagated the full length of a request: BFF to Supervisor, Supervisor to specialist agent, agent to MCP server, MCP server to the underlying API. No hop substitutes a service account, and where the request crosses into a system with its own identity provider — Support Insights for asset data, or an enterprise backend like Salesforce — the token is exchanged rather than dropped. [IBM Verify](https://www.ibm.com/products/verify) performs the [OAuth 2.0 token exchange](https://docs.verify.ibm.com/verify/docs/oauth-20-token-exchange), so the same user arrives on the other side. Propagate or exchange, never substitute. The effect is that each system of record applies the same access controls to an agent's request that it would if that person queried it directly; the platform never becomes the arbiter of who can see what. This is easy to get wrong and hard to retrofit: every delegation in a multi-agent system is a chance to lose the caller's identity, and the moment one hop does, authorization has quietly moved out of the enterprise's existing model and into yours.
 
 **Shared platform code.** One piece of the platform isn't in the diagram, because it isn't a service. The **AI CoE Agent Utils** is a Python library I created that every agent and MCP server is built from: base classes for A2A-enabled LangGraph agents and MCP servers, plus the cross-cutting machinery that would otherwise be reimplemented in every repo — tracing, authentication, header propagation, state persistence. The diagram shows what runs; this is what it's made of. I'll come back to why it exists below.
 
@@ -123,8 +123,8 @@ The agents were deliberately designed to serve multiple personas across use case
 
 The platform was designed from the start as an open node in a broader ecosystem, not a closed system. Both A2A and MCP are bidirectional at the platform boundary.
 
-<a href="/images/2026-08-22-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png">
-  <img src="/images/2026-08-22-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png"
+<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png">
+  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png"
        alt="Ecosystem Interoperability"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
 </a>
@@ -142,7 +142,7 @@ The practical result is that the TLS Agentic Platform can act as either an orche
 
 The TLS Agentic Platform runs inside the **TLS AI Platform**, a secure [IBM Cloud](https://www.ibm.com/cloud) environment purpose-built to host TLS production workloads. The diagram below shows how the agentic stack maps to the underlying cloud infrastructure.
 
-[![TLS Agentic Platform — Cloud Deployment](/images/2026-08-22-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)](/images/2026-08-22-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)
+[![TLS Agentic Platform — Cloud Deployment](/images/2026-08-23-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)](/images/2026-08-23-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)
 
 The agent workloads — BFF, Supervisor, specialist agents, and MCP tool servers — run inside an **[IBM Cloud Kubernetes Service (IKS)](https://www.ibm.com/products/kubernetes-service)** cluster. Each workload runs in its own namespace with dedicated resource quotas. Cross-namespace communication is blocked by default; Kubernetes network policies and an Istio service mesh enforce network isolation, and individual services must explicitly declare which internal and external endpoints they need to reach during onboarding.
 
@@ -262,7 +262,7 @@ Not because anyone disagreed, and not because the migration is difficult — but
 
 There's a paradox in that. The deep agent pattern was the thing that would have made fixing existing problems and building new function faster — skills are additive, so a new capability becomes a new skill rather than a change to a graph every use case shares. More than that, some of the new function in the backlog was unlikely to work well without it. The change being deferred as a threat to the schedule was, I believe, the fastest path to the things the schedule was protecting.
 
-I made that argument, more than once. It didn't land. What came back, from more than one direction, was a version of "if you do this, you better not be late." The work had already been filed as a detour, and an argument is hard to land once that view is set.
+I made that argument, more than once. It didn't land. What came back was never a counterargument — just the reminder, in one form or another, that the schedule came first and the migration had better not threaten it. The work had already been filed as a detour, and an argument is hard to land once that view is set.
 
 It also didn't help that I couldn't prove the claim. Without a solid set of golden questions and eval coverage across agents, I could show that a deep agent handled a hard query well, but not that it handled a representative set measurably better than what we already had. The eval gap and the adoption gap turned out to be the same problem seen from two sides: the argument I needed to make required evidence I hadn't built the means to produce.
 
@@ -298,7 +298,7 @@ What you can control is how fast you move once an option appears. LiteLLM had be
 
 The plain version first: this worked. A team that started with no agentic system had a multi-agent platform in production within months, and it has been serving real TLS users ever since. Most of the agents running on it were built by teams that didn't build the platform, and they interoperate anyway. The shared library, AI CoE Agent Utils, became an inner source project and was adopted by other teams across IBM Infrastructure. Serving as the platform's chief architect has been one of the best roles I've had at IBM, and working with this team has been the best part of it. Everything in the lessons above is the cost of having actually built the thing, not a reason someone shouldn't.
 
-I'm writing this at a moment of transition. Like a lot of large organizations, IBM is consolidating: what began as separate agentic efforts in different corners of the business is converging toward shared platforms. That's a natural evolution, and in some ways it's a validation of the approach. The patterns we landed on — skills-based agents, supervisor orchestration, governed data access — are the same ones the team building the consolidated platform converged on independently: their agentic loop is skills-based too, built without the harness we adopted. When you have no uniform platform and have to build one yourself, you tend to discover the same constraints everyone else does.
+I'm writing this at a moment of transition. Like a lot of large organizations, IBM is consolidating: what began as separate agentic efforts in different corners of the business is converging toward shared platforms. That's a natural evolution, and in some ways it's a validation of the approach. The patterns we landed on — skills-based agents, supervisor orchestration, governed data access — are the same ones other teams across IBM arrived at on their own. When you have no uniform platform and have to build one yourself, you tend to discover the same constraints everyone else does.
 
 My own role is shifting with it, moving from Chief Architect of the TLS Agentic Platform to a broader focus on empowering IBM Infrastructure sellers and clients with the insights they need to make informed decisions and achieve better outcomes. More than two years embedded in TLS — first helping define the underlying platform for running AI solutions in production and then building the agentic layer on top of it — means I'm carrying a grounded understanding of what it actually takes to make AI work in a large service organization, not just what it takes to demo it. It's the same bittersweet feeling I had [leaving the IBM Cloud console team](/2021/08/evolving-the-ibm-cloud-console-with-microservices-a-nodejs-success-story.html).
 
