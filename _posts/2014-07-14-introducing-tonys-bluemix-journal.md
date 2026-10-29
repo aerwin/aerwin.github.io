@@ -20,4 +20,4 @@ image:
 
 I created Tony's #Bluemix Journal on [Paper.li](http://paper.li/) to aggregate interesting articles related to IBM Bluemix, cloud, and related technologies. _Note: The Paper.li page is no longer available._
 
-[![Tony's #Bluemix Journal](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)
+![Tony's #Bluemix Journal](/images/2014-07-14-introducing-tonys-bluemix-journal/TonysBluemixJournal.png)

@@ -35,5 +35,5 @@ Today marks the&nbsp;general availability of&nbsp;IBM Bluemix&nbsp;with more tha
 
 _Read Post on Bluemix Developer's Blog — link no longer available_
 
-[![Bluemix UI Updates: Region Selector](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)
+![Bluemix UI Updates: Region Selector](/images/2014-06-30-ibm-bluemix-general-availability/dashboardListViewFull.png)
 

@@ -35,14 +35,14 @@ Prior to this unification, there were two distinct UI's at different URLs -- one
 - and more! 
 
 &nbsp;
-[![IBM Cloud Console Dashboard](/images/2018-12-22-ibm_cloud_platform_unification_project/ibm_cloud_console_dashboard.png)](/images/2018-12-22-ibm_cloud_platform_unification_project/ibm_cloud_console_dashboard.png)
+![IBM Cloud Console Dashboard](/images/2018-12-22-ibm_cloud_platform_unification_project/ibm_cloud_console_dashboard.png)
 
 # Rollout of cloud.ibm.com
 With such massive changes, we faced a number of interesting questions about how to best rollout the new experience. I will summarize our thought process here, but for more details about our strategy, see *A/B Test Deployment — Rollout of cloud.ibm.com* *(link no longer available)* written by myself and colleague [Nic Sauriol](https://www.linkedin.com/in/nsauriol/?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification).
 
 We were very sensitive to the fact that the holiday season is a key time of year for many of our clients, and we did not want to do anything to disrupt their operations. On the other hand, we believe the new experience offers improvements that our clients could benefit from immediately. Ultimately, we decided to go with an A/B rollout strategy with two consoles running side by side. The diagram below shows a very high-level architecture. Both consoles are deployed separately, but use exactly the same set of [IBM Cloud Platform APIs](https://cloud.ibm.com/apidocs?category=platform_services&cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification) on the backend.
 
-[![Rollout Architecture for cloud.ibm.com](/images/2018-12-22-ibm_cloud_platform_unification_project/cloud_ibm_com_rollout_architecture.png)](/images/2018-12-22-ibm_cloud_platform_unification_project/cloud_ibm_com_rollout_architecture.png)
+![Rollout Architecture for cloud.ibm.com](/images/2018-12-22-ibm_cloud_platform_unification_project/cloud_ibm_com_rollout_architecture.png)
 
 Users in the A group see the existing experience at `console.bluemix.net`, while users in the B group get the enhanced console at [cloud.ibm.com](https://cloud.ibm.com?cm_mmc=TonyErwin-_-Data-_-WW_WW-_-CloudPlatformUnification). However, the choice of console is entirely up to each individual user. At some point in the new year, we will retire the experience at `console.bluemix.net` and force a transition. But, until then, users are free to switch back and forth between both experiences. 
 

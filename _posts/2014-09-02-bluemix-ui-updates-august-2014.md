@@ -38,5 +38,5 @@ The Bluemix UI updates for August are now live in 85 countries! The team kept bu
 
 _Read Post on Bluemix Developer's Blog — link no longer available_
 
-[![Bluemix UI Updates: August 2014](/images/2014-09-02-bluemix-ui-updates-august-2014/appDetailsFull.png)](/images/2014-09-02-bluemix-ui-updates-august-2014/appDetailsFull.png)
+![Bluemix UI Updates: August 2014](/images/2014-09-02-bluemix-ui-updates-august-2014/appDetailsFull.png)
 

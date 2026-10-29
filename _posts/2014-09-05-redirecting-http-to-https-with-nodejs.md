@@ -35,11 +35,11 @@ Colleague [Jeff Sloyer](https://twitter.com/jsloyer) points out in his recent bl
 
 To show what happens "out-of-the-box", I created a demo app in the Bluemix UI using the SDK for Node.js™ starter. The demo app is no longer running, but the screenshot below shows what you would have seen:
 
-[![Screenshot of Node.js Starter App](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)
+![Screenshot of Node.js Starter App](/images/2014-09-05-redirecting-http-to-https-with-nodejs/nodeStarterApp.png)
 
 However, when you use `https`, notice that the browser shows a lock icon in the address bar. And, if you dig into the certificate details, you should see something like the following (which happens to be from Chrome):
 
-[![Certificate info for mybluemix.net](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)
+![Certificate info for mybluemix.net](/images/2014-09-05-redirecting-http-to-https-with-nodejs/mybluemixCertInfo.png)
 
 This indicates that the certificate for `*.mybluemix.net` was issued by [DigiCert](https://www.digicert.com/) and is trusted. You can rest assured the web site is coming from a server running on `mybluemix.net`, and the data is encrypted. On the other hand, if you use `http` there is no certificate info, and web traffic is unencrypted.
 
@@ -63,7 +63,7 @@ The full code listing is shown below. And, a complete package that can be deploy
 
 The screenshot below shows what the live Bluemix deployment of the code looked like _(demo app no longer running)_:
 
-[![Screenshot of HTTPS Redirect Demo](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)
+![Screenshot of HTTPS Redirect Demo](/images/2014-09-05-redirecting-http-to-https-with-nodejs/httpsRedirectDemo.png)
 
 <h4>Alternative Approach: Inspect X-Forwarded-Proto</h4>
 
@@ -79,7 +79,7 @@ To allow you to easily see this for yourself, I've added a route to the `https-r
 
 If you follow that link, the redirect from `http` to `https` still occurs. But, your browser is going to tell you that you can't trust the identity of the site. For example, here's what I see in Chrome:
 
-[![Security Warning in Chrome With Custom Domain](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)
+![Security Warning in Chrome With Custom Domain](/images/2014-09-05-redirecting-http-to-https-with-nodejs/sslErrorWithCustomDomain_annotated.png)
 
 Basically, the same certificate that was present for the `*.mybluemix.net` domain is still being served, but its domain info doesn't match my `tonyerwin.com` custom domain. So, Chrome tells me I should probably stay clear and not continue.
 

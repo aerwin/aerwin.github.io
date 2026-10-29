@@ -68,22 +68,18 @@ The **TLS Concierge** is the front end of the platform, built on IBM's [Carbon f
 
 The screenshot below shows AskTLS handling the kind of question a Technical Escalation Manager might ask when first picking up a new escalation: a natural-language query about the major events in a case, answered with a synthesized, structured timeline pulled from the case system. Ready to read in seconds rather than assembled manually over the course of hours.
 
-<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png">
-  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png"
+<img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/tls_concierge.png"
        alt="TLS Concierge"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
-</a>
 *The TLS Concierge with AskTLS open — one front end giving every TLS role access to the full agentic platform.*
 
 ## Full System Architecture
 
 The **TLS Agentic Platform** spans the full stack: from the Concierge front end through the multi-agent system to the cloud infrastructure described below. It began with the TEM use case; the architecture that emerged from that initial work is what's in production today.
 
-<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png">
-  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
+<img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/agent-platform-architecture.png"
        alt="Multi-Agent Platform Architecture"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
-</a>
 *The TLS Agentic Platform in production. A representative slice — the Supervisor routes to more specialist agents than are shown individually.*
 
 The diagram reads top to bottom, from the user interface down through the agents to the systems of record. The legend tells the visual story: the dark blue Supervisor sits at the top of the agent hierarchy; lighter blue boxes are the specialist agents; grey filled boxes are MCP tool servers; plain white boxes are APIs, services, and data stores; and dashed boxes are external systems the platform doesn't own. The line colors carry the protocols — blue for A2A between agents, slate for MCP from an agent to a tool server, grey for ordinary service and data calls. Here's what each layer does.
@@ -123,11 +119,9 @@ The agents were deliberately designed to serve multiple personas across use case
 
 The platform was designed from the start as an open node in a broader ecosystem, not a closed system. Both A2A and MCP are bidirectional at the platform boundary.
 
-<a href="/images/2026-08-23-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png">
-  <img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png"
+<img src="/images/2026-08-23-building-production-agentic-ai-at-ibm/ecosystem-interoperability.png"
        alt="Ecosystem Interoperability"
        style="border: 1px solid rgba(0,0,0,0.12); border-radius: 4px;">
-</a>
 *The platform is simultaneously a provider of agents and tools to external orchestrators, and an orchestrator of external agents and tools itself.*
 
 On the A2A side: inbound, any external application, assistant, or agent that speaks A2A can call any of the platform's specialist agents directly — the Concierge and its BFF are just one client of many the architecture can support. Outbound, the Supervisor can delegate to agents running on entirely different platforms: [Salesforce Agentforce](https://www.salesforce.com/agentforce/), [IBM watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate), or any other A2A-compliant system.
@@ -142,7 +136,7 @@ The practical result is that the TLS Agentic Platform can act as either an orche
 
 The TLS Agentic Platform runs inside the **TLS AI Platform**, a secure [IBM Cloud](https://www.ibm.com/cloud) environment purpose-built to host TLS production workloads. The diagram below shows how the agentic stack maps to the underlying cloud infrastructure.
 
-[![TLS Agentic Platform — Cloud Deployment](/images/2026-08-23-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)](/images/2026-08-23-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)
+![TLS Agentic Platform — Cloud Deployment](/images/2026-08-23-building-production-agentic-ai-at-ibm/agentic-platform-cloud-deployment.drawio.png)
 
 The agent workloads — BFF, Supervisor, specialist agents, and MCP tool servers — run inside an **[IBM Cloud Kubernetes Service (IKS)](https://www.ibm.com/products/kubernetes-service)** cluster. Each workload runs in its own namespace with dedicated resource quotas. Cross-namespace communication is blocked by default; Kubernetes network policies and an Istio service mesh enforce network isolation, and individual services must explicitly declare which internal and external endpoints they need to reach during onboarding.
 
