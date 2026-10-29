@@ -23,7 +23,7 @@ image:
   show: false
 ---
 
-[![IBM Bluemix Banners](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)
+![IBM Bluemix Banners](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3816.JPG)
 
 About this time a week ago, I was in the middle of the opening night meet-and-greet at That Conference 2014 held at the [Kalahari Resort](https://www.kalahariresorts.com/wisconsin) in Wisconsin Dells, WI. While the "Dells" (as we in the region refer to it) is the self-proclaimed ["Water Park Capital of the World"](http://www.wisdells.com/wisconsin-dells.htm), That Conference is a major tech event with 1000+ software developers, designers, and IT professionals getting together to share information about happenings in mobile, web, and cloud. I was there to represent [IBM](https://www.ibm.com/) (the Principal Sponsor of the conference) with the goal of sharing IBM Bluemix with a new group of developers.
 
@@ -31,7 +31,7 @@ _For those readers who may not know, Bluemix is IBM's new Platform-as-a-Service 
 
 ## Working the Bluemix Booth
 
-[![IBM Bluemix: T-shirts](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)
+![IBM Bluemix: T-shirts](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3833.JPG)
 
 I drove over from MN and met up with colleagues [Mark VanderWiele](https://twitter.com/MarkVanderwiele) and [Carl Osipov](https://twitter.com/CloudsWithCarl). We spent most of our time from Sunday night through Wednesday at the IBM booth talking Bluemix with attendees. There was regular traffic and we ended up running out of the very popular t-shirts we were handing out as SWAG. :) <br /><br />The vast majority of visitors to the booth (like 99%) had never heard of Bluemix. This wasn't terribly surprising since we just GA'ed at the end of June, so it offered us a great opportunity to spread the word. Folks who stayed at the booth long enough to see demos of the Bluemix UI and/or sample apps seemed to leave with a favorable impression. For example, I tweeted the following after [Farah Prasla](https://twitter.com/FarahPrasla) got her introduction to Bluemix:
 
@@ -39,7 +39,7 @@ I drove over from MN and met up with colleagues [Mark VanderWiele](https://twitt
 
 ## Bluemix Break-out Sessions
 
-[![IBM Bluemix: Carl Osipov Presenting](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)
+![IBM Bluemix: Carl Osipov Presenting](/images/2014-08-17-ibm-bluemix-and-that-conference-2014/IMG_3893.JPG)
 
 The team also held two Bluemix breakout sessions on Tuesday afternoon. These sessions were intended to take people through a deeper dive to see how easy it was to construct the sample apps shown at the booth: 
 

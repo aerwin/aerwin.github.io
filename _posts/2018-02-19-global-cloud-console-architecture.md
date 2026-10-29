@@ -39,7 +39,7 @@ The IBM Cloud Console has long been fronted by two offerings from [Akamai](https
 
 With the implementation of the global console, we added the [Dyn Traffic Director (TD)](https://dyn.com/traffic-director/) product to the mix. All requests to console.bluemix.net are sent to the Akamai network, and then Akamai acts as a proxy. Akamai does a DNS lookup to determine the IP address to forward the request to by using a host name which has been configured using a Dyn TD. The Dyn configuration is setup to spread traffic based on geo location to one of six IBM Cloud data centers. This is shown in the diagram below.
 
-[![Global Console High-level Architecture](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture.png)](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture.png)
+![Global Console High-level Architecture](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture.png)
 
 Since Akamai also offers its [Global Traffic Management (GTM)](https://www.akamai.com/us/en/products/web-performance/global-traffic-management.jsp) product for load balancing, it may seem a bit strange to be using this hybrid solution. But, we had a an existing contract with Dyn, and we simply decided to leverage that instead of adding GTM to our Akamai contract. This has worked quite well for us.
 
@@ -48,7 +48,7 @@ Every 60 seconds or so, Dyn checks the health of each console deployment by prob
 
 In the diagram below, the Tokyo deployment of the console is unhealthy, and traffic that would normally go there starts flowing to Sydney.
 
-[![Global Console High-level Architecture With Failed Data Center](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture_with_failover.png)](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture_with_failover.png)
+![Global Console High-level Architecture With Failed Data Center](/images/2018-02-19-global-cloud-console-architecture/global_console_high_level_architecture_with_failover.png)
 
 Clearly, the algorithm used by the health check plays a very important role in the overall success of the architecture. So, when building your own health checks, you should think carefully about the key components that influence the health of your deployments. For example, Redis is one of our absolutely critical components because we use it to store session state. Without Redis, we cannot maintain things like a user's auth token. So, if one of our deployments can no longer connect to its local Redis, then we need to failover.
 
@@ -59,11 +59,11 @@ Finally, the health check can be very helpful for making proactive failovers eas
 # Impact to Microservice Implementation
 As described in a [previous post](https://www.tonyerwin.com/2017/08/bluemix-ui-at-cf-summit.html), each console deployment contains a set of roughly 40 microservices running behind a reverse proxy. In our original implementation, our microservices tended to be tied to APIs in the region they were deployed to. For example, our Dallas deployment could only manage CF resources in Dallas, our London deployment only CF resources in London, and so on. This is illustrated in the pre-Dyn diagram below where microservices in the three data centers only talk to the "backend" within the same region.
 
-[![Microservices Tied to One Backend](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_tied_to_single_region.png)](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_tied_to_single_region.png)
+![Microservices Tied to One Backend](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_tied_to_single_region.png)
 
 This worked fine for us when we had a separate URL for each console deployment and users knew they had to go to the London console URL to manage their London resources. However, this architecture was not conducive to the goals of global console where we wanted the UI to be served from the geographically nearest data center and for it to continue to be accessible even if all but one deployment failed. In order to accomplish this, we needed to decouple the microservices from any one specific region and enable them to communicate with equivalent APIs in any of the other regions based on what the user was requesting. This is shown in the diagram below.
 
-[![Microservices Communicate With Different Backends](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_different_backends.png)](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_different_backends.png)
+![Microservices Communicate With Different Backends](/images/2018-02-19-global-cloud-console-architecture/global_console_microservices_different_backends.png)
 
 Of course, an astute reader might point out we'd be even better off if all of the backend APIs provided their own globally load balanced endpoints. Then a console microservice would be able to always point at the same host names no matter where deployed. And, indeed, we do have many APIs in the IBM Cloud ecosystem that are moving in that direction.
 
@@ -72,7 +72,7 @@ This architectural update has been great for us in many ways, and has given us m
 
 Historically, the console has run on [Cloud Foundry](https://www.cloudfoundry.org/) on the IBM Cloud, but we are nearly done with a migration to Kubernetes (managed by the [IBM Cloud Container Service](https://www.ibm.com/products/kubernetes-service)). We have been able to add Kubernetes deployments into the rotation simply by updating our Dyn configuration. This has allowed us to vette Kubernetes fully before turning off our CF deployments entirely. This is represented in the diagram below showing Dyn load balancing between two CF deployments and three Kubernetes deployments.
 
-[![Load Balancing Between CF and Kubernetes Deployments](/images/2018-02-19-global-cloud-console-architecture/global_console_load_balancing_between_cf_and_kube.png)](/images/2018-02-19-global-cloud-console-architecture/global_console_load_balancing_between_cf_and_kube.png)
+![Load Balancing Between CF and Kubernetes Deployments](/images/2018-02-19-global-cloud-console-architecture/global_console_load_balancing_between_cf_and_kube.png)
 
 # Conclusion
 We're excited by the improvements in performance and reliability we've been able to provide our customers with the global console. I hope some of the lessons and insights that my team has gained in the process will help your efforts as well.

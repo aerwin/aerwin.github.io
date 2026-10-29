@@ -24,4 +24,4 @@ It's been just one month since IBM Bluemix reached general availability, but we 
 
 _The original write-up on the IBM Bluemix Developers Community is no longer available._
 
-[![Bluemix UI Updates: July 2014](/images/2014-08-01-bluemix-ui-updates-july-2014/julyFeatured.png)](/images/2014-08-01-bluemix-ui-updates-july-2014/julyFeatured.png)
+![Bluemix UI Updates: July 2014](/images/2014-08-01-bluemix-ui-updates-july-2014/julyFeatured.png)

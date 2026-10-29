@@ -49,7 +49,7 @@ I'll say more about these requirements in the next couple of sections.
 
 We will be creating a custom domain in Bluemix, and for it to function properly, you will need to own the domain name that you plan to use. In addition, it must be registered with a [DNS hosting service](https://en.wikipedia.org/wiki/DNS_hosting_service) that allows you to make configuration changes. For example, I own the `tonyerwin.com` domain (which points at the blog you're reading right now) and use GoDaddy for DNS hosting.
 
-[![GoDaddy Domain Dashboard](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/dnsHostingProviderDashboard.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/dnsHostingProviderDashboard.png)
+![GoDaddy Domain Dashboard](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/dnsHostingProviderDashboard.png)
 
 Even if you don't own a domain or have access to your DNS provider, you can still explore the functionality in this article. But, you will have to edit your `hosts` file. I'll say a little more about that option later on in the <a href="#ConfigureDNS">_Configuring DNS for Custom Domains_</a> section.
 
@@ -94,23 +94,23 @@ Now that we have the prerequisites out of the way, let's start by adding a custo
 1. Log in to the [IBM Cloud console](https://cloud.ibm.com).
 2. In the banner, open the _Organizations_ menu and choose **Manage Organizations**.
 
-[![Bluemix UI: Select Manage Organizations from Banner](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)
+![Bluemix UI: Select Manage Organizations from Banner](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsBanner_annotated.png)
 
 3. In the _Manage Organizations_ pane, make sure your organization is selected in the tree on the left side. Then, click **Domains** to view the custom domains for your organization.
 
-[![Bluemix UI: Manage Organizations Top-Level](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsTopLevel_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsTopLevel_annotated.png)
+![Bluemix UI: Manage Organizations Top-Level](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/manageOrganizationsTopLevel_annotated.png)
 
 4. On the _Domains_ tab, click the **Add Domain** button.
 
-[![Bluemix UI: Manage Domains](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL1_nohead_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL1_nohead_annotated.png)
+![Bluemix UI: Manage Domains](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL1_nohead_annotated.png)
 
 5. Enter your custom domain in the text box in the newly added row. As mentioned earlier, this should be a domain that you own and that is registered with a DNS hosting service. For my custom domain, I own the `tonyerwin.com` domain, and I want to use the `bluemix.tonyerwin.com` domain for my demo apps that will be deployed to Bluemix.
 
-[![Bluemix UI: Adding Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL2_nohead.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL2_nohead.png)
+![Bluemix UI: Adding Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL2_nohead.png)
 
 6. Click the **Save** button. After the save operation completes, you should notice a new icon in the _SSL Certificate_ column. We'll come back to it later, but clicking this icon is how you would start the process of uploading a certificate for your domain.
 
-[![Bluemix UI: Custom Domain Added](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL3_nohead_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL3_nohead_annotated.png)
+![Bluemix UI: Custom Domain Added](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL3_nohead_annotated.png)
 
 <h2 id="CreateAppUsingCustomDomain">Using a Custom Domain in an App</h2>
 
@@ -127,7 +127,7 @@ If you want to create a brand new app, do the following:
     - Optionally change the default `Host`.
     - From the `Domain` pulldown, select your custom domain.
 
-[![Creating Starter App With Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_createApp_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_createApp_annotated.png)
+![Creating Starter App With Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_createApp_annotated.png)
 
 4. Click the `Create` button to create your app. After creation, you will be taken to the _App Details_ view of your new app.
 
@@ -137,12 +137,12 @@ If you prefer to edit the route of the existing app, follow the steps below:
 
 1. Go to the App Details view for your app. If you created your app in the last section, you're probably already there. Otherwise, find your app in the Dashboard and click on it.
 
-[![Bluemix UI: App Details Showing Same App With Gear Menu](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/sslDemoAppDetailsWithMenu.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/sslDemoAppDetailsWithMenu.png)
+![Bluemix UI: App Details Showing Same App With Gear Menu](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/sslDemoAppDetailsWithMenu.png)
 
 2. Open the "gear" menu in the upper right hand corner of the App Details view, and choose the `Edit Routes` menu item.
 3. In the Edit Routes dialog, you can add and remove routes. In addition, each route offers a pulldown that includes all available domains and allows you to choose any of your custom domains.
 
-[![Edit Route Dialog Before SSL Cert Upload](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_editRouteNoSSL_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_editRouteNoSSL_annotated.png)
+![Edit Route Dialog Before SSL Cert Upload](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL0_editRouteNoSSL_annotated.png)
 
 4. Notice in the screen shot above that my app has one route, `ssl-demo.bluemix.tonyerwin.com`. Also, note that the SSL status icon to the right of the route shows an open padlock. This indicates we have not yet uploaded an SSL certificate for the route's domain.
 
@@ -185,7 +185,7 @@ At this point, we have an app using a route making use of our custom domain. How
 
 The mechanism for adding a `CNAME` record is going to vary depending on your provider. For GoDaddy, it's rather simple. I go to the `DNS Management` configuration page for my `tonyerwin.com` domain. From there, I click the `Add` button. This brings up a panel like the one in the screenshot below. On it, I've set `Type` to _CNAME_, the `Host` to `*.bluemix` (the `tonyerwin.com` part is assumed), and `Points to` to `secure.us-south.bluemix.net`.
 
-[![GoDaddy Add Record Dialog](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/goDaddyAddRecord.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/goDaddyAddRecord.png)
+![GoDaddy Add Record Dialog](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/goDaddyAddRecord.png)
 
 If you don't use GoDaddy, you should still find a similar mechanism from your provider. Once you commit these kinds of changes, you will have to wait some period of time for the changes to propagate. Once they do, you should be able to access your app via the browser.
 
@@ -211,7 +211,7 @@ We're now at a point where you can access your app in the browser using a route 
 
 If you follow that link, your browser is going to report that you can't trust the identity of the server because it identifies itself as `*.mybluemix.net` rather than the domain in the URL. For example, here's what I see in Chrome:
 
-[![Security Warning in Chrome With Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/chromeWarningForBluemix2.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/chromeWarningForBluemix2.png)
+![Security Warning in Chrome With Custom Domain](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/chromeWarningForBluemix2.png)
 
 So, this finally brings us to the main point of this post &mdash; namely, eliminating that server mismatch by using your own certificate. 
 
@@ -223,34 +223,34 @@ With that, let's walkthrough the steps to upload your files (certificate, privat
 2. Find your domain in the table and click the `Upload Certificate` icon in the _SSL Certificate_ column. Recall I pointed out this icon when you first created your custom domain.
 3. For each field on the Upload Certificate dialog, click the `Choose` button and select the appropriate file.
 
-[![Bluemix UI: Upload Certificate Dialog (Populated)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL5.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL5.png)
+![Bluemix UI: Upload Certificate Dialog (Populated)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL5.png)
 
 4. Click the `Upload` button and the upload process should begin. Once the upload is complete, the dialog will disappear and you will be taken back to the _Manage Domains_ table. And, you should also see the icon for your domain has changed to a green padlock.<br />
 
-[![Bluemix UI: Manage Domains with SSL Uploaded](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL6_nohead_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL6_nohead_annotated.png)
+![Bluemix UI: Manage Domains with SSL Uploaded](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL6_nohead_annotated.png)
 
 5. If you click on the green padlock (which is the `View Certificate` icon), you will see a dialog much like the one below where you can see all of the important details about the certificate. Note that the dialog also contains buttons that allow you to `Replace` or `Delete` your uploaded files.
 
-[![Bluemix UI: View Certificate](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL7.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL7.png)
+![Bluemix UI: View Certificate](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL7.png)
 
 6. If you also uploaded an intermediate certificate, you can click the root node of the certificate tree at the top of the dialog. This will show you all of the important information about the intermediate certificate.
 
-[![Bluemix UI: View Certificate with Intermediate Selected](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL8.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL8.png)
+![Bluemix UI: View Certificate with Intermediate Selected](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL8.png)
 
 7. Click the `Close` button on the View Certificate dialog.\
 8. Optionally, go back to the App Details view for your app and again bring up the Edit Routes dialog. You should see a green padlock next to your route indicating it's now secured by your uploaded files.
 
-[![Bluemix UI: Edit Routes Dialog with Route Secured](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL9_editRouteWithSSL_annotated.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL9_editRouteWithSSL_annotated.png)
+![Bluemix UI: Edit Routes Dialog with Route Secured](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/custDomainSSL9_editRouteWithSSL_annotated.png)
 
 ## Verify the Results
 
 Now, if you try to access your route via the `https` protocol, the browser should declare your site is properly identified and trusted. For example, the screenshot below shows the certificate details for my app from Chrome: 
 
-[![Bluemix UI: Chrome Details Trusted](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeTrusted.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeTrusted.png)
+![Bluemix UI: Chrome Details Trusted](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeTrusted.png)
 
 But, for full disclosure, if you visit my app (see [https://ssl-demo.bluemix.tonyerwin.com](https://ssl-demo.bluemix.tonyerwin.com/)), you'll get a slightly different result because I didn't actually get my certificates from a trusted certificate authority. Instead, I used Keychain Access on my Mac to generate a self-signed intermediate certificate. In addition, I configured the certificate to be trusted on my system. (If you're interested, I described these steps in my other post on [creating self-signed certificates](https://www.tonyerwin.com/2014/09/generating-self-signed-ssl-certificates.html).)   Since my intermediate certificate is obviously not trusted on your system, you'll see a browser warning if you try to access my app. The screen shot below shows the warning I see in Chrome if I try to access my app from another system. While there's still an error, notice that it's no longer a server mismatch error. Instead, Chrome tells me the certificate was issued by an entity not trusted by my computer. 
 
-[![Bluemix UI: Chrome Warning Non-Trusted](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeNonTrusted.png)](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeNonTrusted.png)
+![Bluemix UI: Chrome Warning Non-Trusted](/images/2014-09-15-bluemix-ui-ssl-certificates-and-custom/bluemixTonyErwinDetailsInChromeNonTrusted.png)
 
 ## Redirecting HTTP to HTTPS
 

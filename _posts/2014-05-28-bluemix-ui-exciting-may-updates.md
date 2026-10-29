@@ -29,6 +29,6 @@ As the UI lead for the IBM Bluemix web interface, I've had the chance to write a
 - Updated documentation.
 - Numerous usability improvements and bug fixes.
 
-[![Bluemix UI Updates: Dashboard](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)
+![Bluemix UI Updates: Dashboard](/images/2014-05-28-bluemix-ui-exciting-may-updates/mayDashboard.png)
 
 And, for reference, I also wrote posts about Bluemix UI updates from earlier months (March and April 2014), though those links are no longer available.

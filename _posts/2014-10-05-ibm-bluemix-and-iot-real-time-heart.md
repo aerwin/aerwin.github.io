@@ -29,7 +29,7 @@ image:
   show: false
 ---
 
-[![MIO Alpha I Strapless Continuous Heart Rate Monitor](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrOnWrist.JPG)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrOnWrist.JPG)
+![MIO Alpha I Strapless Continuous Heart Rate Monitor](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrOnWrist.JPG)
 
 Some of my peers in IBM's Emerging Technology group have been creating some really cool Internet of Things (IoT) demos using IBM Bluemix. Two of them, HR Tracker and [Race Tracker](http://m2m.demos.ibm.com/sports.html), are geared toward fitness and activity tracking. They are both capable of displaying the heart rate and geolocation of exercisers as the values change in real-time. In this post, I'll describe both sample apps and give an overview of the technology used to build them.
 
@@ -37,11 +37,11 @@ Some of my peers in IBM's Emerging Technology group have been creating some real
 
 Last month, I got to be part of an HR Tracker demo at [That Conference 2014](https://www.tonyerwin.com/2014/08/ibm-bluemix-and-that-conference-2014.html). For my part, it was a pretty simple process. First, I installed the demo app on my iPhone. Then, I strapped on a brand new, wrist-worn [MIO Alpha I Strapless Continuous Heart Rate Monitor](http://smile.amazon.com/gp/product/B00BJ6HLDI/ref=smi_www_rcolv2_go_smi?ie=UTF8&amp;redirect=true), turned it on, and paired it with the phone via Bluetooth. Finally, I hit the **Start** button in the app. And, before I knew it, a new icon popped up in colleague [Mark VanderWiele's](https://twitter.com/MarkVanderwiele) browser showing my heart rate and position. Pretty cool!
 
-[![HR Tracker Screenshot](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrScreenshot.png)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrScreenshot.png)
+![HR Tracker Screenshot](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrScreenshot.png)
 
 And, even cooler, as my heart rate changed on the MIO Alpha, I could see it update almost immediately in the web app. 
 
-[![HR Tracker Screenshot](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrMonitorAndScreen.JPG)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrMonitorAndScreen.JPG)
+![HR Tracker Screenshot](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/hrMonitorAndScreen.JPG)
 
 At this point, I went out for a short walk. While I was gone, Mark could see exactly where I was and how "hard" I was working (via heart rate) in the parking lot and side streets around the Kalahari Resort.
 
@@ -51,11 +51,11 @@ Race Tracker is similar to HR Tracker, but is geared more toward monitoring data
 
 Via the Race Tracker app (written mostly by Bryan), I was able to "watch" his progress during the race. The animated GIF below (sped up to reduce size) shows Bryan's data updating at he crossed the 20-mile point (on the St. Paul side of the Mississippi River):
 
-[![Race Tracker w/ Bryan Boyd in Marathon](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker2_800.gif)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker2_800.gif)
+![Race Tracker w/ Bryan Boyd in Marathon](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker2_800.gif)
 
 I then switched to the satellite view and caught him still going strong at Mile 21:
 
-[![Race Tracker w/ Bryan Boyd in Marathon (Satellite)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker3_800.gif)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker3_800.gif)
+![Race Tracker w/ Bryan Boyd in Marathon (Satellite)](/images/2014-10-05-ibm-bluemix-and-iot-real-time-heart/raceTracker3_800.gif)
 
 Race Tracker can also send notifications at pre-determined intervals. For example, the tweet below came through the feed as Bryan reached 24 miles:
 

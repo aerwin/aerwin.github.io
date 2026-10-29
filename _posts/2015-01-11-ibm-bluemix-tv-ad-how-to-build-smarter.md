@@ -23,45 +23,32 @@ That's especially exciting for me because I'm the lead dev architect for the Blu
 So, with that intro, I mainly wanted to share some of my favorite captures from the [YouTube version](https://www.youtube.com/watch?v=hpVkDHhFj2Q) of the video:
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube1.png">
-        <img class="tonyImg" alt="Bluemix YouTube: How to Build a Smarter App" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube1.png" scale="0" class="center-image"/>
-    </a>
+    <img class="tonyImg" alt="Bluemix YouTube: How to Build a Smarter App" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube1.png" scale="0" class="center-image"/>
 
     <figcaption>How to Build a Smarter App (0:02)</figcaption></figure>
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube2.png">
-        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Banner and Catalog" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube2.png" scale="0" class="center-image"/>
-    </a><figcaption>Bluemix UI Banner and Catalog (0:11)</figcaption>
+    <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Banner and Catalog" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube2.png" scale="0" class="center-image"/><figcaption>Bluemix UI Banner and Catalog (0:11)</figcaption>
 </figure>
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube3.png">
-        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Business Analytics" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube3.png" scale="0" class="center-image"/>
-    </a>
+    <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Business Analytics" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube3.png" scale="0" class="center-image"/>
 
     <figcaption>Bluemix UI Catalog for Business Analytics (0:13)</figcaption>
 </figure>
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube4.png">
-        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Watson" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube4.png" scale="0" class="center-image"/>
-        
-    </a><figcaption>Bluemix UI Catalog for Watson (0:16)</figcaption>
+    <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Catalog for Watson" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube4.png" scale="0" class="center-image"/><figcaption>Bluemix UI Catalog for Watson (0:16)</figcaption>
 </figure>
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube5.png">
-        <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Dashboard" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube5.png" scale="0" class="center-image"/>
-    </a>
+    <img class="tonyImg" alt="Bluemix YouTube: Bluemix UI Dashboard" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube5.png" scale="0" class="center-image"/>
 
     <figcaption>Bluemix UI Dashboard (0:20)</figcaption>
 </figure>
 
 <figure>
-    <a href="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube6.png">
-        <img class="tonyImg" alt="Bluemix YouTube: With IBM Bluemix Developers Can Work Better, Faster, Smarter" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube6.png" scale="0" class="center-image"/>
-    </a>
+    <img class="tonyImg" alt="Bluemix YouTube: With IBM Bluemix Developers Can Work Better, Faster, Smarter" src="/images/2015-01-11-ibm-bluemix-tv-ad-how-to-build-smarter/youTube6.png" scale="0" class="center-image"/>
     <figcaption>With IBM Bluemix Developers Can Work Better, Faster, Smarter (0:27)</figcaption>
 </figure>
 
